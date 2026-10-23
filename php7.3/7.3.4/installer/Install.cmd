@@ -1,9 +1,9 @@
 @echo off
 setlocal
-cd /d "%~dp0"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0Install-Php734Port.ps1" %*
-set "INSTALL_EXIT=%ERRORLEVEL%"
+set "PHP734_DISPATCHER=%~dp0Invoke-Php734Installer.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$ErrorActionPreference='Stop'; $global:LASTEXITCODE=0; try { & $env:PHP734_DISPATCHER -Operation Install; $ok=$?; if (-not $ok -or $LASTEXITCODE -ne 0) { exit 1 }; exit 0 } catch { Write-Host $_ -ForegroundColor Red; exit 1 }"
+set "PHP734_INSTALL_EXIT=%ERRORLEVEL%"
 echo.
-if "%INSTALL_EXIT%"=="0" (echo Completed. See the message above.) else (echo Failed. Keep phpStudy services stopped and read the message above.)
+if "%PHP734_INSTALL_EXIT%"=="0" (echo Verify the explicit success message above before starting services.) else (echo FAILED. Keep services stopped and read the error above.)
 pause
-exit /b %INSTALL_EXIT%
+exit /b %PHP734_INSTALL_EXIT%

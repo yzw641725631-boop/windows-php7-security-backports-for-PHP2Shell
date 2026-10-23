@@ -1,0 +1,253 @@
+"""Isolated deployment checks on the local Windows PowerShell 5.1 host.
+PowerShell 2.0 is unavailable locally. C# is separately compiled against .NET 2.0.
+Only test drivers narrow WMI process inventory to disposable fixture processes;
+production scripts contain no bypass switch.
+"""
+from pathlib import Path
+import hashlib
+import ctypes
+import json
+import os
+import shutil
+import subprocess
+import time
+import threading
+import xml.etree.ElementTree as ET
+import zipfile
+
+ROOT = Path(__file__).resolve().parent
+ARCHIVE = ROOT.parent / 'php734-official-port-win/dist/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip'
+BASELINE = Path(r'D:\ProgramFiles\phpstudy_pro\Extensions\php\php7.3.4nts')
+LAB = ROOT / ('legacy-lab-' + time.strftime('%Y%m%d-%H%M%S'))
+LAB.mkdir()
+RESULTS = []
+ENV = os.environ.copy()
+ENV['PSModulePath'] = str(Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/Modules')
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def snapshot(path):
+    return {str(p.relative_to(path)): sha(p) for p in path.rglob('*') if p.is_file()}
+
+
+def fixture(label, collision=False):
+    target = LAB / label / 'PHP 7.3.4 test'
+    target.mkdir(parents=True)
+    with zipfile.ZipFile(ARCHIVE) as z:
+        for name in z.namelist():
+            original = BASELINE / name
+            if original.is_file() and original.suffix.lower() != '.ini':
+                dest = target / name
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(original, dest)
+    extension = 'php_mbstring.dll' if collision else 'php_redis.dll'
+    shutil.copy2(BASELINE / 'ext/php_redis.dll', target / 'ext' / extension)
+    (target / 'php.ini').write_text('extension_dir="' + str(target / 'ext') + '"\n'
+                                   'extension=' + extension + '\n'
+                                   'session.upload_progress.enabled=1\ndate.timezone=Asia/Shanghai\n', encoding='utf-8')
+    (target / 'custom').mkdir()
+    (target / 'custom/keep.txt').write_text('custom file retained', encoding='utf-8')
+    return target
+
+
+def ps_quote(value):
+    return "'" + str(value).replace("'", "''") + "'"
+
+
+def call(script, target, args=(), unknown=False):
+    driver = LAB / ('driver-' + str(time.time_ns()) + '.ps1')
+    if unknown:
+        inventory = "@((New-Object PSObject -Property @{ Name='php-cgi.exe'; ProcessId=1; ExecutablePath=$null }))"
+    else:
+        inventory = ("@(Microsoft.PowerShell.Management\\Get-WmiObject -Class $Class -Filter $Filter | Where-Object { "
+                     "$_.ExecutablePath -and $_.ExecutablePath.StartsWith(" + ps_quote(str(LAB) + '\\') + ", [StringComparison]::OrdinalIgnoreCase) })")
+    text = ("$global:LASTEXITCODE=0\n"
+            "function Get-WmiObject { [CmdletBinding()] param([string]$Class,[string]$Filter)\n" + inventory + "\n}\n"
+            "& " + ps_quote(ROOT / script) + " -PhpDir " + ps_quote(target) + " " + " ".join(ps_quote(a) for a in args) + "\n"
+            "exit $LASTEXITCODE\n")
+    for name in ('-ArchivePath', '-RuntimeDir', '-CheckOnly'):
+        text = text.replace(ps_quote(name), name)
+    driver.write_text(text, encoding='utf-8-sig')
+    result = subprocess.run(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(driver)],
+                            capture_output=True, timeout=180, env=ENV)
+    output = result.stdout + result.stderr
+    driver.with_suffix('.output.txt').write_bytes(output)
+    return result.returncode, output.decode('gb18030', 'replace')
+
+
+def receipt(path):
+    tree = ET.parse(path)
+    mapping = {}
+    for entry in tree.findall('.//{*}DCT/{*}En'):
+        key = next((c for c in entry if c.attrib.get('N') == 'Key'), None)
+        value = next((c for c in entry if c.attrib.get('N') == 'Value'), None)
+        if key is not None and value is not None:
+            mapping[key.text] = value.text
+    return mapping
+
+
+def check(label, condition, detail=None):
+    RESULTS.append({'case': label, 'passed': bool(condition)})
+    if not condition:
+        raise AssertionError(label + ': ' + str(detail))
+
+
+target = fixture('success')
+before = snapshot(target)
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE), '-CheckOnly'))
+check('preflight leaves active PHP directory unchanged', code == 0 and snapshot(target) == before, out[-1800:])
+print('preflight: passed', flush=True)
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE)))
+check('installation succeeds with preserved original configuration and custom extension', code == 0 and sha(target / 'php.ini') == before['php.ini'] and
+      sha(target / 'ext/php_redis.dll') == before[str(Path('ext/php_redis.dll'))] and
+      sha(target / 'custom/keep.txt') == before[str(Path('custom/keep.txt'))], out[-1800:])
+print('install: passed', flush=True)
+hashes = json.loads((ROOT / 'legacy-runtime-files.json').read_text())
+check('all 84 pinned runtime files are deployed consistently', all(sha(target / name) == expected for name, expected in hashes.items()))
+record_path = next(target.parent.glob(target.name + '.php734-legacy-install-*.xml'))
+data = receipt(record_path)
+check('original directory backup is byte-identical', data['Status'] == 'installed' and snapshot(Path(data['BackupDir'])) == before)
+with (target / 'php.ini').open('a', encoding='utf-8') as stream:
+    stream.write('; changed after install\n')
+current = snapshot(target)
+code, out = call('Rollback-Php734Legacy.ps1', target)
+check('rollback restores complete original snapshot', code == 0 and snapshot(target) == before, out[-1800:])
+data = receipt(record_path)
+check('rollback keeps post-install configuration changes in separate directory', snapshot(Path(data['PreservedAfterRollback'])) == current)
+print('rollback: passed', flush=True)
+
+target = fixture('busy')
+before = snapshot(target)
+child = subprocess.Popen([str(target / 'php.exe'), '-n', '-r', 'sleep(90);'], creationflags=subprocess.CREATE_NO_WINDOW)
+try:
+    time.sleep(0.3)
+    code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE)))
+    check('active PHP blocks replacement without killing the existing worker', code != 0 and child.poll() is None and snapshot(target) == before, out[-1500:])
+finally:
+    child.terminate()
+    child.wait(timeout=10)
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE)), unknown=True)
+check('unknown process paths fail closed', code != 0 and snapshot(target) == before, out[-1500:])
+tampered = LAB / 'tampered.zip'
+shutil.copy2(ARCHIVE, tampered)
+with tampered.open('r+b') as stream:
+    stream.seek(500)
+    value = stream.read(1)
+    stream.seek(500)
+    stream.write(bytes([value[0] ^ 1]))
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(tampered)))
+check('tampered archive rejected before replacement', code != 0 and snapshot(target) == before, out[-1500:])
+
+extracted = LAB / 'extracted'
+with zipfile.ZipFile(ARCHIVE) as z:
+    z.extractall(extracted)
+code, out = call('Install-Php734Legacy.ps1', target, ('-RuntimeDir', str(extracted), '-CheckOnly'))
+check('pre-extracted runtime can be independently verified', code == 0 and snapshot(target) == before, out[-1500:])
+(extracted / 'unlisted-fixture.txt').write_text('must not be copied or executed', encoding='ascii')
+code, out = call('Install-Php734Legacy.ps1', target, ('-RuntimeDir', str(extracted), '-CheckOnly'))
+check('pre-extracted runtime rejects additional unlisted files before startup', code != 0 and snapshot(target) == before, out[-1500:])
+(extracted / 'unlisted-fixture.txt').unlink()
+with (extracted / 'php7.dll').open('r+b') as stream:
+    stream.seek(100)
+    value = stream.read(1)
+    stream.seek(100)
+    stream.write(bytes([value[0] ^ 1]))
+code, out = call('Install-Php734Legacy.ps1', target, ('-RuntimeDir', str(extracted), '-CheckOnly'))
+check('tampered pre-extracted runtime rejected against external pinned manifest', code != 0 and snapshot(target) == before, out[-1500:])
+
+with (target / 'php.ini').open('a', encoding='utf-8') as stream:
+    stream.write('extension=php_nonexistent_legacy_test.dll\n')
+bad_before = snapshot(target)
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE)))
+check('existing configuration warnings block replacement', code != 0 and snapshot(target) == bad_before, out[-1500:])
+
+target = fixture('automatic-recovery', collision=True)
+before = snapshot(target)
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE)))
+records = list(target.parent.glob(target.name + '.php734-legacy-install-*.xml'))
+data = receipt(records[0]) if records else {}
+check('post-activation extension mismatch automatically restores original', code != 0 and snapshot(target) == before and data.get('Status') == 'failed-rolled-back', out[-2200:])
+
+result = subprocess.run(['cmd.exe', '/d', '/c', str(ROOT / 'Install-Legacy.cmd')],
+                        input=b'Z:\\legacy-test-path-does-not-exist\r\n\r\n', env=ENV, capture_output=True, timeout=45)
+check('CMD wrapper propagates failure instead of reporting Completed', result.returncode != 0 and b'FAILED' in result.stdout and b'Completed' not in result.stdout,
+      (result.stdout + result.stderr).decode('gb18030', 'replace')[-1200:])
+
+# Reproduce a #requires mismatch and prove that the new generic wrapper cannot
+# translate it into a success message. This requires no installed PS 2 engine.
+launcher = LAB / 'requires-mismatch-launcher'
+launcher.mkdir()
+for name in ('Install.cmd', 'Invoke-Php734Installer.ps1'):
+    shutil.copy2(ROOT / name, launcher / name)
+(launcher / 'Install-Php734Port.ps1').write_text('#requires -Version 99.0\nWrite-Host SHOULD-NOT-RUN\n', encoding='ascii')
+result = subprocess.run(['cmd.exe', '/d', '/c', str(launcher / 'Install.cmd')], input=b'\r\n', env=ENV,
+                        capture_output=True, timeout=45)
+check('generic wrapper propagates an actual requires-version rejection', result.returncode != 0 and b'FAILED' in result.stdout and
+      b'Completed' not in result.stdout and b'SHOULD-NOT-RUN' not in result.stdout,
+      (result.stdout + result.stderr).decode('gb18030', 'replace')[-1500:])
+
+dispatcher = LAB / 'dispatch-legacy-selection.ps1'
+dispatcher.write_text("Import-Module Microsoft.PowerShell.Utility\nImport-Module Microsoft.PowerShell.Management\n$PSVersionTable['PSVersion'] = [Version]'2.0'\n& " + ps_quote(ROOT / 'Invoke-Php734Installer.ps1') +
+                      " -Operation Install\nexit $LASTEXITCODE\n", encoding='utf-8-sig')
+result = subprocess.run(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(dispatcher)],
+                        input=b'Z:\\legacy-test-path-does-not-exist\r\n', env=ENV, capture_output=True, timeout=45)
+check('dispatcher selects legacy path for simulated version 2.0 and reports invalid targets as failure', result.returncode != 0 and
+      b'2.0' in result.stdout and b'#requires' not in result.stdout,
+      (result.stdout + result.stderr).decode('gb18030', 'replace')[-1500:])
+
+# An actual native directory handle reproduces transient rename denial. Release
+# the handle after the child reports readiness, then require a successful move.
+locked = LAB / 'transient-lock' / 'source'
+locked.mkdir(parents=True)
+(locked / 'keep.txt').write_text('directory-lock-fixture', encoding='ascii')
+destination = locked.parent / 'renamed'
+ready = locked.parent / 'ready.txt'
+driver = locked.parent / 'move.ps1'
+driver.write_text(". " + ps_quote(ROOT / 'Php734-Legacy.Common.ps1') + "\n"
+                  "function Get-WmiObject { param($Class,$Filter) @() }\n"
+                  "[IO.File]::WriteAllText(" + ps_quote(ready) + ", 'ready')\n"
+                  "Move-LegacyDirectory " + ps_quote(locked) + ' ' + ps_quote(destination) + ' ' + ps_quote(locked) + "\n"
+                  "Write-Host LEGACY-MOVE-OK\n", encoding='utf-8-sig')
+kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+kernel.CreateFileW.argtypes = [ctypes.c_wchar_p, ctypes.c_uint32, ctypes.c_uint32, ctypes.c_void_p, ctypes.c_uint32, ctypes.c_uint32, ctypes.c_void_p]
+kernel.CreateFileW.restype = ctypes.c_void_p
+kernel.CloseHandle.argtypes = [ctypes.c_void_p]
+handle = kernel.CreateFileW(str(locked), 0x80, 3, None, 3, 0x02000000, None)
+assert handle not in (None, ctypes.c_void_p(-1).value)
+released = threading.Event()
+def release_handle():
+    kernel.CloseHandle(handle)
+    released.set()
+child = subprocess.Popen(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(driver)],
+                          stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=ENV)
+timer = None
+try:
+    deadline = time.monotonic() + 15
+    while not ready.exists() and time.monotonic() < deadline and child.poll() is None:
+        time.sleep(0.03)
+    assert ready.exists(), 'Move child did not become ready'
+    timer = threading.Timer(0.8, release_handle)
+    timer.start()
+    out, err = child.communicate(timeout=20)
+    check('directory swap tolerates a real transient native directory lock', child.returncode == 0 and
+          b'LEGACY-MOVE-OK' in out and (destination / 'keep.txt').read_text() == 'directory-lock-fixture',
+          (out + err).decode('gb18030', 'replace')[-1800:])
+finally:
+    if timer is not None:
+        timer.join(timeout=3)
+    if not released.is_set():
+        release_handle()
+    if child.poll() is None:
+        child.terminate()
+        child.wait(timeout=5)
+
+report = {'passed': all(row['passed'] for row in RESULTS), 'execution_host': 'Windows 11 / Windows PowerShell 5.1',
+          'actual_powershell_2_execution_verified': False, 'dotnet2_api_compile_checked_separately': True,
+          'user_reported_server_2008_r2_sp1_cli_startup': True, 'server_2008_r2_full_business_validation': False,
+          'process_inventory_in_tests': 'actual WMI limited to visible disposable-lab processes; unknown-path rejection separately simulated; production has no bypass',
+          'checks': RESULTS}
+(ROOT / 'legacy-installer-verification.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+print(json.dumps({'passed': report['passed'], 'checks': len(RESULTS), 'lab': str(LAB)}))

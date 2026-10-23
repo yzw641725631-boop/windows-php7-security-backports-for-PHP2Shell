@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "execution_host": "Windows 11 / Windows PowerShell 5.1",
+  "actual_powershell_2_execution_verified": false,
+  "dotnet2_api_compile_checked_separately": true,
+  "user_reported_server_2008_r2_sp1_cli_startup": true,
+  "server_2008_r2_full_business_validation": false,
+  "process_inventory_in_tests": "actual WMI limited to visible disposable-lab processes; unknown-path rejection separately simulated; production has no bypass",
+  "checks": [
+    {
+      "case": "preflight leaves active PHP directory unchanged",
+      "passed": true
+    },
+    {
+      "case": "installation succeeds with preserved original configuration and custom extension",
+      "passed": true
+    },
+    {
+      "case": "all 84 pinned runtime files are deployed consistently",
+      "passed": true
+    },
+    {
+      "case": "original directory backup is byte-identical",
+      "passed": true
+    },
+    {
+      "case": "rollback restores complete original snapshot",
+      "passed": true
+    },
+    {
+      "case": "rollback keeps post-install configuration changes in separate directory",
+      "passed": true
+    },
+    {
+      "case": "active PHP blocks replacement without killing the existing worker",
+      "passed": true
+    },
+    {
+      "case": "unknown process paths fail closed",
+      "passed": true
+    },
+    {
+      "case": "tampered archive rejected before replacement",
+      "passed": true
+    },
+    {
+      "case": "pre-extracted runtime can be independently verified",
+      "passed": true
+    },
+    {
+      "case": "pre-extracted runtime rejects additional unlisted files before startup",
+      "passed": true
+    },
+    {
+      "case": "tampered pre-extracted runtime rejected against external pinned manifest",
+      "passed": true
+    },
+    {
+      "case": "existing configuration warnings block replacement",
+      "passed": true
+    },
+    {
+      "case": "post-activation extension mismatch automatically restores original",
+      "passed": true
+    },
+    {
+      "case": "CMD wrapper propagates failure instead of reporting Completed",
+      "passed": true
+    },
+    {
+      "case": "generic wrapper propagates an actual requires-version rejection",
+      "passed": true
+    },
+    {
+      "case": "dispatcher selects legacy path for simulated version 2.0 and reports invalid targets as failure",
+      "passed": true
+    },
+    {
+      "case": "directory swap tolerates a real transient native directory lock",
+      "passed": true
+    }
+  ],
+  "dotnet2_api_compile": {
+    "passed": true,
+    "source_language": "C# 2 / ISO-2",
+    "reference_assemblies": [
+      ".NET 2.0 mscorlib.dll",
+      ".NET 2.0 System.dll"
+    ],
+    "actual_powershell2_execution": false
+  }
+}

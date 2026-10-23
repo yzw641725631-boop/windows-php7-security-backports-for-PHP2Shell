@@ -2,6 +2,8 @@
 
 ## 中文
 
+安装器 v2 的隔离检查和旧 API 编译检查另记在 `legacy-installer-verification.json`。它不重新验证 PHP 引擎：实际宿主仍为 Windows 11 / PowerShell 5.1，辅助进程捕获类通过 C# 2 / .NET 2.0 引用程序集编译检查；真正的 PowerShell 2.0 运行时无法在本机执行。用户报告 Server 2008 R2 SP1 上补丁 CLI 启动成功，但旧系统完整安装/业务验证未完成。
+
 本目录保存本机构建阶段的记录，不是第三方安全认证。`records/` 中将构建工作区、引导 PHP 与用户目录的绝对路径替换为占位符；数值、状态、输出和用例名称保持原样。因此这里的日志不是原始日志的字节级副本。
 
 | 文件 | 内容与结论 |
@@ -22,6 +24,8 @@
 安装检查使用实际 CIM 进程信息，但在非管理员测试进程中只选择隔离目录内可见的测试进程；未知路径拒绝逻辑另行模拟。正式脚本没有绕过进程检查的开关。仓库发布前对公共路径改造和打包的检查另记在 `publication-verification.json`（生成后提供），不将历史记录冒充本次重新运行的完整测试。
 
 ## English
+
+Installer-v2 observations are recorded separately in `legacy-installer-verification.json`. They do not retest or certify the PHP engine: execution used Windows 11 / PowerShell 5.1, while the capture helper compiled as C# 2 against .NET 2.0 reference assemblies. The actual PowerShell 2.0 engine is unavailable on this host. A user-reported patched CLI startup on Server 2008 R2 SP1 does not complete installer/business validation.
 
 These are local build-time observations, not third-party certification. Absolute build-workspace, bootstrap-PHP and user-profile paths in `records/` were replaced with placeholders; values, statuses, outputs and case names are otherwise retained. Redacted logs are not byte-identical copies of the originals.
 

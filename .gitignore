@@ -10,10 +10,12 @@ php-upload-error.log
 *.p12
 *.php734-port.lock
 *.php734-port-install-*.json
+*.php734-legacy-install-*.xml
 *.before-php734-port-*/
 *.after-php734-port-*/
 *.failed-php734-port-*/
 .php734-port-work-*/
+.php734-legacy-work-*/
 
 # Build/test workspaces; published ZIPs in dist/ are intentionally tracked
 **/work/

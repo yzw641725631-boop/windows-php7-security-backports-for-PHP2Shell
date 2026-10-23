@@ -2,17 +2,21 @@
 
 ## 中文
 
-**[打开 Releases 下载页面](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/tag/php-7.3.4-php2shell-20261023-rc1)**，在 Assets 中选择运行包或 phpStudy 安装包。不要把自动生成的 Source code 当作独立运行包。
+当前推荐 **v2 部署包**，包含 PowerShell 2.0 兼容入口和修正后的启动器；此前安装包保留为历史文件。PHP 核心运行 ZIP 未改变。Server 2008 R2 SP1 上从新包运行 `Install-Legacy.cmd`，见[说明](../installer/LEGACY-INSTALL.zh-en.md)。
+
+**[打开 Releases 下载页面](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/tag/php-7.3.4-php2shell-20261023-rc2)**，在 Assets 中选择运行包或 phpStudy 安装包。不要把自动生成的 Source code 当作独立运行包。
 
 - `php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip`：完整运行包，原字节保持不变，适用 Windows **x64** / NTS / VC15。文件名里的 `Win32` 是历史发行命名，不表示这是 x86 包。
-- `phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip`：相同运行包加安装/回滚脚本、双语说明、许可与内部哈希清单；交互提示为中文。
+- `phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-v2-20261023.zip`：相同运行包加安装/回滚脚本、双语说明、许可与内部哈希清单；交互提示为中文。
 - `SHA256SUMS.txt` / `package-manifest.json`：公开包的 SHA-256 与大小。清单用于一致性校验，本次没有独立代码签名。
 
 在本目录可用 `Get-FileHash .\文件名.zip -Algorithm SHA256` 对照清单。请先阅读 [版本范围与限制](../README.md) 和 [安装说明](../installer/README.md)。
 
 ## English
 
-**[Open the release downloads](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/tag/php-7.3.4-php2shell-20261023-rc1)** and select the runtime or phpStudy kit under Assets. The automatic Source code archives are repository snapshots.
+Use the **v2 deployment kit** with PowerShell 2.0-compatible entry points and corrected launcher exit handling. Earlier kits are historical; the runtime ZIP is unchanged. On Server 2008 R2 SP1, use `Install-Legacy.cmd` from the new kit. See the [guide](../installer/LEGACY-INSTALL.zh-en.md).
+
+**[Open the release downloads](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/tag/php-7.3.4-php2shell-20261023-rc2)** and select the runtime or phpStudy kit under Assets. The automatic Source code archives are repository snapshots.
 
 The 20261022 ZIP is the unchanged complete **x64** NTS VC15 runtime; `Win32` is legacy filename terminology, not an x86 target. The 20261023 bilingual kit contains the same runtime, installation/rollback scripts, bilingual instructions, licenses and internal hashes; script prompts are Chinese.
 
