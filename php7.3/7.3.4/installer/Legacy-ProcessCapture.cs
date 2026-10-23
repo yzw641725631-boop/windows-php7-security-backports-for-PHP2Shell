@@ -13,6 +13,13 @@ public sealed class Php734LegacyProcessResult
 
 public static class Php734LegacyProcessCapture
 {
+    public static void ReplaceReceipt(string temporary, string destination)
+    {
+        // Pass a real CLR null; old PowerShell otherwise binds $null to an
+        // empty string for File.Replace's string backupFileName parameter.
+        System.IO.File.Replace(temporary, destination, null);
+    }
+
     public static Php734LegacyProcessResult Run(string exe, string arguments, string cwd, int timeout)
     {
         Process process = new Process();

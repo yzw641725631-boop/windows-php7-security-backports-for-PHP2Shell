@@ -23,13 +23,12 @@ try {
     $originalIni = Get-LegacyHash (Join-Path $root 'php.ini')
     if (Test-Blank $RuntimeDir) {
         if (Test-Blank $ArchivePath) { $ArchivePath = Join-Path $kit 'php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip' }
-        $archive = (Resolve-Path -LiteralPath $ArchivePath).ProviderPath
+        $archive = Get-LegacyFullPath $ArchivePath
         if ((Get-LegacyHash $archive) -ne '879005e1a853258100e1db88db635dc955046123c4732b14d36b8f50a9a5d730') { throw '运行包 ZIP SHA-256 不匹配。' }
         $unpacked = Join-Path $context['Work'] 'unpacked'
         $reply = Invoke-LegacyPhp (Join-Path $root 'php.exe') @('-n', '-f', $tools['Helper'], '--', 'extract', $archive, $unpacked, $tools['Hashes']) $root
     } else {
-        $resolvedRuntime = Resolve-Path -LiteralPath $RuntimeDir
-        $unpacked = Get-LegacyFullPath $resolvedRuntime.ProviderPath
+        $unpacked = Get-LegacyFullPath $RuntimeDir
         if ($unpacked -eq $root -or $unpacked.StartsWith($root + '\', [StringComparison]::OrdinalIgnoreCase) -or $root.StartsWith($unpacked + '\', [StringComparison]::OrdinalIgnoreCase)) {
             throw '已解压的新运行包必须与原 PHP 目录分开存放。'
         }
@@ -51,7 +50,7 @@ try {
         [void](Test-LegacyPhp $candidate $tools -RequirePort)
         $backup = Assert-LegacySibling (Join-Path $context['Parent'] ($context['Leaf'] + '.before-php734-port-legacy-' + $context['Id'])) $context['Parent'] ($context['Leaf'] + '.before-php734-port-legacy-')
         $receiptPath = Join-Path $context['Parent'] ($context['Leaf'] + '.php734-legacy-install-' + $context['Id'] + '.xml')
-        $receipt = @{ Format='php734-legacy-install-v1'; Status='prepared'; Created=(Get-Date).ToString('o');
+        $receipt = @{ Format='php734-legacy-install-v2'; Status='prepared'; Created=(Get-Date).ToString('o');
                       PhpDir=$root; BackupDir=$backup; OriginalIniSha256=$originalIni;
                       RuntimeZipSha256='879005e1a853258100e1db88db635dc955046123c4732b14d36b8f50a9a5d730';
                       BeforeExtensions=$before['Extensions']; AfterExtensions=@(); PreservedAfterRollback='' }
@@ -76,6 +75,7 @@ try {
         Write-Host '请验证网站/API、数据库、Session 和上传。回滚请使用 Rollback-Legacy.cmd。'
     }
 } catch {
+    $failure = $_
     $reason = $_.Exception.Message
     if ($oldMoved) {
         try {
@@ -95,6 +95,7 @@ try {
         }
     }
     Write-Host ('安装未完成：' + $reason) -ForegroundColor Red
+    Write-Host $failure.InvocationInfo.PositionMessage -ForegroundColor Red
     exit 1
 } finally { if ($null -ne $context) { Close-LegacyContext $context } }
 exit 0

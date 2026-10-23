@@ -1,5 +1,9 @@
 # PHP 7.3.4 — Windows x64 / NTS / VC15
 
+**v3 修复说明：** 修复旧版助手在 PowerShell 2.0 上的 `LiteralPath` 参数错误；请完整更新安装包，仅把旧 v2 的 `Install.cmd` 换成 `Install-Legacy.cmd` 不能消除此错误。`Install.cmd` 仍会自动分流。PHP 运行包未改变。
+
+**v3 correction:** fixes the legacy helper's `LiteralPath` parameter failure. Update the complete kit; changing only the entry point in an old v2 kit does not fix it. `Install.cmd` still dispatches automatically. PHP runtime bytes are unchanged.
+
 [中文](#中文) · [English](#english) · [Repository / 仓库](../../README.md)
 
 ## 中文
@@ -17,10 +21,10 @@
 
 ### 下载、安装与回滚
 
-**安装器 v2：** 新增 PowerShell 2.0 兼容助手，并修复启动器错误显示成功的问题。Server 2008 R2 SP1 请使用 `Install-Legacy.cmd`；回滚使用 `Rollback-Legacy.cmd`。运行包仍是同一个 7.3.4 构建。兼容助手已做本地隔离检查和 .NET 2.0 API 编译检查，实际 PowerShell 2.0 全流程仍待现场验证，见[旧系统说明](installer/LEGACY-INSTALL.zh-en.md)。
+**安装器 v3：** 新增 PowerShell 2.0 兼容助手，并修复启动器错误显示成功的问题。Server 2008 R2 SP1 请使用 `Install-Legacy.cmd`；回滚使用 `Rollback-Legacy.cmd`。运行包仍是同一个 7.3.4 构建。兼容助手已做本地隔离检查和 .NET 2.0 API 编译检查，实际 PowerShell 2.0 全流程仍待现场验证，见[旧系统说明](installer/LEGACY-INSTALL.zh-en.md)。
 
-- [phpStudy 双语安装包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc2/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-v2-20261023.zip)：包含运行包 ZIP、安装/回滚脚本和中英说明。脚本交互提示目前为中文。
-- [完整 PHP 运行包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc2/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip)：同次构建的核心、内置扩展和配套依赖；没有用户的 `php.ini`。
+- [phpStudy 双语安装包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc3/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-v3-20261023.zip)：包含运行包 ZIP、安装/回滚脚本和中英说明。脚本交互提示目前为中文。
+- [完整 PHP 运行包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc3/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip)：同次构建的核心、内置扩展和配套依赖；没有用户的 `php.ini`。
 - [SHA-256 清单](dist/SHA256SUMS.txt) / [安装说明](installer/README.md) / [构建说明](build/README.md)。
 
 安装需要先停 phpStudy 服务，保持目标 PHP 进程退出。以管理员身份执行 `Install.cmd`，输入当前目录，例如 `D:\phpstudy_pro\Extensions\php\php7.3.4nts`。脚本校验精确版本/架构和包哈希、复制配置/自装扩展、完整备份旧目录、在原路径替换。安装后的配置/扩展检查失败会尝试自动恢复。成功后启动服务并验证业务；手动恢复使用 `Rollback.cmd`。
@@ -66,12 +70,12 @@ This directory contains an **unofficial PHP2Shell source-port candidate for pris
 
 ### Target and downloads
 
-**Installer v2:** adds a PowerShell 2.0-compatible helper and fixes the launcher's false success message. Use `Install-Legacy.cmd` / `Rollback-Legacy.cmd` on Server 2008 R2 SP1. Runtime bytes are unchanged. Isolated tests and a .NET 2.0 API compile check have been performed; actual PowerShell 2.0 end-to-end execution remains pending. See the [legacy guide](installer/LEGACY-INSTALL.zh-en.md).
+**Installer v3:** adds a PowerShell 2.0-compatible helper and fixes the launcher's false success message. Use `Install-Legacy.cmd` / `Rollback-Legacy.cmd` on Server 2008 R2 SP1. Runtime bytes are unchanged. Isolated tests and a .NET 2.0 API compile check have been performed; actual PowerShell 2.0 end-to-end execution remains pending. See the [legacy guide](installer/LEGACY-INSTALL.zh-en.md).
 
 The target is **Windows x64 / NTS / VC15 (MSVC 2017)**. `PHP_VERSION` remains 7.3.4; the build date is 2026-10-22. The optimized build uses `/O2 /Ob2` with `/d2SSAOptimizer-` for the legacy compiler. There are 114 changed source files and 111 upstream non-test mapping entries.
 
-- [Bilingual phpStudy installer kit](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc2/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-v2-20261023.zip); interactive script messages are currently Chinese.
-- [Standalone complete runtime](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc2/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip), without a user `php.ini`.
+- [Bilingual phpStudy installer kit](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc3/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-v3-20261023.zip); interactive script messages are currently Chinese.
+- [Standalone complete runtime](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc3/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip), without a user `php.ini`.
 - [SHA-256 hashes](dist/SHA256SUMS.txt), [installation/rollback](installer/README.md), and [build instructions](build/README.md).
 
 Stop phpStudy services before installation. Run `Install.cmd` as Administrator and enter the active PHP 7.3.4 directory. It checks the exact target and archive hashes, preserves configuration/add-ons, backs up the original directory and activates the replacement at the same path. Failed post-activation configuration checks trigger a recovery attempt. Restart services after success and test the application; use `Rollback.cmd` to restore the snapshot.

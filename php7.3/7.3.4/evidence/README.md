@@ -1,8 +1,12 @@
 # Validation evidence / 验证记录
 
+**v3 修复说明：** 修复旧版助手在 PowerShell 2.0 上的 `LiteralPath` 参数错误；请完整更新安装包，仅把旧 v2 的 `Install.cmd` 换成 `Install-Legacy.cmd` 不能消除此错误。`Install.cmd` 仍会自动分流。PHP 运行包未改变。
+
+**v3 correction:** fixes the legacy helper's `LiteralPath` parameter failure. Update the complete kit; changing only the entry point in an old v2 kit does not fix it. `Install.cmd` still dispatches automatically. PHP runtime bytes are unchanged.
+
 ## 中文
 
-安装器 v2 的隔离检查和旧 API 编译检查另记在 `legacy-installer-verification.json`。它不重新验证 PHP 引擎：实际宿主仍为 Windows 11 / PowerShell 5.1，辅助进程捕获类通过 C# 2 / .NET 2.0 引用程序集编译检查；真正的 PowerShell 2.0 运行时无法在本机执行。用户报告 Server 2008 R2 SP1 上补丁 CLI 启动成功，但旧系统完整安装/业务验证未完成。
+安装器 v3 的隔离检查和旧 API 编译检查另记在 `legacy-installer-verification.json`。它不重新验证 PHP 引擎：实际宿主仍为 Windows 11 / PowerShell 5.1，辅助进程捕获类通过 C# 2 / .NET 2.0 引用程序集编译检查；真正的 PowerShell 2.0 运行时无法在本机执行。用户报告 Server 2008 R2 SP1 上补丁 CLI 启动成功，但旧系统完整安装/业务验证未完成。
 
 本目录保存本机构建阶段的记录，不是第三方安全认证。`records/` 中将构建工作区、引导 PHP 与用户目录的绝对路径替换为占位符；数值、状态、输出和用例名称保持原样。因此这里的日志不是原始日志的字节级副本。
 
@@ -25,7 +29,7 @@
 
 ## English
 
-Installer-v2 observations are recorded separately in `legacy-installer-verification.json`. They do not retest or certify the PHP engine: execution used Windows 11 / PowerShell 5.1, while the capture helper compiled as C# 2 against .NET 2.0 reference assemblies. The actual PowerShell 2.0 engine is unavailable on this host. A user-reported patched CLI startup on Server 2008 R2 SP1 does not complete installer/business validation.
+Installer-v3 observations are recorded separately in `legacy-installer-verification.json`. They do not retest or certify the PHP engine: execution used Windows 11 / PowerShell 5.1, while the capture helper compiled as C# 2 against .NET 2.0 reference assemblies. The actual PowerShell 2.0 engine is unavailable on this host. A user-reported patched CLI startup on Server 2008 R2 SP1 does not complete installer/business validation.
 
 These are local build-time observations, not third-party certification. Absolute build-workspace, bootstrap-PHP and user-profile paths in `records/` were replaced with placeholders; values, statuses, outputs and case names are otherwise retained. Redacted logs are not byte-identical copies of the originals.
 

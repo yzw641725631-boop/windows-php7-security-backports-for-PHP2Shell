@@ -14,6 +14,7 @@ import time
 import threading
 import xml.etree.ElementTree as ET
 import zipfile
+import base64
 
 ROOT = Path(__file__).resolve().parent
 ARCHIVE = ROOT.parent / 'php734-official-port-win/dist/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip'
@@ -29,12 +30,38 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def acl_snapshot(path, protect_custom=False):
+    command = "$ErrorActionPreference='Stop'; $root=" + ps_quote(path) + '; '
+    if protect_custom:
+        command += ("$custom=[IO.Path]::Combine($root, 'custom'); $acl=[IO.Directory]::GetAccessControl($custom); "
+                    "$acl.SetAccessRuleProtection($true,$true); [IO.Directory]::SetAccessControl($custom,$acl); ")
+    command += ("foreach ($name in @('', 'php.ini', 'custom', 'custom\\keep.txt')) { "
+                "$p=[IO.Path]::Combine($root,$name); "
+                "if ([IO.Directory]::Exists($p)) { $acl=[IO.Directory]::GetAccessControl($p) } "
+                "else { $acl=[IO.File]::GetAccessControl($p) }; "
+                # Windows may normalize AUTO_INHERITED flags and reorder
+                # equivalent inherited allow ACEs when an ACL is applied.
+                # Compare owner/group, protection, canonical form and every
+                # access-rule field instead of requiring byte-identical SDDL.
+                "$owner=$acl.GetOwner([Security.Principal.SecurityIdentifier]); "
+                "$group=$acl.GetGroup([Security.Principal.SecurityIdentifier]); "
+                "Write-Output ($owner.Value+'|'+$group.Value+'|'+$acl.AreAccessRulesProtected+'|'+$acl.AreAccessRulesCanonical); "
+                "$rules=@(foreach ($rule in $acl.GetAccessRules($true,$true,[Security.Principal.SecurityIdentifier])) { "
+                "$rule.IdentityReference.Value+'|'+[int]$rule.FileSystemRights+'|'+[int]$rule.AccessControlType+'|'+"
+                "[int]$rule.InheritanceFlags+'|'+[int]$rule.PropagationFlags+'|'+$rule.IsInherited }); "
+                "$rules | Sort-Object }")
+    result = subprocess.run(['powershell.exe', '-NoProfile', '-Command', command],
+                            capture_output=True, timeout=20, env=ENV)
+    assert result.returncode == 0, result.stderr.decode('gb18030', 'replace')
+    return result.stdout
+
+
 def snapshot(path):
     return {str(p.relative_to(path)): sha(p) for p in path.rglob('*') if p.is_file()}
 
 
-def fixture(label, collision=False):
-    target = LAB / label / 'PHP 7.3.4 test'
+def fixture(label, collision=False, leaf='PHP 7.3.4 test'):
+    target = LAB / label / leaf
     target.mkdir(parents=True)
     with zipfile.ZipFile(ARCHIVE) as z:
         for name in z.namelist():
@@ -57,14 +84,19 @@ def ps_quote(value):
     return "'" + str(value).replace("'", "''") + "'"
 
 
-def call(script, target, args=(), unknown=False):
+def call(script, target, args=(), unknown=False, block_provider_commands=False):
     driver = LAB / ('driver-' + str(time.time_ns()) + '.ps1')
     if unknown:
         inventory = "@((New-Object PSObject -Property @{ Name='php-cgi.exe'; ProcessId=1; ExecutablePath=$null }))"
     else:
         inventory = ("@(Microsoft.PowerShell.Management\\Get-WmiObject -Class $Class -Filter $Filter | Where-Object { "
                      "$_.ExecutablePath -and $_.ExecutablePath.StartsWith(" + ps_quote(str(LAB) + '\\') + ", [StringComparison]::OrdinalIgnoreCase) })")
-    text = ("$global:LASTEXITCODE=0\n"
+    blocked = ''
+    if block_provider_commands:
+        for name in ('Test-Path', 'Resolve-Path', 'Get-Item', 'Get-ChildItem', 'Copy-Item',
+                     'Get-Acl', 'Set-Acl', 'Move-Item', 'Remove-Item'):
+            blocked += 'function ' + name + " { throw 'Filesystem provider command must not be used by the legacy helper' }\n"
+    text = ("$global:LASTEXITCODE=0\n" + blocked +
             "function Get-WmiObject { [CmdletBinding()] param([string]$Class,[string]$Filter)\n" + inventory + "\n}\n"
             "& " + ps_quote(ROOT / script) + " -PhpDir " + ps_quote(target) + " " + " ".join(ps_quote(a) for a in args) + "\n"
             "exit $LASTEXITCODE\n")
@@ -80,6 +112,10 @@ def call(script, target, args=(), unknown=False):
 
 def receipt(path):
     tree = ET.parse(path)
+    if tree.getroot().tag == 'php734-receipt':
+        return {field.attrib['name']: [base64.b64decode(v.text or '').decode('utf-8') for v in field.findall('value')]
+                if field.attrib['kind'] == 'array' else base64.b64decode(field.findtext('value') or '').decode('utf-8')
+                for field in tree.getroot().findall('field')}
     mapping = {}
     for entry in tree.findall('.//{*}DCT/{*}En'):
         key = next((c for c in entry if c.attrib.get('N') == 'Key'), None)
@@ -118,6 +154,47 @@ check('rollback restores complete original snapshot', code == 0 and snapshot(tar
 data = receipt(record_path)
 check('rollback keeps post-install configuration changes in separate directory', snapshot(Path(data['PreservedAfterRollback'])) == current)
 print('rollback: passed', flush=True)
+
+# Regression for the real PS 2.0 report: do not depend on any -LiteralPath
+# command or silently substitute wildcard-expanding -Path filesystem commands.
+legacy_sources = ['Php734-Legacy.Common.ps1', 'Install-Php734Legacy.ps1', 'Rollback-Php734Legacy.ps1']
+check('legacy filesystem operations have no LiteralPath parameter dependency',
+      all('-LiteralPath' not in (ROOT / name).read_text('utf-8-sig') for name in legacy_sources))
+target = fixture('literal-path-regression', leaf='PHP 7.3.4 [test] 中文')
+# The baseline PHP expects its legacy ini encoding for non-ASCII extension_dir
+# values. Use an ASCII relative setting so this test exercises installer paths,
+# not a change to the PHP runtime's historical ini/extension loader behavior.
+ini_text = (target / 'php.ini').read_text('utf-8')
+(target / 'php.ini').write_text(ini_text.replace(str(target / 'ext'), 'ext'), encoding='ascii')
+(target / 'custom/read-only.txt').write_text('read-only custom file', encoding='ascii')
+os.chmod(target / 'custom/read-only.txt', 0o444)
+os.chmod(target / 'custom', 0o555)
+sibling = target.parent / 'PHP 7.3.4 t 中文'
+sibling.mkdir()
+(sibling / 'sentinel.txt').write_text('unrelated directory', encoding='ascii')
+before = snapshot(target)
+sibling_before = snapshot(sibling)
+acl_before = acl_snapshot(target, protect_custom=True)
+code, out = call('Install-Php734Legacy.ps1', target, ('-ArchivePath', str(ARCHIVE)), block_provider_commands=True)
+check('installation succeeds with provider commands unavailable and literal Unicode bracket paths using relative extension_dir',
+      code == 0 and sha(target / 'php.ini') == before['php.ini'] and
+      sha(target / 'custom/read-only.txt') == before[str(Path('custom/read-only.txt'))] and snapshot(sibling) == sibling_before,
+      out[-2200:])
+check('native filesystem copy preserves owner group access rules canonical form and inheritance protection', acl_snapshot(target) == acl_before)
+code, out = call('Rollback-Php734Legacy.ps1', target, block_provider_commands=True)
+check('rollback reads literal bracket-path receipts and preserves unrelated sibling with provider commands unavailable',
+      code == 0 and snapshot(target) == before and snapshot(sibling) == sibling_before, out[-2200:])
+print('literal-path regression: passed', flush=True)
+
+old_receipt = LAB / 'old-receipt.xml'
+command = ("$ErrorActionPreference='Stop'; . " + ps_quote(ROOT / 'Php734-Legacy.Common.ps1') +
+           "; @{Format='php734-legacy-install-v1'; Status='installed'; BeforeExtensions=@('Core','redis')} | Export-Clixml -Path " +
+           ps_quote(old_receipt) + "; $r=Read-LegacyReceipt " + ps_quote(old_receipt) +
+           "; if ($r['Format'] -ne 'php734-legacy-install-v1' -or $r['Status'] -ne 'installed' -or $r['BeforeExtensions'][1] -ne 'redis') { exit 1 }")
+result = subprocess.run(['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-Command', command],
+                        capture_output=True, timeout=20, env=ENV)
+check('native XML receipt reader retains backward compatibility with previous CLIXML receipts', result.returncode == 0,
+      (result.stdout + result.stderr).decode('gb18030', 'replace')[-1800:])
 
 target = fixture('busy')
 before = snapshot(target)

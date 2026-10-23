@@ -2,15 +2,17 @@
 
 ## 中文
 
-这个 v2 部署包修复了旧启动器在 PowerShell 版本不符时仍显示 `Completed` 的问题，并新增按 **PowerShell 2.0 / .NET 2.0 API** 编写的安装与回滚助手。PHP 运行包没有重新编译，仍是原来的 **PHP 7.3.4 / Windows x64 / NTS / VC15**，ZIP SHA-256：
+这个 v3 部署包修复 v2 旧版助手的 `LiteralPath` 参数兼容错误，文件系统检查、复制、权限保留和清理改用 .NET 2.0 API。它保留启动器退出状态检查、完整备份、固定哈希校验和失败恢复。PHP 运行包没有重新编译，仍是原来的 **PHP 7.3.4 / Windows x64 / NTS / VC15**，ZIP SHA-256：
 
 ```text
 879005e1a853258100e1db88db635dc955046123c4732b14d36b8f50a9a5d730
 ```
 
+v2 的 Install.cmd 已会自动选择旧版助手；v3 沿用此行为。因此切换到旧 v2 的 Install-Legacy.cmd 不能消除此参数错误，请使用 v3 完整包。
+
 ### 在 Server 2008 R2 SP1 上操作
 
-1. 将 **v2 完整部署包**解压到原 PHP 目录之外，助手、清单、PHP 文件和运行包 ZIP 要配套使用。
+1. 将 **v3 完整部署包**解压到原 PHP 目录之外，助手、清单、PHP 文件和运行包 ZIP 要配套使用。
 2. 在 phpStudy 停止服务，并停止会自动重新拉起 PHP 的管理程序。保持原 PHP 进程退出。
 3. 右键 **`Install-Legacy.cmd` → 以管理员身份运行**。
 4. 输入**正在使用的原 PHP 目录**，例如 `D:\phpstudy_pro\Extensions\php\php7.3.4nts`。不要填写安装工具包目录或新包的临时测试目录。
@@ -25,6 +27,7 @@
 - 备份旧目录，保留 `php.ini`、自装扩展、自定义文件和 ACL，新版仍放回原路径。只覆盖可信清单中的运行文件。
 - 替换后使用原配置检查；失败时尝试自动恢复并保留失败版本。目录短暂被文件扫描等占用时有限重试，不强杀现有 PHP 进程。
 - 兼容助手的安装记录为同级 **`.php734-legacy-install-...xml`**，备份目录含 `.before-php734-port-legacy-`。保持服务停止后，运行 **`Rollback-Legacy.cmd`** 恢复。
+- v3 使用原生 XML 读写安装记录，支持带方括号的路径；可读取 v2 助手留下的旧 CLIXML 记录。v3 新记录请使用 v3 的回滚工具，不要换回旧 v2 助手。
 - 回滚会保留回滚前整个目录，安装后配置变化可从 `.after-php734-port-legacy-...` 人工取回，不自动合并。
 - 本兼容回滚助手只处理它创建的 XML 记录；旧 5.1 助手创建的 JSON 记录仍用对应的原回滚工具。若兼容安装后升级了 PowerShell，仍选择 `Rollback-Legacy.cmd`。
 
@@ -48,11 +51,13 @@ PHP 引擎仍是原来的非官方移植候选版，没有因安装助手更新�
 
 ## English
 
-The v2 kit fixes the old launcher's false `Completed` message after a PowerShell version rejection and adds installation/rollback helpers written for **PowerShell 2.0 / .NET 2.0 APIs**. The PHP runtime is unchanged: **7.3.4 / Windows x64 / NTS / VC15**, with the ZIP hash shown above.
+The v3 kit fixes the v2 legacy helper's `LiteralPath` parameter failure on old PowerShell. Filesystem checks, copy, ACL preservation and cleanup now use .NET 2.0 APIs. Launcher exit checks, full backups, pinned hashes and recovery are retained. The PHP runtime is unchanged: **7.3.4 / Windows x64 / NTS / VC15**, with the ZIP hash shown above.
+
+The v2 generic launcher already selected the legacy helper automatically; switching only the entry point in an old v2 kit does not fix this error. Use the complete v3 kit.
 
 ### Installation
 
-Extract the complete v2 kit outside the active PHP directory. Stop phpStudy services and supervisors, run **`Install-Legacy.cmd` as Administrator**, and enter the original active PHP directory. Only the explicit installation/configuration-check success message indicates success; a failure must show `FAILED`. Start services and verify the application after success.
+Extract the complete v3 kit outside the active PHP directory. Stop phpStudy services and supervisors, run **`Install-Legacy.cmd` as Administrator**, and enter the original active PHP directory. Only the explicit installation/configuration-check success message indicates success; a failure must show `FAILED`. Start services and verify the application after success.
 
 The updated generic launcher selects an entry point based on PowerShell version. The explicit legacy launcher is recommended on Server 2008 R2. No PowerShell upgrade is required by this deployment path. Execution-policy arguments are process-local and cannot override organization policy.
 
@@ -61,6 +66,8 @@ The updated generic launcher selects an entry point based on PowerShell version.
 The helper verifies the unchanged runtime ZIP and all **84 runtime files**, checks target metadata/configuration/extensions, retains a full backup including INI/add-ons/custom files/ACLs and deploys at the same active path. Trusted extraction uses the existing PHP's ZIP/JSON support, avoiding newer .NET ZIP APIs. Only manifest-listed files are overlaid. Failed post-activation checks trigger recovery attempts; short-lived directory locks receive bounded retries without killing existing workers.
 
 Legacy receipts are sibling `.php734-legacy-install-...xml` files and backups contain `.before-php734-port-legacy-`. Stop services and use **`Rollback-Legacy.cmd`** to restore the original snapshot. The current directory is preserved under `.after-php734-port-legacy-...`, including later configuration edits. They are not merged automatically.
+
+V3 writes native XML receipts to support literal bracket paths and can read old v2-helper CLIXML receipts. Use the v3 rollback helper for new v3 receipts; do not switch back to the old v2 helper.
 
 The legacy rollback tool handles its own XML receipts. Original 5.1-installer JSON receipts require the original rollback tool. If PowerShell is upgraded after a legacy installation, continue using the explicit legacy rollback launcher.
 

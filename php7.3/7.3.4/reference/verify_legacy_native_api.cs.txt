@@ -1,0 +1,43 @@
+// Compile-only compatibility probe; never executed or included in the kit.
+using System;
+using System.IO;
+using System.Security.AccessControl;
+using System.Text;
+using System.Xml;
+
+public static class LegacyNativeApiCompileProbe
+{
+    public static void CompileOnly(string source, string destination)
+    {
+        DirectoryInfo info = new DirectoryInfo(source);
+        FileInfo[] entries = info.GetFiles();
+        string[] directories = Directory.GetDirectories(source, "*", SearchOption.AllDirectories);
+        string[] files = Directory.GetFiles(source, "*", SearchOption.AllDirectories);
+        Directory.SetAccessControl(destination, Directory.GetAccessControl(source));
+        DirectorySecurity security = new DirectorySecurity();
+        security.SetSecurityDescriptorBinaryForm(Directory.GetAccessControl(source).GetSecurityDescriptorBinaryForm(), AccessControlSections.Access | AccessControlSections.Owner | AccessControlSections.Group);
+        Directory.SetAccessControl(destination, security);
+        File.SetAccessControl(destination, File.GetAccessControl(source));
+        File.SetAttributes(destination, File.GetAttributes(source) & ~FileAttributes.ReadOnly);
+        File.Copy(source, destination, false);
+        File.Replace(source, destination, null);
+        Directory.Delete(destination, true);
+        XmlWriterSettings settings = new XmlWriterSettings();
+        settings.Encoding = new UTF8Encoding(false);
+        settings.Indent = true;
+        using (Stream stream = File.Open(destination, FileMode.Create, FileAccess.Write, FileShare.None))
+        using (XmlWriter writer = XmlWriter.Create(stream, settings))
+        {
+            writer.WriteStartDocument();
+            writer.WriteStartElement("receipt");
+            writer.WriteAttributeString("format", "compile-probe");
+            writer.WriteElementString("value", Convert.ToBase64String(Encoding.UTF8.GetBytes(source)));
+            writer.WriteEndElement();
+            writer.WriteEndDocument();
+            writer.Flush();
+        }
+        XmlDocument document = new XmlDocument();
+        document.LoadXml(File.ReadAllText(source));
+        document.DocumentElement.GetAttribute("format");
+    }
+}

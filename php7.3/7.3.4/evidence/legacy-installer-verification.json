@@ -32,6 +32,26 @@
       "passed": true
     },
     {
+      "case": "legacy filesystem operations have no LiteralPath parameter dependency",
+      "passed": true
+    },
+    {
+      "case": "installation succeeds with provider commands unavailable and literal Unicode bracket paths using relative extension_dir",
+      "passed": true
+    },
+    {
+      "case": "native filesystem copy preserves owner group access rules canonical form and inheritance protection",
+      "passed": true
+    },
+    {
+      "case": "rollback reads literal bracket-path receipts and preserves unrelated sibling with provider commands unavailable",
+      "passed": true
+    },
+    {
+      "case": "native XML receipt reader retains backward compatibility with previous CLIXML receipts",
+      "passed": true
+    },
+    {
       "case": "active PHP blocks replacement without killing the existing worker",
       "passed": true
     },
@@ -85,8 +105,10 @@
     "source_language": "C# 2 / ISO-2",
     "reference_assemblies": [
       ".NET 2.0 mscorlib.dll",
-      ".NET 2.0 System.dll"
+      ".NET 2.0 System.dll",
+      ".NET 2.0 System.Xml.dll"
     ],
+    "native_filesystem_xml_api_probe_compiled": true,
     "actual_powershell2_execution": false
   }
 }
