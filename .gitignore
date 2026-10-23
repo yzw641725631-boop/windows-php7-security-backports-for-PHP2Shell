@@ -1,0 +1,35 @@
+# Local configuration, credentials and installation snapshots
+php.ini
+php-upload-error.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.php734-port.lock
+*.php734-port-install-*.json
+*.before-php734-port-*/
+*.after-php734-port-*/
+*.failed-php734-port-*/
+.php734-port-work-*/
+
+# Build/test workspaces; published ZIPs in dist/ are intentionally tracked
+**/work/
+**/stage/
+**/logs/
+**/verification/
+**/soft-oom-cases/
+**/upstream-case-work/
+**/deployment-lab-*/
+**/__pycache__/
+*.pyc
+*.obj
+*.pdb
+*.ilk
+*.pch
+.vs/
+.vscode/
+.DS_Store
+Thumbs.db

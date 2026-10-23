@@ -1,0 +1,57 @@
+@echo off
+setlocal
+set "PHP73_BUILD_ROOT=<WORKSPACE>\php73-windows-build\"
+set "PHP73_VC_ROOT=%PHP73_BUILD_ROOT%toolchain\VC\Tools\MSVC\14.16.27023"
+set "PHP73_WINDOWS_SDK=C:\Program Files (x86)\Windows Kits\10"
+set "PHP73_WINDOWS_SDK_VERSION=10.0.26100.0"
+set "PATH=%PHP73_VC_ROOT%\bin\Hostx64\x64;%PHP73_WINDOWS_SDK%\bin\%PHP73_WINDOWS_SDK_VERSION%\x64;%PHP73_BUILD_ROOT%sdk\bin;%PHP73_BUILD_ROOT%sdk\msys2\usr\bin;%PATH%"
+set "INCLUDE=%PHP73_VC_ROOT%\include;%PHP73_VC_ROOT%\atlmfc\include;%PHP73_WINDOWS_SDK%\Include\%PHP73_WINDOWS_SDK_VERSION%\ucrt;%PHP73_WINDOWS_SDK%\Include\%PHP73_WINDOWS_SDK_VERSION%\shared;%PHP73_WINDOWS_SDK%\Include\%PHP73_WINDOWS_SDK_VERSION%\um;%PHP73_WINDOWS_SDK%\Include\%PHP73_WINDOWS_SDK_VERSION%\winrt"
+set "LIB=%PHP73_VC_ROOT%\lib\x64;%PHP73_VC_ROOT%\atlmfc\lib\x64;%PHP73_WINDOWS_SDK%\Lib\%PHP73_WINDOWS_SDK_VERSION%\ucrt\x64;%PHP73_WINDOWS_SDK%\Lib\%PHP73_WINDOWS_SDK_VERSION%\um\x64"
+set "PHP_SDK_VS=vc15"
+set "PHP_SDK_ARCH=x64"
+set "PHP_SDK_OS_ARCH=x64"
+set "PHP_SDK_ROOT_PATH=%PHP73_BUILD_ROOT%sdk"
+set "PHP_SDK_BIN_PATH=%PHP73_BUILD_ROOT%sdk\bin"
+set "PHP_SDK_MSYS2_PATH=%PHP73_BUILD_ROOT%sdk\msys2\usr\bin"
+rem PHP 7.3's distribution script uses syntax removed in PHP 8.
+set "PHP_SDK_PHP_CMD=<BASELINE_PHP_DIR>\php.exe"
+set "PHP_SDK_VC_TOOLSET_VER=14.16.27054"
+set "VCToolsInstallDir=%PHP73_VC_ROOT%\"
+set "WindowsSdkDir=%PHP73_WINDOWS_SDK%\"
+set "WindowsSDKVersion=%PHP73_WINDOWS_SDK_VERSION%\"
+rem VC15's SSA optimizer faults in this legacy VM with the current serviced compiler.
+rem This compiler-only workaround does not alter PHP's source or module interface.
+set "_CL_=/d2SSAOptimizer- /Od /Ob0"
+cd /d "<BUILD_WORKSPACE>\php-7.3.4"
+if /i "%~1"=="configure" goto configure
+if /i "%~1"=="build" goto build
+if /i "%~1"=="build-optimized" goto build_optimized
+if /i "%~1"=="snap" goto snap
+if /i "%~1"=="dist" goto dist
+echo Usage: run-build.cmd configure ^| build ^| snap
+exit /b 2
+
+:configure
+cl 2>&1
+call buildconf.bat
+if errorlevel 1 exit /b %errorlevel%
+call configure.bat --enable-snapshot-build --enable-debug-pack --disable-zts --enable-com-dotnet=shared --without-analyzer --without-oci8-12c --without-pdo-oci --with-mp=4 --with-php-build=<WORKSPACE>\php73-windows-build\build\deps
+exit /b %errorlevel%
+
+:build
+nmake /nologo
+exit /b %errorlevel%
+
+:build_optimized
+set "_CL_=/d2SSAOptimizer- /O2 /Ob2"
+nmake /nologo
+exit /b %errorlevel%
+
+:snap
+nmake /nologo snap
+exit /b %errorlevel%
+
+:dist
+nmake /nologo build-dist
+exit /b %errorlevel%
+

@@ -1,0 +1,31 @@
+{
+  "version": "7.3.4",
+  "target": "Windows Server 2019 x64, VC15 NTS",
+  "execution_host": "Windows 11 Pro 10.0.26200",
+  "target_server_2019_execution_verified": false,
+  "unofficial_build": true,
+  "security_equivalence_independently_audited": false,
+  "official_reference": "01a40e89fbfc499936e3b05888d8f00bfde886df",
+  "optimization": "/O2 /Ob2",
+  "compiler_workaround": "/d2SSAOptimizer-",
+  "session_upload_progress": "retained; restricted serialization during request startup",
+  "source_files_changed": 114,
+  "upstream_code_mapping_entries": 111,
+  "core_and_extension_smoke": "passed",
+  "ordinary_fastcgi_oom_checks": 220,
+  "hard_limit_exit": 137,
+  "upstream_comparison": {
+    "not_run": 57,
+    "matches_upstream": 139,
+    "different_output": 17,
+    "syntax_incompatible": 14,
+    "timeout": 1
+  },
+  "limitations": [
+    "No independent security audit or exploit regression certification",
+    "Full PHP 8 test harness/API equivalence is not claimed",
+    "Third-party extension load checks do not validate all their OOM paths",
+    "Bundled historical third-party dependencies are not fully security-updated",
+    "Windows Server 2019/IIS and target ThinkPHP applications have not been executed here"
+  ]
+}

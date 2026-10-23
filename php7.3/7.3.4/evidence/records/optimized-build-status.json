@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "log": "logs/build-optimized-01.log",
+  "optimization": "/O2 /Ob2",
+  "compiler_workaround": "/d2SSAOptimizer-"
+}

@@ -1,0 +1,1468 @@
+{
+  "kind": "bounded PHP 8.2 test compatibility probe",
+  "not_upstream_test_harness": true,
+  "security_equivalence_to_official_patch": false,
+  "timeout_seconds_per_process": 8,
+  "max_configured_memory_bytes": 134217728,
+  "counts": {
+    "not_run": 57,
+    "matches_upstream": 139,
+    "different_output": 17,
+    "syntax_incompatible": 14,
+    "timeout": 1
+  },
+  "cases": [
+    {
+      "test": "Zend/tests/oom_SplFixedArray___unserialize.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_SplFixedArray___unserialize\\test.php on line 11\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 11\n"
+    },
+    {
+      "test": "Zend/tests/oom_SplFixedArray___wakeup.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_SplFixedArray___wakeup\\test.php on line 10\n",
+      "expected": "Fatal error: Allowed memory size of 16777216 bytes exhausted %S(tried to allocate %d bytes) in %s on line 10\n"
+    },
+    {
+      "test": "Zend/tests/oom_SplFixedArray_copy_ctor.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_SplFixedArray_copy_ctor\\test.php on line 7\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 7\n"
+    },
+    {
+      "test": "Zend/tests/oom_SplFixedArray_fromArray_001.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 169869312 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_SplFixedArray_fromArray_001\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_SplFixedArray_fromArray_002.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_SplFixedArray_fromArray_002\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 5\n"
+    },
+    {
+      "test": "Zend/tests/oom_after_main_script.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "Done\n\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_after_main_script\\test.php on line 9\nShutdown function called\n",
+      "expected": "Done\n\nFatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\nShutdown function called\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_fill_001.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 34361835520 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_fill_001\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_fill_002.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 42949672960 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_fill_002\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_fill_003.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 34361835520 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_fill_003\\test.php on line 3\n",
+      "expected": "Fatal error: Possible integer overflow in memory allocation (1073741824 * 32 + 32) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_fill_004.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 42949672960 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_fill_004\\test.php on line 3\n",
+      "expected": "Fatal error: Possible integer overflow in memory allocation (1073741824 * 32 + 32) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_001.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_001\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_002.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_002\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_003.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_003\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_004.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 41943040 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_004\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_005.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_005\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_006.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_006\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_007.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_007\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_array_pad_008.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 41943040 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_array_pad_008\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_call_function.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_call_function\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 6\n"
+    },
+    {
+      "test": "Zend/tests/oom_call_function_002.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 10485760 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_call_function_002\\test.php on line 14\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_call_function_003.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_call_function_003\\test.php on line 24\narray(1) {\n  [0]=>\n  array(1) {\n    [0]=>\n    *RECURSION*\n  }\n}\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\narray(1) {\n  [0]=>\n  *RECURSION*\n}\n"
+    },
+    {
+      "test": "Zend/tests/oom_debug_backtrace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_debug_backtrace\\test.php on line 8\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_debug_backtrace_args.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_debug_backtrace_args\\test.php on line 8\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_debug_backtrace_named_args.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Uncaught Error: Cannot unpack array with string keys in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_debug_backtrace_named_args\\test.php:19\nStack trace:\n#0 {main}\n  thrown in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_debug_backtrace_named_args\\test.php on line 19\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_error_get_last.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_error_get_last\\test.php on line 12\nAllowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes)\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\nAllowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes)\n"
+    },
+    {
+      "test": "Zend/tests/oom_exception_trace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_exception_trace\\test.php on line 8\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_hard_limit_exceeded.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: zend_test"
+    },
+    {
+      "test": "Zend/tests/oom_hard_limit_exceeded_during_complilation.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "Zend/tests/oom_interrupt.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: pcntl,posix"
+    },
+    {
+      "test": "Zend/tests/oom_interrupt_unfinished_call_frame.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "===DONE===\n",
+      "expected": "===DONE===\n"
+    },
+    {
+      "test": "Zend/tests/oom_interrupt_unfinished_call_frame_fiber.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Uncaught Error: Class 'Fiber' not found in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_interrupt_unfinished_call_frame_fiber\\test.php:5\nStack trace:\n#0 {main}\n  thrown in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_interrupt_unfinished_call_frame_fiber\\test.php on line 5\n",
+      "expected": "===DONE===\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_001.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_001\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 5\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_002.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected ':', expecting ')' in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_002\\test.php on line 6\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_002\\test.php\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_003.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_003\\test.php on line 13\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 13\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_004.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected ':', expecting ')' in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_004\\test.php on line 10\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_004\\test.php\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_005.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected ':', expecting ')' in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_005\\test.php on line 13\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_005\\test.php\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_006.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected ':', expecting ')' in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_006\\test.php on line 10\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_006\\test.php\n"
+    },
+    {
+      "test": "Zend/tests/oom_json_decode_007.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_json_decode_007\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes exhausted %S(tried to allocate %d bytes) in %s on line 5\n"
+    },
+    {
+      "test": "Zend/tests/oom_pending_at_shutdown.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "Shutdown function called\n\nFatal error: Allowed memory size of 16777216 bytes exhausted (tried to allocate 14680064 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_pending_at_shutdown\\test.php on line 5\n",
+      "expected": "Shutdown function called\n\nFatal error: Allowed memory size of 16777216 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_range_001.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 4297064448 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_range_001\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_range_002.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 4297064448 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_range_002\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_range_003.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 4297064448 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_range_003\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_range_004.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 4297064448 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_range_004\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_request_parsing.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "Zend/tests/oom_soft_limit_exceeded.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_soft_limit_exceeded\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes %s (tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_soft_limit_exceeded_fcall.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 10485760 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_soft_limit_exceeded_fcall\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 10485760 bytes %s (tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "Zend/tests/oom_soft_limit_in_callback.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: zend_test"
+    },
+    {
+      "test": "Zend/tests/oom_str_repeat.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 316669952 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_str_repeat\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_001.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_002.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_003.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_004.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_005.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_006.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_007.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_008.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_009.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_011.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_012.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_013.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 104857600 bytes exhausted (tried to allocate 211812352 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_unserialize_013\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 5\n"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_014.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_015.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "string(6) \"object\"\n",
+      "expected": "Fatal error: Allowed memory size of 104857600 bytes exhausted %S(tried to allocate %d bytes) in %s on line 5\n"
+    },
+    {
+      "test": "Zend/tests/oom_unserialize_016.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_unserialize_016\\test.php on line 18\narray(1) {\n  [0]=>\n  array(1) {\n    [0]=>\n    *RECURSION*\n  }\n}\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\narray(1) {\n  [0]=>\n  *RECURSION*\n}\n"
+    },
+    {
+      "test": "ext/bz2/tests/oom_bzcompress.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "ext/bz2/tests/oom_bzdecompress.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\bz2\\tests\\oom_bzdecompress\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/bz2/tests/oom_bzip2_decompress_filter.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\bz2\\tests\\oom_bzip2_decompress_filter\\test.php on line 9\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/curl/tests/oom_curl_exec.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: curl"
+    },
+    {
+      "test": "ext/curl/tests/oom_curl_multi_exec.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: curl"
+    },
+    {
+      "test": "ext/date/tests/oom_date_create.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "bool(false)\n",
+      "expected": "bool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_date_create_immutable.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "bool(false)\n",
+      "expected": "bool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_date_interval_create_from_date_string.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "\nWarning: date_interval_create_from_date_string(): Unknown or bad format (\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001 in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_date_interval_create_from_date_string\\test.php on line 2\nbool(false)\n",
+      "expected": "Warning: date_interval_create_from_date_string(): Unknown or bad format (%s) at position 0 (%s): Unexpected character in %s on line %d\nbool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_date_modify.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "\nWarning: date_modify(): Failed to parse time string (\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001 in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_date_modify\\test.php on line 2\nbool(false)\n",
+      "expected": "Warning: date_modify(): Failed to parse time string (%s) at position 0 (%s): Unexpected character in %s on line %d\nbool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_date_parse.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "int(1000)\n",
+      "expected": "int(1000)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_dateinterval_construct.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nFatal error: Dynamic class names are not allowed in compile-time ::class fetch in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_dateinterval_construct\\test.php on line 5\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_dateinterval_construct\\test.php\n"
+    },
+    {
+      "test": "ext/date/tests/oom_dateinterval_createfromdatestring.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "\nWarning: DateInterval::createFromDateString(): Unknown or bad format (\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001 in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_dateinterval_createfromdatestring\\test.php on line 2\nbool(false)\n",
+      "expected": "Warning: DateInterval::createFromDateString(): Unknown or bad format (%s) at position 0 (%s): Unexpected character in %s on line %d\nbool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_dateperiod_construct.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nFatal error: Dynamic class names are not allowed in compile-time ::class fetch in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_dateperiod_construct\\test.php on line 5\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_dateperiod_construct\\test.php\n"
+    },
+    {
+      "test": "ext/date/tests/oom_datetime_construct.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nFatal error: Dynamic class names are not allowed in compile-time ::class fetch in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_datetime_construct\\test.php on line 5\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_datetime_construct\\test.php\n"
+    },
+    {
+      "test": "ext/date/tests/oom_datetime_modify.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "\nWarning: DateTime::modify(): Failed to parse time string (\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001 in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_datetime_modify\\test.php on line 2\nbool(false)\n",
+      "expected": "Warning: DateTime::modify(): Failed to parse time string (%s) at position 0 (%s): Unexpected character in %s on line %d\nbool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_datetimeimmutable_construct.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nFatal error: Dynamic class names are not allowed in compile-time ::class fetch in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_datetimeimmutable_construct\\test.php on line 5\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_datetimeimmutable_construct\\test.php\n"
+    },
+    {
+      "test": "ext/date/tests/oom_datetimeimmutable_modify.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "\nWarning: DateTimeImmutable::modify(): Failed to parse time string (\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001 in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\date\\tests\\oom_datetimeimmutable_modify\\test.php on line 2\nbool(false)\n",
+      "expected": "Warning: DateTimeImmutable::modify(): Failed to parse time string (%s) at position 0 (%s): Unexpected character in %s on line %d\nbool(false)\n"
+    },
+    {
+      "test": "ext/date/tests/oom_strtotime.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "bool(false)\n",
+      "expected": "bool(false)\n"
+    },
+    {
+      "test": "ext/dom/tests/oom_xpath.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\dom\\tests\\oom_xpath\\test.php on line 7\n",
+      "expected": "Fatal error: Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n\n"
+    },
+    {
+      "test": "ext/exif/tests/oom_exif_numeric_metadata.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: exif"
+    },
+    {
+      "test": "ext/exif/tests/oom_exif_read_data_tags.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: exif"
+    },
+    {
+      "test": "ext/exif/tests/oom_exif_scan_jpeg_header.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: exif"
+    },
+    {
+      "test": "ext/exif/tests/oom_exif_thumbnail_large_file_001.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: exif"
+    },
+    {
+      "test": "ext/exif/tests/oom_exif_thumbnail_large_file_002.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: exif"
+    },
+    {
+      "test": "ext/exif/tests/oom_exif_thumbnail_tiff.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: exif"
+    },
+    {
+      "test": "ext/fileinfo/tests/oom_cdf_sector_chain.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/filter/tests/oom_filter_default_encoded.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/filter/tests/oom_filter_input.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/filter/tests/oom_filter_input_array.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/filter/tests/oom_filter_var.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\filter\\tests\\oom_filter_var\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/filter/tests/oom_filter_var_array.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\filter\\tests\\oom_filter_var_array\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/filter/tests/oom_filter_var_full_special_chars.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\filter\\tests\\oom_filter_var_full_special_chars\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefrombmp.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefrombmp\\test.php on line 9\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgd2.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2\\test.php on line 2\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2\\test.php\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgd2_chunkbuf.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2_chunkbuf\\test.php on line 2\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2_chunkbuf\\test.php\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgd2_compbuf.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2_compbuf\\test.php on line 2\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2_compbuf\\test.php\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgd2part.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2part\\test.php on line 2\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2part\\test.php\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgd2part_chunkbuf.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2part_chunkbuf\\test.php on line 2\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2part_chunkbuf\\test.php\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgd2part_compbuf.phpt",
+      "status": "syntax_incompatible",
+      "output": "\nParse error: syntax error, unexpected '=>' (T_DOUBLE_ARROW) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2part_compbuf\\test.php on line 2\nErrors parsing <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgd2part_compbuf\\test.php\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromgif.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromgif\\test.php on line 9\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefrompng.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefrompng\\test.php on line 13\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromstring.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromstring\\test.php on line 11\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromtga.phpt",
+      "status": "not_run",
+      "reason": "skip TGA support unavailable"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromwbmp.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 1073741824 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromwbmp\\test.php on line 14\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagecreatefromxbm.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagecreatefromxbm\\test.php on line 8\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/gd/tests/oom_imagepalettetotruecolor.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\gd\\tests\\oom_imagepalettetotruecolor\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/iconv/tests/oom_iconv.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 16777216 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\iconv\\tests\\oom_iconv\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/iconv/tests/oom_iconv_mime_decode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\iconv\\tests\\oom_iconv_mime_decode\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/iconv/tests/oom_iconv_mime_decode_headers.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\iconv\\tests\\oom_iconv_mime_decode_headers\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/iconv/tests/oom_iconv_mime_encode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\iconv\\tests\\oom_iconv_mime_encode\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/iconv/tests/oom_iconv_mime_encode_line_length.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 9223372036856872960 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\iconv\\tests\\oom_iconv_mime_encode_line_length\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/iconv/tests/oom_iconv_stream_filter.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\iconv\\tests\\oom_iconv_stream_filter\\test.php on line 10\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/imap/tests/oom_imap_mime_header_decode.phpt",
+      "status": "not_run",
+      "reason": "Unavailable extension: imap"
+    },
+    {
+      "test": "ext/intl/tests/oom_normalizer_normalize.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\intl\\tests\\oom_normalizer_normalize\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/intl/tests/oom_normalizer_normalize_func.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\intl\\tests\\oom_normalizer_normalize_func\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/intl/tests/oom_uconverter_convert.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\intl\\tests\\oom_uconverter_convert\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/intl/tests/oom_uconverter_transcode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\intl\\tests\\oom_uconverter_transcode\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/json/tests/json_decode_oom_utf8_substitute.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 16777216 bytes exhausted (tried to allocate 33554432 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\json\\tests\\json_decode_oom_utf8_substitute\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 16777216 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/json/tests/json_encode_oom_escape.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\json\\tests\\json_encode_oom_escape\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/json/tests/json_encode_oom_partial_output.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\json\\tests\\json_encode_oom_partial_output\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/json/tests/json_encode_oom_pretty_print.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 10485760 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\json\\tests\\json_encode_oom_pretty_print\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/json/tests/json_encode_oom_string_prealloc.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 33554432 bytes exhausted (tried to allocate 23068672 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\json\\tests\\json_encode_oom_string_prealloc\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of 33554432 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_buf_growth.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_buf_growth\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_convert_case.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_convert_case\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_convert_encoding.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_convert_encoding\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_convert_variables.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_convert_variables\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_convert_variables_many.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 10485760 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_convert_variables_many\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_decode_mimeheader.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_decode_mimeheader\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line 3\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_encode_mimeheader.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_encode_mimeheader\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_encode_numericentity.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_encode_numericentity\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_ereg_replace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_ereg_replace\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_eregi_replace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_eregi_replace\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_parse_str.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_parse_str\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_split.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_split\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_str_split.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Uncaught Error: Call to undefined function mb_str_split() in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split\\test.php:2\nStack trace:\n#0 {main}\n  thrown in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_str_split_filter.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Uncaught Error: Call to undefined function mb_str_split() in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split_filter\\test.php:3\nStack trace:\n#0 {main}\n  thrown in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split_filter\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_str_split_fixed_width.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Uncaught Error: Call to undefined function mb_str_split() in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split_fixed_width\\test.php:3\nStack trace:\n#0 {main}\n  thrown in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split_fixed_width\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_str_split_length.phpt",
+      "status": "different_output",
+      "exit_code": 255,
+      "output": "\nFatal error: Uncaught Error: Call to undefined function mb_str_split() in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split_length\\test.php:2\nStack trace:\n#0 {main}\n  thrown in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_str_split_length\\test.php on line 2\n",
+      "expected": "array(1) {\n  [0]=>\n  string(3) \"abc\"\n}\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_strcut_filter.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_strcut_filter\\test.php on line 7\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_strcut_length.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "string(3) \"abc\"\n",
+      "expected": "string(3) \"abc\"\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_strimwidth.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 16777216 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_strimwidth\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 16777216 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_strtoupper.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_strtoupper\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_substr_count.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_substr_count\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/mbstring/tests/oom_mb_substr_length.phpt",
+      "status": "matches_upstream",
+      "exit_code": 0,
+      "output": "string(3) \"abc\"\n",
+      "expected": "string(3) \"abc\"\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_filter.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_filter\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_match_all.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_match_all\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_match_captures.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_match_captures\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of 134217728 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_replace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_replace\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_replace_callback.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_replace_callback\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_replace_callback_array.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_replace_callback_array\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/pcre/tests/oom_preg_split.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\pcre\\tests\\oom_preg_split\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/simplexml/tests/oom_array_cast.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\simplexml\\tests\\oom_array_cast\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/simplexml/tests/oom_json_encode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\simplexml\\tests\\oom_json_encode\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/simplexml/tests/oom_xpath.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\simplexml\\tests\\oom_xpath\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapclient_call.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapclient_dorequest_chunked.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapclient_dorequest_close.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapclient_dorequest_content_length.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapclient_response_headers.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapclient_soapcall.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapserver_handle_array.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Body><SOAP-ENV:Fault><faultcode>SOAP-ENV:Server</faultcode><faultstring>Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes)</faultstring></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>\n",
+      "expected": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Body><SOAP-ENV:Fault><faultcode>SOAP-ENV:Server</faultcode><faultstring>Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes)</faultstring></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>\n"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapserver_handle_headers.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Body><SOAP-ENV:Fault><faultcode>SOAP-ENV:Server</faultcode><faultstring>Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes)</faultstring></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>\n",
+      "expected": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Body><SOAP-ENV:Fault><faultcode>SOAP-ENV:Server</faultcode><faultstring>Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes)</faultstring></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>\n"
+    },
+    {
+      "test": "ext/soap/tests/oom_soapserver_handle_parameters.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Body><SOAP-ENV:Fault><faultcode>SOAP-ENV:Server</faultcode><faultstring>Allowed memory size of 67108864 bytes exhausted (tried to allocate 2097152 bytes)</faultstring></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>\n",
+      "expected": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"><SOAP-ENV:Body><SOAP-ENV:Fault><faultcode>SOAP-ENV:Server</faultcode><faultstring>Allowed memory size of 67108864 bytes exhausted %S(tried to allocate %d bytes)</faultstring></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>\n"
+    },
+    {
+      "test": "ext/standard/tests/array/oom_array_chunk.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 10485760 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\array\\oom_array_chunk\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/array/oom_array_map_zip.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 10485760 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\array\\oom_array_map_zip\\test.php on line 2\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/file/fread_oom_chunk_size.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 104857600 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\file\\fread_oom_chunk_size\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/file/fread_oom_filter_chunk_size.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 104857600 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\file\\fread_oom_filter_chunk_size\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/file/fread_oom_length.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 106954752 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\file\\fread_oom_length\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/file/oom_file.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\file\\oom_file\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/file/oom_file_get_contents.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 14680064 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\file\\oom_file_get_contents\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/image/oom_getimagesize_cws.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/standard/tests/image/oom_getimagesize_xbm.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\image\\oom_getimagesize_xbm\\test.php on line 7\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/image/oom_getimagesizefromstring_cws.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "ext/standard/tests/streams/oom_stream_copy_to_stream_memory.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\streams\\oom_stream_copy_to_stream_memory\\test.php on line 6\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/streams/oom_stream_get_contents.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 14680064 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\streams\\oom_stream_get_contents\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/streams/stream_get_line_oom_chunk_size.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 104857600 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\streams\\stream_get_line_oom_chunk_size\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_explode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_explode\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_implode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 33554432 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_implode\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_levenshtein.phpt",
+      "status": "different_output",
+      "exit_code": 0,
+      "output": "\nWarning: levenshtein(): Argument string(s) too long in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_levenshtein\\test.php on line 3\nint(-1)\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_nl2br.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 16777216 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_nl2br\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_setcookie_value.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_setcookie_value\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_str_getcsv.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_str_getcsv\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_str_ireplace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_str_ireplace\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_str_replace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_str_replace\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_str_split.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 35651584 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_str_split\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_str_word_count.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_str_word_count\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_strtr.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_strtr\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_substr_replace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_substr_replace\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/standard/tests/strings/oom_unpack.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\strings\\oom_unpack\\test.php on line 5\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/tokenizer/tests/token_get_all_TOKEN_PARSE_oom_feedback.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 403789 bytes exhausted (tried to allocate 32768 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\tokenizer\\tests\\token_get_all_TOKEN_PARSE_oom_feedback\\test.php on line 4\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xml/tests/oom_xml_parse_attributes.phpt",
+      "status": "timeout",
+      "reason": "Stopped after 8 seconds"
+    },
+    {
+      "test": "ext/xml/tests/oom_xml_parse_into_struct.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xml\\tests\\oom_xml_parse_into_struct\\test.php on line 3\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xml/tests/oom_xml_parse_ns.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xml\\tests\\oom_xml_parse_ns\\test.php on line 12\n",
+      "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_getattribute.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 2097152 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_getattribute\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of 2097152 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_getattributeno.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 2097152 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_getattributeno\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of 2097152 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_getattributens.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 2097152 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_getattributens\\test.php on line 16\n",
+      "expected": "Fatal error: Allowed memory size of 2097152 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_lookupnamespace.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 2097152 bytes exhausted (tried to allocate 8388608 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_lookupnamespace\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of 2097152 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_readinnerxml.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 2097152 bytes exhausted (tried to allocate 6291456 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_readinnerxml\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of 2097152 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_readouterxml.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_readouterxml\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of 4194304 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/xmlreader/tests/oom_xmlreader_readstring.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 2097152 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\xmlreader\\tests\\oom_xmlreader_readstring\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of 2097152 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_deflate_add.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "ext/zlib/tests/oom_gzcompress.phpt",
+      "status": "not_run",
+      "reason": "Memory limit above probe budget"
+    },
+    {
+      "test": "ext/zlib/tests/oom_gzdecode.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_gzdecode\\test.php on line 12\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_gzfile.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_gzfile\\test.php on line 17\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_gzgets.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_gzgets\\test.php on line 18\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_gzpassthru.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_gzpassthru\\test.php on line 19\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_inflate_add.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 4194304 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_inflate_add\\test.php on line 13\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_readgzfile.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_readgzfile\\test.php on line 18\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "ext/zlib/tests/oom_zlib_inflate_filter.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "\nFatal error: Allowed memory size of 4194304 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\zlib\\tests\\oom_zlib_inflate_filter\\test.php on line 19\n",
+      "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+    },
+    {
+      "test": "sapi/cli/tests/oom_request_parsing_next_request.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "sapi/cli/tests/oom_shutdown_function_next_request.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_array_upload_name.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_early_report.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_field_name.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_files.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_files_registration.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_files_registration_full_path.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_form_value.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_header_continuation.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_header_count.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_long_header_line.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_mb_encoding.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_post_vars.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/basic/oom_rfc1867_upload_progress.phpt",
+      "status": "not_run",
+      "reason": "Needs external fixture or upstream subprocess harness"
+    },
+    {
+      "test": "tests/output/oom_in_internal_output_handler.phpt",
+      "status": "matches_upstream",
+      "exit_code": 255,
+      "output": "",
+      "expected": ""
+    }
+  ]
+}

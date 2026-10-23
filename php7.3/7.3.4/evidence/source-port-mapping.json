@@ -1,0 +1,569 @@
+{
+  "official_commit": "01a40e89fbfc499936e3b05888d8f00bfde886df",
+  "source_port_scope": "PHP 7.3.4 Windows VC15 NTS x64",
+  "security_equivalence_independently_audited": false,
+  "mapping_is_not_a_security_certification": true,
+  "counts": {
+    "adapted_with_version_specific_changes": 45,
+    "upstream_context_port": 56,
+    "not_applicable": 9,
+    "regenerated": 1
+  },
+  "files": [
+    {
+      "file": "Zend/zend.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "OOM state initialized/reset; PHP 7 error callback adapter receives filename/line/message; delayed error after script execution."
+    },
+    {
+      "file": "Zend/zend_API.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_API.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_alloc.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Official PHP 8.2 allocator module, with PHP 7 int overflow output, public ABI signatures, non-atomic VM interrupt flag and Windows LocalFree adapters."
+    },
+    {
+      "file": "Zend/zend_alloc.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Official fallible APIs and hard-limit controls, with PHP 7 public argument widths retained."
+    },
+    {
+      "file": "Zend/zend_attributes.c",
+      "disposition": "not_applicable",
+      "note": "Attributes were added in PHP 8; no corresponding PHP 7 runtime feature."
+    },
+    {
+      "file": "Zend/zend_attributes.h",
+      "disposition": "not_applicable",
+      "note": "Attributes were added in PHP 8; no corresponding PHP 7 runtime feature."
+    },
+    {
+      "file": "Zend/zend_builtin_functions.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 trace arrays and positional args use fallible builders/append; PHP 8 SensitiveParameter and named args are absent."
+    },
+    {
+      "file": "Zend/zend_compile.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_exceptions.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "UnwindExit/GracefulExit prerequisites added for PHP 7; incoming exceptions cannot replace UnwindExit; internal markers bypass Throwable formatting."
+    },
+    {
+      "file": "Zend/zend_execute.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Adds upstream free_unfinished_calls used by the VM between-opcode unwind path."
+    },
+    {
+      "file": "Zend/zend_execute_API.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 native-call frame implementation retained; callbacks check pending OOM; existing old-branch state resets retained."
+    },
+    {
+      "file": "Zend/zend_globals.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "OOM state and interned-string flag appended to existing public globals, retaining prior field offsets."
+    },
+    {
+      "file": "Zend/zend_hash.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 Bucket-based packed layout retained; fallible initialization, growth, conversion, insert and lookup added; publication follows allocation."
+    },
+    {
+      "file": "Zend/zend_hash.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 hash layout and public API retained with additional fallible operations and HASH_NOMEM sentinel."
+    },
+    {
+      "file": "Zend/zend_objects.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_objects.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_operators.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 lowercase implementation wrapped with fallible allocation; original exported ABI retained."
+    },
+    {
+      "file": "Zend/zend_operators.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_smart_str.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Upstream allocation helpers adapted, unrelated PHP 7 formatters retained."
+    },
+    {
+      "file": "Zend/zend_smart_str.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Upstream fallible smart-string APIs using the unchanged two-field smart_str layout."
+    },
+    {
+      "file": "Zend/zend_string.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 lacks init-existing-interned hook; permitted cache-miss result uses the same fallible string allocation."
+    },
+    {
+      "file": "Zend/zend_string.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Official fallible string primitives adapted to PHP 7 IS_STRING type; existing known-string numeric IDs retained."
+    },
+    {
+      "file": "Zend/zend_types.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "Zend/zend_vm_def.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 VM generator retained; interrupt OOM delivery and between-opline sentinel added; skips finally during unwind and cleans incomplete calls."
+    },
+    {
+      "file": "Zend/zend_vm_execute.h",
+      "disposition": "regenerated",
+      "note": "Generated by PHP 7.3 zend_vm_gen.php from adapted VM definitions."
+    },
+    {
+      "file": "ext/bz2/bz2.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/bz2/bz2_filter.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/curl/interface.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/date/lib/parse_date.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Error-count caps added to PHP 7 timelib parser; PHP 8 generated #line-number churn is not imported."
+    },
+    {
+      "file": "ext/date/lib/parse_date.re",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Error-count caps added to matching PHP 7 grammar."
+    },
+    {
+      "file": "ext/date/lib/parse_iso_intervals.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Matching generated/parser source updated; PHP 8 #line-number-only churn excluded."
+    },
+    {
+      "file": "ext/date/lib/parse_iso_intervals.re",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Matching PHP 7 timelib interval grammar, with bounded diagnostic collection."
+    },
+    {
+      "file": "ext/dom/xpath.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/exif/exif.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/fileinfo/libmagic.patch",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/fileinfo/libmagic/cdf.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/filter/filter.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/filter/sanitizing_filters.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/gd/libgd/gd.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/gd/libgd/gd_gd2.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/gd/libgd/gd_tga.c",
+      "disposition": "not_applicable",
+      "note": "PHP 7 bundled GD has no TGA decoder."
+    },
+    {
+      "file": "ext/gd/libgd/gdhelpers.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/gd/libgd/wbmp.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/iconv/iconv.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/imap/php_imap.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/intl/converter/converter.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/intl/normalizer/normalizer_normalize.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/json/json_encoder.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 borrows object property tables; PHP 8 zend_release_properties call is inapplicable. OOM paths stop output construction."
+    },
+    {
+      "file": "ext/json/json_parser.y",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/json/json_scanner.re",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/libxml/libxml.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/mbstring/libmbfl/filters/mbfilter_qprint.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/mbstring/libmbfl/mbfl/mbfilter.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Filter callback failures propagate, including PHP 7 numeric-entity callbacks; PHP 7 return-c collector contract retained."
+    },
+    {
+      "file": "ext/mbstring/libmbfl/mbfl/mbfl_encoding.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 has no mb_convert_buf Zend-string conversion buffer; corresponding PHP 7 memory-device allocator is adapted instead."
+    },
+    {
+      "file": "ext/mbstring/libmbfl/mbfl/mbfl_memory_device.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 pluggable allocator gets fallible realloc hook. Failure retains old buffer and returns -1."
+    },
+    {
+      "file": "ext/mbstring/mb_gpc.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/mbstring/mbstring.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Fallible output copies and converter result cleanup. PHP 8 mb_str_split and mb_trim_string conversion-buffer implementation are absent."
+    },
+    {
+      "file": "ext/mbstring/php_mbregex.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/mbstring/php_unicode.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 uses a three-codepoint output buffer; callback errors propagate through that dispatcher rather than PHP 8 callback-per-helper signatures."
+    },
+    {
+      "file": "ext/opcache/ZendAccelerator.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Fallible interned-string allocation adapted. PHP 7 lacks inheritance CE-cache map_ptr publication window."
+    },
+    {
+      "file": "ext/opcache/ZendAccelerator.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 has no shared class-name CE-cache/map_ptr slots; pending_ce_cache-only fields/prototypes are inapplicable."
+    },
+    {
+      "file": "ext/opcache/jit/zend_jit_arm64.dasc",
+      "disposition": "not_applicable",
+      "note": "PHP 7.3 has no OPcache JIT."
+    },
+    {
+      "file": "ext/opcache/jit/zend_jit_disasm.c",
+      "disposition": "not_applicable",
+      "note": "PHP 7.3 has no OPcache JIT."
+    },
+    {
+      "file": "ext/opcache/jit/zend_jit_x86.dasc",
+      "disposition": "not_applicable",
+      "note": "PHP 7.3 has no OPcache JIT."
+    },
+    {
+      "file": "ext/opcache/zend_file_cache.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 file-cache layout retained; PHP 8 CE map_ptr rollback has no corresponding slots to roll back."
+    },
+    {
+      "file": "ext/opcache/zend_persist.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 has no class-name CE-cache slot publication mechanism; original parent-update return contract retained."
+    },
+    {
+      "file": "ext/pcre/php_pcre.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 inlines capture construction; corresponding stop/cleanup guards added. Name pointers borrow compiled-pattern storage; replacement outputs use fallible strings."
+    },
+    {
+      "file": "ext/session/php_session.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/session/session.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/shmop/shmop.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/simplexml/simplexml.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/soap/php_encoding.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/soap/php_http.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/soap/soap.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 varargs error callback delegates OOM to the engine, not SoapFault conversion."
+    },
+    {
+      "file": "ext/spl/spl_fixedarray.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 allocation/resize/clone paths adapted, with size publication after allocation and a resize reentrancy guard. PHP 8 __unserialize method is absent."
+    },
+    {
+      "file": "ext/standard/array.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/assert.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 assert.abort uses bailout and has no pre-existing UnwindExit call; PHP 8 guard against replacing its exit marker is inapplicable to that branch."
+    },
+    {
+      "file": "ext/standard/basic_functions.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/basic_functions.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Early RINIT entry declared with PHPAPI linkage for Windows."
+    },
+    {
+      "file": "ext/standard/file.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/head.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/html.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/image.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/levenshtein.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Preserves PHP 7 255-character bound and return-long signature; allocations become fallible."
+    },
+    {
+      "file": "ext/standard/pack.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/php_incomplete_class.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/php_var.h",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "New restricted-mode APIs exported with PHP 7 unserializer signatures retained."
+    },
+    {
+      "file": "ext/standard/string.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/url_scanner_ex.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/standard/url_scanner_ex.re",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Early request initialization for both PHP 7 URL-scanner contexts, before session upload-progress processing."
+    },
+    {
+      "file": "ext/standard/var.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Raw incomplete-class C payloads round-trip during upload-progress updates using PHP 7 property and class-name APIs."
+    },
+    {
+      "file": "ext/standard/var_unserializer.re",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Restricted incomplete-class mode and raw C payloads adapted; no class lookup/autoload/wakeup in that mode; PHP 8 E enum format is absent."
+    },
+    {
+      "file": "ext/tokenizer/tokenizer.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 array token builder and scanner callback adapted; PhpToken classes do not exist in PHP 7.3."
+    },
+    {
+      "file": "ext/xml/xml.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/xmlreader/php_xmlreader.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/xmlwriter/php_xmlwriter.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/zend_test/test.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Optional test extension built; PHP 8 test-only observer/stub and fuzzer controls are not a PHP 7 application API. Full upstream harness equivalence is not claimed."
+    },
+    {
+      "file": "ext/zend_test/test.stub.php",
+      "disposition": "not_applicable",
+      "note": "PHP 7 uses manual test arginfo rather than PHP 8 stubs."
+    },
+    {
+      "file": "ext/zend_test/test_arginfo.h",
+      "disposition": "not_applicable",
+      "note": "PHP 7 uses manual test arginfo rather than PHP 8 generated arginfo."
+    },
+    {
+      "file": "ext/zlib/zlib.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "ext/zlib/zlib_filter.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "main/SAPI.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "main/SAPI.h",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "main/main.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "Hard-limit percentage handler, early RINIT, delayed-state reset and output-lock protection; PHP 7 last-error strings use malloc/free rather than request heap."
+    },
+    {
+      "file": "main/php_variables.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "main/rfc1867.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    },
+    {
+      "file": "main/streams/memory.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 memory streams use raw char buffers, so growth uses fallible emalloc/realloc rather than PHP 8 zend_string functions."
+    },
+    {
+      "file": "main/streams/streams.c",
+      "disposition": "adapted_with_version_specific_changes",
+      "note": "PHP 7 fill-buffer returns void; failure returns without using a missing buffer, preserving existing API. PHP 8 read-to-str function is absent."
+    },
+    {
+      "file": "sapi/fuzzer/fuzzer-sapi.c",
+      "disposition": "not_applicable",
+      "note": "SAPI absent from PHP 7.3 and not part of this Windows build."
+    },
+    {
+      "file": "sapi/phpdbg/phpdbg.c",
+      "disposition": "upstream_context_port",
+      "note": "Applicable upstream change carried over with PHP 7 types; source hash and final diff are included for review."
+    }
+  ]
+}

@@ -1,0 +1,4630 @@
+{
+  "kind": "experimental",
+  "security_equivalence_to_official_patch": false,
+  "cycles": 10,
+  "cases": [
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 1,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 2,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 3,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 4,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 5,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 6,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 7,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 8,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 9,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "loop",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "cycle": 10,
+      "initial_pid": 13136,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 13136\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 13136,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": false
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 1,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 2,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 3,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 4,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 5,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 6,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 7,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 8,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 9,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 18\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 19\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 12582912 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 20\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 18874368 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 21\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "X-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "before-shutdownSHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 9\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "cycle": 10,
+      "initial_pid": 39348,
+      "reply": {
+        "app_status": 0,
+        "protocol_status": 0,
+        "headers": "Status: 500 Internal Server Error\r\nX-Powered-By: PHP/7.3.4\r\nX-PHP-PID: 39348\r\nContent-type: text/html; charset=UTF-8",
+        "body": "SHUTDOWN-MARKER",
+        "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\soft-oom-cases\\60c15953826c4a538772eff40d5f546a\\index.php on line 32\n"
+      },
+      "after": {
+        "pid": 39348,
+        "version": "7.3.4",
+        "status": "ok",
+        "error": null,
+        "opcache_cached": true
+      },
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "hard_limit_exit_code": 137,
+  "passed": true
+}

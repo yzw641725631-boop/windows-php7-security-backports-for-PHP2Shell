@@ -1,0 +1,26 @@
+[
+  {
+    "file": "php81-eol-zend_alloc.c",
+    "url": "https://raw.githubusercontent.com/php/php-src/PHP-8.1-CVE-2026-109618-109619/Zend/zend_alloc.c",
+    "bytes": 95334,
+    "sha256": "e74ebf2a525b7581c82b81484493adde13bdc82858549969c25238d150e827d7"
+  },
+  {
+    "file": "php85-zend_alloc.c",
+    "url": "https://raw.githubusercontent.com/php/php-src/php-8.5.12/Zend/zend_alloc.c",
+    "bytes": 120349,
+    "sha256": "082d69a789f071accdf3cc120817fcb225e29caae13141151ef7135fc42c519e"
+  },
+  {
+    "file": "php-8.2.35.tar.xz",
+    "url": "https://www.php.net/distributions/php-8.2.35.tar.xz",
+    "bytes": 12216408,
+    "sha256": "5737b98601fe5ab1b8c5db0c82ed3158acb9283ed3081ffe2faffb9ac81455e6"
+  },
+  {
+    "file": "php82-official-fix.patch",
+    "url": "https://github.com/php/php-src/commit/01a40e89fbfc.patch",
+    "bytes": 700584,
+    "sha256": "23219a0b0d8866fefc2749829a0eb544dd1e840b3d6d9ecf98eff1a47c02dfc4"
+  }
+]

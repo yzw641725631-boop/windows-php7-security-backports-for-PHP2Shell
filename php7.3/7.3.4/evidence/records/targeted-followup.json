@@ -1,0 +1,30 @@
+[
+  {
+    "test": "Zend/tests/oom_debug_backtrace.phpt",
+    "status": "matches_upstream",
+    "exit_code": 255,
+    "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_debug_backtrace\\test.php on line 8\n",
+    "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+  },
+  {
+    "test": "Zend/tests/oom_exception_trace.phpt",
+    "status": "matches_upstream",
+    "exit_code": 255,
+    "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\Zend\\tests\\oom_exception_trace\\test.php on line 8\n",
+    "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+  },
+  {
+    "test": "ext/standard/tests/file/fread_oom_length.phpt",
+    "status": "matches_upstream",
+    "exit_code": 255,
+    "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 106954752 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\standard\\tests\\file\\fread_oom_length\\test.php on line 3\n",
+    "expected": "Fatal error: Allowed memory size of %d bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+  },
+  {
+    "test": "ext/mbstring/tests/oom_mb_encode_numericentity.phpt",
+    "status": "matches_upstream",
+    "exit_code": 255,
+    "output": "\nFatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2097152 bytes) in <BUILD_WORKSPACE>\\upstream-case-work\\ext\\mbstring\\tests\\oom_mb_encode_numericentity\\test.php on line 5\n",
+    "expected": "Fatal error: Allowed memory size of 8388608 bytes exhausted %S(tried to allocate %d bytes) in %s on line %d\n"
+  }
+]

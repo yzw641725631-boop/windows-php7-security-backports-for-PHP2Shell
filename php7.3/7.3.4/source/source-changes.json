@@ -1,0 +1,579 @@
+{
+  "version": "7.3.4",
+  "original_source_sha256": "6fe79fa1f8655f98ef6708cde8751299796d6c1e225081011f4104625b923b83",
+  "official_reference": "01a40e89fbfc499936e3b05888d8f00bfde886df",
+  "unofficial_build": true,
+  "patch_sha256": "ac3674eaf1806079d4f2d164ac06cd611ac3b593cffd47398d2dd994804d3ff2",
+  "changed_files": [
+    {
+      "file": "Zend/zend.c",
+      "before": "db7ed5f78a6c7fb7cef271e602c7fe3e2c4c6b8dd7dff0325e9236f664140a91",
+      "after": "fade58270c62761756a67116ea9a195b9f9bd35438eea09018ed1882ad1a8d9d"
+    },
+    {
+      "file": "Zend/zend.h",
+      "before": "81188c14d86bec3d5a17076c8312dc6617facbd9f9c6de56ae4c1091338f05b3",
+      "after": "bad3f1c0e88a0ee73da30778c076d1f988f25943d7f569d61c40de834cb46454"
+    },
+    {
+      "file": "Zend/zend_API.c",
+      "before": "492c27b4422b54bcacb0394edf0d232b17709ed0dd3e42bcc7d7b276cea475a5",
+      "after": "902a03bb9322500a0a83958e8c497dfd5a9c2264777e431d81eb900a8d8b72d0"
+    },
+    {
+      "file": "Zend/zend_API.h",
+      "before": "bfac99c3ac6614f054266ea7b28a4cb51480c412d80f0fe855454d6a08aa9b2d",
+      "after": "ab2ac182543c4f205042d17e3642fa4bd2cb382a52c5923c041997edb4da051e"
+    },
+    {
+      "file": "Zend/zend_alloc.c",
+      "before": "f44aaf897d9eec8966378fd9a202af944cdc3d6341ff3476c1fec3d888e2908d",
+      "after": "832da89b03ecb618048d2c1b4b0ccd159a57329fd988bbf3467813047a97cc68"
+    },
+    {
+      "file": "Zend/zend_alloc.h",
+      "before": "0183a213704d33aacca7f744f80494b20e5d6a6be3d2c05f83124c8edc6d2364",
+      "after": "fce3f48a4bf6ef10a6808c8a5e117084f4a1bf0f3b274be8ca30914599ee575c"
+    },
+    {
+      "file": "Zend/zend_builtin_functions.c",
+      "before": "62dd46c65e6363b3bf1ae3a3c54c450f0ca8b19fdd10c246db5e6d38df700053",
+      "after": "efa51afc9407de87a55134f9bd4b6ec23ab3055d061dbda922699fc922050ad8"
+    },
+    {
+      "file": "Zend/zend_compile.c",
+      "before": "45594b7017b01ce9cb649e177a4493467941ea1ba6ee639f819b5c00fbfb4eba",
+      "after": "bc56ce64b8243c39df4d3829a071df9fc5d760bb48563d81a3e1a2744f8eea89"
+    },
+    {
+      "file": "Zend/zend_exceptions.c",
+      "before": "4c9fa41a3a397bdeffe38f2064d93c4fb477f6c269796babc25357a80d20eb7d",
+      "after": "d2852aca643bf6e19c52ce3199117bcecd8e9ff2fcf4abc54d39e3ddb603975f"
+    },
+    {
+      "file": "Zend/zend_exceptions.h",
+      "before": "160b409fcee10a5be4cd6d42a52e96834c6bd45124f79782143f727265bf51ae",
+      "after": "9abbb21fbb01dc801e0c16641a05786e1efb483fd2b7ec2d1d179fc94ae68afb"
+    },
+    {
+      "file": "Zend/zend_execute.c",
+      "before": "c61bf07501e51aeb1c4d39a73a172b2bd1f51ee415f23f811c82d09316f131ef",
+      "after": "ced6e09b14712c81650fa4e7db5f11efda635f09d93b2e3309fa2aadf02cf68b"
+    },
+    {
+      "file": "Zend/zend_execute_API.c",
+      "before": "75431bd08914b195c1ec11901ea76afaaa90211b197c6f0113d1b5728514c3e1",
+      "after": "f409eec6d426f3ef1616254ab77d9e63fcafe7d948bb1e36df07da6b1b15e5c9"
+    },
+    {
+      "file": "Zend/zend_globals.h",
+      "before": "e8e90c5b206674b302d2923bdf7dcb09ceb54552a044608b85db315f967195a8",
+      "after": "a1dcc27d24cbd38c2470cc0be28ca09dc6efb2dff6399dc4c35c3c754fcd7f71"
+    },
+    {
+      "file": "Zend/zend_hash.c",
+      "before": "ce538c5c5681740c33eda2c59dc7b857bda4cf4264b080baf3ed9e73514274fb",
+      "after": "e0efa90b96251f35bf4e1fc7865e85153e61bbcd02599c8f1f3b7975e3c53e43"
+    },
+    {
+      "file": "Zend/zend_hash.h",
+      "before": "9c17093da182bfa1165db7edabadfbfac05eac1ea3a5e58f35b6fe77df1340c7",
+      "after": "c1d9ae033cd23fdf13429513b1e5f5acd4d570448e96195f54fa3ce9c05351ab"
+    },
+    {
+      "file": "Zend/zend_language_scanner.c",
+      "before": "2002d7199414468fb133644b2f1a0f5f4b38b8251d3cd3aa06d230aa78924df6",
+      "after": "d199ff9ef4ef2f3b83a0948780abd8bd9a783260097caa9bb1c15777496a2ca6"
+    },
+    {
+      "file": "Zend/zend_language_scanner_defs.h",
+      "before": "5904f87eed03149226ba80799afedfbb8215312264da8cc6f9b2ffe4211c6949",
+      "after": "c7307111f4ee25c0c8c8995e4c9991b5c1b5df958f58a0a3b8e4b727234e9a77"
+    },
+    {
+      "file": "Zend/zend_mmap.h",
+      "before": null,
+      "after": "46a303151d4a96cf0fe125890ebaa636b74b836705a04a1d62b74e9052f3ee42"
+    },
+    {
+      "file": "Zend/zend_objects.c",
+      "before": "183e89707ff981503eefc00cbbeefc8f5dcce89ea86117d0d267fa1c03bdc1be",
+      "after": "2f223b11ecaf5a58457110ea103339aced484bf9602aef8e4005e3a8f25eef19"
+    },
+    {
+      "file": "Zend/zend_objects.h",
+      "before": "11da8c09d77b2fadf514059a889b322d9f0885901e5b78ecec81053e8d869cb6",
+      "after": "1f5667eb1c49ae4b6f94bb960bff9689d73658bdd6cb8c90e803e1dd34a0f841"
+    },
+    {
+      "file": "Zend/zend_operators.c",
+      "before": "6aa5370fc65db62ad806af60d0675b4b5300c3b2c5a01db8ee90c8d720ba58aa",
+      "after": "4d8edead886451c072fdbbf8ea59cefc139aaa4ceb64c063410f5df1aafc884c"
+    },
+    {
+      "file": "Zend/zend_operators.h",
+      "before": "681e0b0d3460c77d6aa239ff2a68e2284b607059025d5acec1e1957dd80b3702",
+      "after": "b4f8d1ebc5230ab8971c5d3940f9d6576b75c3bebd600028ed9a0609df32502e"
+    },
+    {
+      "file": "Zend/zend_smart_str.c",
+      "before": "5828956ada254f16428370bc3922dfbd035eb110ef19e7875429aacd12019aca",
+      "after": "f31e31496d32607362f96747c2837b8efd59814d81ea7c8f5ac356d624b5b8e7"
+    },
+    {
+      "file": "Zend/zend_smart_str.h",
+      "before": "8ab64f56137317a83faf3f8c20f8188646adc9827466f148fc2e505f49bb0502",
+      "after": "c12a46317285b775dfcbec73bd6de4ebbe4fb94de5d32b9128f22f680479c5c5"
+    },
+    {
+      "file": "Zend/zend_string.c",
+      "before": "ed61bc00c7598bdf44f6fa7692cd44d5de26ad3d9d04ca8317ec0a2c96f50b07",
+      "after": "4c5ff0b0dcb8a90375838991d38ac5975680e03cbba1409f119db404580ce299"
+    },
+    {
+      "file": "Zend/zend_string.h",
+      "before": "0f8a007f4bba5d51cbeb8201644792b2c9b3bed73b89c7a75e16b0a688564c74",
+      "after": "32e76e469fba0496fa027aec1a4ab5e703ebe2aa1b93ca8401846c8ae761fabb"
+    },
+    {
+      "file": "Zend/zend_types.h",
+      "before": "41c4b588b568ce0dcca75dc4503805507755af605892b4d8090d0cd455c42e7b",
+      "after": "cca987fb10e6f5e5f2de85bf28cddb9a228ab45161fe15316c2c3064c5b7d402"
+    },
+    {
+      "file": "Zend/zend_vm_def.h",
+      "before": "4907f083a5a53239ee2c1abc742df95eaf186ed18d09bc068874bf1d1c292521",
+      "after": "61e87528ad4aae4b1b17c5bcacdbfd80b997f4e77459c0bf1d3cf71e0d95eb2b"
+    },
+    {
+      "file": "Zend/zend_vm_execute.h",
+      "before": "fb95a613f9842e08de337573a5e6e8bb1a090023171491ab26fddc6aa8abb0e2",
+      "after": "dce53f098a1dddbd14ef370a9f0eaeaecf48248e330e51096005c90c0d517935"
+    },
+    {
+      "file": "ext/bz2/bz2.c",
+      "before": "fb27a6389cac9f2403e65a0680158d941500e626ed18561ac265378d31dcd787",
+      "after": "3b6fc1ab5c1daab9db5db1a8d2782b31e911d27aa605f5f656d67fae3d4f4c79"
+    },
+    {
+      "file": "ext/bz2/bz2_filter.c",
+      "before": "0de01b7ba25d28c204e35a66f689ec1c2bd9392a428c916a5e383b8b7cba3e4d",
+      "after": "671e457e0c7c2189e169e1369e1ff3931d5d38aa9d7c431fc29997af4c6f9c9d"
+    },
+    {
+      "file": "ext/curl/interface.c",
+      "before": "3bc6d5cf56bbf984d695874aad36e99a27bc1f9ef3608f69142d954c353a173d",
+      "after": "0d7fecb96484dfad50a03d44f2d70d25e8f7dfc75a1c0bc6c6295ce3fbc63892"
+    },
+    {
+      "file": "ext/date/lib/parse_date.c",
+      "before": "6eb896fa201db9acc6b7c7074c99a13ecea4155bdef5aea381110e93b4e65dfc",
+      "after": "3e0f9e35f0d62cebaca38a54eaf4f16b39a34907c26fb035ace7fc8497eae296"
+    },
+    {
+      "file": "ext/date/lib/parse_date.re",
+      "before": "a31a952a668b77d14f1ccdc1893dc983217861d7cb02e1900adca5959469a263",
+      "after": "6c790bba656c1afecf0f6d58e4ee93e9ab3b23726ffb8f13cf501dc9c7a2f28b"
+    },
+    {
+      "file": "ext/date/lib/parse_iso_intervals.c",
+      "before": "9893261dca804d436e450b150452f8bcc16bae3556d29e75dd0194ae7fb6a7db",
+      "after": "7d82057945a8c58ddf50aa3d6d225a8a1068817a19df6d64a9cd5e5cb99fc451"
+    },
+    {
+      "file": "ext/date/lib/parse_iso_intervals.re",
+      "before": "2d780e0ffa8b712daedea74c2bcf29b95d147fedd66aae2c2f32cd304fe81862",
+      "after": "725e99d87cbba2f9d6d22cec8956fe0a18c7a55555cbefd22c1edbecb9bc6b79"
+    },
+    {
+      "file": "ext/date/lib/timelib_config.h",
+      "before": null,
+      "after": "e130e82d424aa38ffcf22c6f869007cadc18e000617fc55bf25e42a0c227759c"
+    },
+    {
+      "file": "ext/dom/xpath.c",
+      "before": "3ceb1da8f805acc36f3c6f992f05cdbd7bebe657309b340d3a3e5360e12e8f33",
+      "after": "689bef8e69a1ad61fe189286c7867afddb2cef8e6d525120d650dba712f36650"
+    },
+    {
+      "file": "ext/exif/exif.c",
+      "before": "65aa5ef6ad030a1bc7872df492e382173801f802f89e7e3cfdb6b02f9a2aa10d",
+      "after": "46c307efb19a296cab83f3df39b61979cc88417fe7eb94050c19ec0fda01d04a"
+    },
+    {
+      "file": "ext/fileinfo/libmagic/cdf.c",
+      "before": "e205ba71b930ab3d1c84c0b355f87d8031684883d27fe896c38966a2e5035efe",
+      "after": "03a55ba6c24c268aa4c4f8f39a373d109ae156f2939ff34bf152b75b4c7a5e9e"
+    },
+    {
+      "file": "ext/filter/filter.c",
+      "before": "5ba055db0f38f3f70308c7186291a5362326402acdabda27838a35420de24b92",
+      "after": "12395e0121598682944c56c4a304fc90dcca955683cdc1b56bf11d38631d1570"
+    },
+    {
+      "file": "ext/filter/sanitizing_filters.c",
+      "before": "72da2dfd62bba09ac2ce182cefda6e4fef489971e822ba82bdcf01f9b72f4051",
+      "after": "37f07db4e5dbce5b3ebe74243c9410e562044b7acd4ca08500dc69a0129d9260"
+    },
+    {
+      "file": "ext/gd/libgd/gd.c",
+      "before": "0878ef0004ecd087793292bea685c3d504b804e980dc772fdfa86e3f926f93c2",
+      "after": "de64f94dfbdb210952ec956713cfd4ca5abfd0202dbee4191c38ecd367e01233"
+    },
+    {
+      "file": "ext/gd/libgd/gd_gd2.c",
+      "before": "268102cee44409edf1a057d8fef097b1bfcb21b3f3fd8957fa4ba69c46138335",
+      "after": "aa715388bc0fab56687ee73ac6d8264542a68fade6c062e43f44d9dd063744dc"
+    },
+    {
+      "file": "ext/gd/libgd/gdhelpers.h",
+      "before": "33bb9c521a4e5f48e2df34eab92e75187e301621cbfabb4cf28f9cf6f1fac9db",
+      "after": "41748d034d362f2707042079c25b65f0276cdca9ad4ad48adfa241efbf4f9885"
+    },
+    {
+      "file": "ext/gd/libgd/wbmp.c",
+      "before": "0919a3447e53bc3ab664dd75702ea08e3ddb0e504bd7be3f64f0b69f3a5f0f29",
+      "after": "9e47d5e35daf45636baee513a0f16852d123d771429ad5a1b35c9ad447813d80"
+    },
+    {
+      "file": "ext/iconv/iconv.c",
+      "before": "502ded798e00966a59c17df9628e7b7b884df253c09f8ece83b0da035e800bd8",
+      "after": "d43e4513d86eea2e403cd69216f090412c57edd10bf73bb642999eee599d63aa"
+    },
+    {
+      "file": "ext/imap/php_imap.c",
+      "before": "febfe3e4245a20c339ebe387592c664ee3d16048531e39e82076172b83ea1715",
+      "after": "04aa998b6df67dd0891acd4876e7eee97408f4afa50cef9ef3e4bb6f5f21174a"
+    },
+    {
+      "file": "ext/intl/converter/converter.c",
+      "before": "774830971ac2faa5e946a48abe6b120e884970622cd0e37a423d01c4b99f607c",
+      "after": "2c97d5c6ba8527dadaf0562d3c505f02faed4e1362358cd3ebc1627ac28581f1"
+    },
+    {
+      "file": "ext/intl/normalizer/normalizer_normalize.c",
+      "before": "4302d62ea19ed46627da2f897e0bc20d6da34d1ad593338db03b04ccf014382a",
+      "after": "8c5b0f0fc38e207f41749a7be216ab07255d5a683c32609d79d1da53302c2eb8"
+    },
+    {
+      "file": "ext/json/json_encoder.c",
+      "before": "b7185449bd371ab4ba92eef2a92c4346e4e457b988dfc845e671e1ce6f20c1fd",
+      "after": "dcb533a7cc7c6a3e5d06eb123fa6b507c1a8c3fe939fb8adb809a586a649c576"
+    },
+    {
+      "file": "ext/json/json_parser.tab.c",
+      "before": "5868b4eb0270986057e0ef3f070b3cf972b26d22a698a5902646b8b1291b639c",
+      "after": "3b5190f3725e5c22c0c921967451b213c079ecc2f128c875d134fce5d06435f8"
+    },
+    {
+      "file": "ext/json/json_parser.tab.h",
+      "before": "2e514001a23fdfa031bf540aa7014c4733b2ccfa525c8398af2a1d265adc3022",
+      "after": "2a7fbb480874d2a2222829678ea552cb6f7f0d9e0d134df52e942b5fd6544468"
+    },
+    {
+      "file": "ext/json/json_parser.y",
+      "before": "8eaa1c1c85ef0e7f9bdaca7dd10065439783f2d71a5b972550f21ba2a8908fb9",
+      "after": "15fba258a36b8e3153d481166786e54436cf36d7d3d4b4ce0ea95a86774f6ad8"
+    },
+    {
+      "file": "ext/json/json_scanner.c",
+      "before": "a4bd8440050158eaf7a783ddb0a8fb766cb280d1dbca1e5c2f951f62ea0b6271",
+      "after": "b33b346cc19f0ab1408e6ec302b89d52046c1ae7dc446d8b51cf94bcf4445c83"
+    },
+    {
+      "file": "ext/json/json_scanner.re",
+      "before": "eb4f70be2a7c9fd483794c4f0066186d48e11c764a8d5850d36f8f86a299784f",
+      "after": "36b860c2aca6458d4ef50e1a8310e6998aceb5eb5925c4373876691c1f9b95f3"
+    },
+    {
+      "file": "ext/json/php_json_scanner_defs.h",
+      "before": "c099d918ab8d9bbfe1095afa4db0800c632c149c361d730a36c80c1524c73cc0",
+      "after": "ef394891916b5ec7e2192ed83eb8745ceb608d0e71f9196f61fd8b411953a775"
+    },
+    {
+      "file": "ext/libxml/libxml.c",
+      "before": "6b52caacdc6ccac840d2986cea6967532b3b8f42a2554d98a173cfd56c0d9327",
+      "after": "1aaa2d03afccf501d99358146ed6fefdd0cfa987fc2415186aead08fe9f46668"
+    },
+    {
+      "file": "ext/mbstring/libmbfl/filters/mbfilter_qprint.c",
+      "before": "1a5ebc616d83aed137d2f8815e28402ac6b23753aeb2fc9bd67389e615291fc4",
+      "after": "0cd351600f2dd86d76571fd916e91732e8886f9ed21265c349dc9ffc144d24da"
+    },
+    {
+      "file": "ext/mbstring/libmbfl/mbfl/mbfilter.c",
+      "before": "b063f3b770871db257b5ac84ca2c4b74ce04b9578578144f5ecce291fc70dc44",
+      "after": "d2b54d667aa8a66d462e50b982f5d181825e90df6d806ef1f4da263d1d94c672"
+    },
+    {
+      "file": "ext/mbstring/libmbfl/mbfl/mbfl_allocators.h",
+      "before": "71813b6a0c12f836cca1edc01f65aa3ab7acf81c442217d295dcff20f6b656e1",
+      "after": "4b5553e9180150be6c0e0a5279556c5a370a7ffdfa76b14e190c685b2d0a1e3a"
+    },
+    {
+      "file": "ext/mbstring/libmbfl/mbfl/mbfl_memory_device.c",
+      "before": "2c29af587edcccc98bee49e22a403f807b957910024581c9a485210c8f5bc445",
+      "after": "d256b2a5b927b2d4993f255ab9836bc8d873392787e9709fff66d0c46af3a33c"
+    },
+    {
+      "file": "ext/mbstring/mb_gpc.c",
+      "before": "f6489cac70f0bc8a54227fdf7561ffccd3678582e345504deccf97edc0cade43",
+      "after": "54efef5add4057aa36925e734c5120b834629232c3144aa218c047102b664496"
+    },
+    {
+      "file": "ext/mbstring/mbstring.c",
+      "before": "88740feef268c478295f781b512b0cebff4225c5cf5310207ffb046cca72658c",
+      "after": "30229fd06fb58f8c425136375ea9c418592610153d0d0fb20ae28810ed44f660"
+    },
+    {
+      "file": "ext/mbstring/oniguruma/oniguruma.h",
+      "before": null,
+      "after": "f28b4f40bb1af7e6899fb2944842ffabb98bcdc5f7b0cd81d630cdf6bd9c5055"
+    },
+    {
+      "file": "ext/mbstring/php_mbregex.c",
+      "before": "af6791dbd1e8b141c1abb95d3bc87de0e9a506175dd7d2686245395f54a5aef1",
+      "after": "94ece6358cb951ecc3e27f4512bc7cd7afb0b1d9d9d375855b700eb45837fd0b"
+    },
+    {
+      "file": "ext/mbstring/php_unicode.c",
+      "before": "d2d7edc0e82221e225419af88ecfd0d5bff0e585bbd66eba84789e5d2085becc",
+      "after": "deea370407d5f21b0e06992cf676a180c22c1a7361a597ff4bde8e6cb8bce6db"
+    },
+    {
+      "file": "ext/opcache/ZendAccelerator.c",
+      "before": "3e0a8e8f57dc799009250ad1086879b72beeaa84db7ea2f4ae2af079cf734e3d",
+      "after": "5af8b3f687d8a3e9991d8803e174cd8525a2c1795744a6859d7839888eafe354"
+    },
+    {
+      "file": "ext/opcache/zend_file_cache.c",
+      "before": "27cbb03638d27e26ce114b94e894bd00274379758e8a90442e7bb43fcaffe530",
+      "after": "b69b196fe2e8cf295f713c0489d3f6e1a62a77226b3f93a76128ae7300a5617e"
+    },
+    {
+      "file": "ext/pcre/php_pcre.c",
+      "before": "d360551a31da689b4e0708d76c1c45b984d7b03bee8ed5dc59bda1e4b7cb2df1",
+      "after": "2d89eb5b27b03fd1c00363dd71d26e5eb44fe6b290159b1aacb206e98a72d7e3"
+    },
+    {
+      "file": "ext/pdo/pdo_sql_parser.c",
+      "before": "74dff251d292303f05e7875f5b9ba067813accd9bf8dfd9078a728a14e27174c",
+      "after": "b882dc53bbaaeb234769f652808668160b59c4a15b4398995dfdcaff68794a2b"
+    },
+    {
+      "file": "ext/session/php_session.h",
+      "before": "4533f5d79fe39e4315e5041e7b737aef25cfe3aa84efe99cac8271d8c788987e",
+      "after": "d1bf2af730db35d751f8daf76438b644404198996dc33a46e68efe0ddb70ff36"
+    },
+    {
+      "file": "ext/session/session.c",
+      "before": "866dcc0812a0c6f6156567a51b1fea9476c18a653186a4b4aa91731e5f1f3959",
+      "after": "3192b12ea0b6cc7c3736df5f7e7b81fc4f9f04ab5beea5fe244789d63f5b6c00"
+    },
+    {
+      "file": "ext/shmop/shmop.c",
+      "before": "8de7dee113963565b14f0252d7e0de84c6ca9a26050eb99394c3255e7b8a02f1",
+      "after": "fd158ff876637eceebe332effa0c89560fb6362bfab9f333cd753490f947159f"
+    },
+    {
+      "file": "ext/simplexml/simplexml.c",
+      "before": "d1e71de607b572e55ed639a2513284908fb9ccf49d4da36869ba33d62877308f",
+      "after": "ef0fd21a88e7d801c2ca55e70522f23c949fe84546bb933f612d7b6fa1f7aa06"
+    },
+    {
+      "file": "ext/soap/php_encoding.c",
+      "before": "8ad113ca1ee72888ff83ee9d4b9048104b939b27064d971874c4dae889dd1893",
+      "after": "2809ac0dc63f3b4d7cac4d5d8123ed0cc071c893039b38d4a88a0a18e325f7ad"
+    },
+    {
+      "file": "ext/soap/php_http.c",
+      "before": "ed13cbc1e40c48d816d40e4b7d828be8dcdfc1d03b9cc1ecafeab328bca7fb3e",
+      "after": "bf6b5c6d7a41bedae31cd9506f751cb0567d85f9e0d76b0fc1a72f184b1a4a25"
+    },
+    {
+      "file": "ext/soap/soap.c",
+      "before": "5ce57d7bc43622c4fe9c1de703508d49043d9fa3b3f53f76211e0ced8d0736e1",
+      "after": "ad7d5b2fe4f2468bdefc0107066ad0d725376b678ff33bb12667c0af54df2cb2"
+    },
+    {
+      "file": "ext/spl/spl_fixedarray.c",
+      "before": "02e9a525a237ebb721a2bb52d960a6fd6c1ee2eeb475cb610ef3d593fa6491bc",
+      "after": "41d6cc38953261c81a8fe4114e082d41c17355aa26b552bb5761c6afcd5b4031"
+    },
+    {
+      "file": "ext/standard/array.c",
+      "before": "8c6312fa13f61c24797f96cc7f5886e4d9770999f9fe794c525154cc34677c4f",
+      "after": "319d4bee036f52b2eb66cf99327a7f3d39e79c24852372c772faf4d6888e43e5"
+    },
+    {
+      "file": "ext/standard/basic_functions.c",
+      "before": "eeb2dae2fa16fba99b941aba3551366d875cf88d9a17c6215fee0886db4e4caa",
+      "after": "daf4db8b58f794d59af6324bccad2dc5c9c9bcf98776f34e45b42e27c769b49b"
+    },
+    {
+      "file": "ext/standard/basic_functions.h",
+      "before": "3109207a18cf8907c1b85e171001b234ff14cd49ca0efe3273b77b1e6793bfe4",
+      "after": "2f412ae83ec0fee9058a84787cb7f499c0dff553229998426ccf7f775737da42"
+    },
+    {
+      "file": "ext/standard/file.c",
+      "before": "399b9d0d0e6b979439d1964ad3a5780a749c8924899065f834a9e5cbf0927b47",
+      "after": "4ceec16a0123abac5341009a53854795a3f7d52f1a1120a54962576673dee2f9"
+    },
+    {
+      "file": "ext/standard/head.c",
+      "before": "159f863711bbeb7817b2741351d2d524f17213653bb26ee4ac76235f5757e0b1",
+      "after": "d25533931979ce74f1d83c395e95161dcb039813802780b071829b5ec0efd99f"
+    },
+    {
+      "file": "ext/standard/html.c",
+      "before": "e82a7646a070fd4958ed700e810fb2c1163b7510370f10dab46eacd94ae926df",
+      "after": "d6d46a26a9b892106d69c6d58d5ba743d88efa9f910092a4c3a2456ffc4848c9"
+    },
+    {
+      "file": "ext/standard/image.c",
+      "before": "a03b2211e4220a7c2399cd147742a0a481b2169e69380c316c6f265f1ac492fb",
+      "after": "11574d32da0c16d00914ea2b8526fb9d18d031ee0ef07e8cb52a87584ceeb70d"
+    },
+    {
+      "file": "ext/standard/levenshtein.c",
+      "before": "6d19d34ed89cfe223483a81f8c790111910acab3b45faebbb5887d487636f5f5",
+      "after": "174aa3e8f020bf9ebbd23e098d7ce39e60599c8a279e4a8b36d68e9c4798ada1"
+    },
+    {
+      "file": "ext/standard/pack.c",
+      "before": "4fa356a0ee51be505646f248c2a1cef9609f71b930aa4a3208407217f09c580a",
+      "after": "561b39dae72f8fa69a27c693a1cb4998eead105b3590909a5ebeb69295f50b6c"
+    },
+    {
+      "file": "ext/standard/php_incomplete_class.h",
+      "before": "898e498f4415b96d55955062e6e2c26788d135cbeb0246f75453aa8261526472",
+      "after": "dbd9d929321ff7b4cdc7e8ba937f732db70d492014784874644268a9cf84c508"
+    },
+    {
+      "file": "ext/standard/php_var.h",
+      "before": "e22459d16a239e0b1a37e291ea552b8f610890c34be88faf805663228376cceb",
+      "after": "c5f7d9889535f862c384cef6d8fb2b840b82d05c0626dfbdcd870df78e9d7178"
+    },
+    {
+      "file": "ext/standard/string.c",
+      "before": "e1e63a85c8deb89f6bf1d75d134eda402e2382b17d2deb9118641bb8ab8d6d3a",
+      "after": "408763e8724ac638bef02b9319b2bab3fd04f36c05e801d04b162b034e6bedc0"
+    },
+    {
+      "file": "ext/standard/url_scanner_ex.c",
+      "before": "409730cc09565d1fa7ebd346abaffe6b7af13db5b47dece49a984229d5eb48cd",
+      "after": "1f971c462c09fbf7ca8495c55e8d10653fbcc6081990579feee5fb8333c5c5fa"
+    },
+    {
+      "file": "ext/standard/url_scanner_ex.h",
+      "before": "53afb5f5f8f410d7b27352b0c4c738b0eab54ee190f356aafb3bfef5c2fe465c",
+      "after": "9c3b656e1de8b2622383a3b2b5192a81fdfd7ea5550d716f4e21deccce0de78c"
+    },
+    {
+      "file": "ext/standard/url_scanner_ex.re",
+      "before": "533e72249e82fdf134f89271be667282b28859a721d7cf0e254614a3e7d20a1a",
+      "after": "a6e134288a734d209314696992d3b653d9febced7b78eb933537e534edb5df3b"
+    },
+    {
+      "file": "ext/standard/var.c",
+      "before": "4c1e19e8849867e88e22b0ba4f15ab39fe24e61f4f7b436a977efbd867ab24f2",
+      "after": "6f9650606e7c675d4da1a95a4d80f89475fcf974bcfc2ad4844814e5b80d9a6c"
+    },
+    {
+      "file": "ext/standard/var_unserializer.c",
+      "before": "7b8c9bcd56b5276918adfd230b821e3291cc350739c2fc964602701999d7f6c0",
+      "after": "47d96a7fd935f3b9ef5256920d4143d5c2aa573a8cdab6821c9bd0c8aa55c843"
+    },
+    {
+      "file": "ext/standard/var_unserializer.re",
+      "before": "77ebf88d241fded6f0a274b3c10f672141a89a30616e3bbd516f1996bd5a5495",
+      "after": "c34d96567f013cce22e7f36d43145d90d2bf140d392aa32aafa3d92ca9c4d4a5"
+    },
+    {
+      "file": "ext/tokenizer/tokenizer.c",
+      "before": "5b373548b56018874d481758ec38036f83e28806cee6a38f4eb1fad3046dd8b4",
+      "after": "411057e6460e1628d9b4baeade18142db8b619a86cb8d9a751edeadbad0e8273"
+    },
+    {
+      "file": "ext/xml/xml.c",
+      "before": "0613bc954797df6f689e784544424b8a0d6b2d47df4d35780881092cef3f5cb5",
+      "after": "e08e0aaecede0b664a3429547b7e10eea8c17ee83152074f0afa20c3c1e8118d"
+    },
+    {
+      "file": "ext/xmlreader/php_xmlreader.c",
+      "before": "6dac46511e0f37a9d7ef517b910978326ad22f1de71e1886984b9ec510b2dc96",
+      "after": "245aed60869bbeb4e5d174bfc7f625bf771afb2299772860c44f6fe48a5d0e1b"
+    },
+    {
+      "file": "ext/xmlwriter/php_xmlwriter.c",
+      "before": "e1ab8cfa4ccdde34b181f71d8eec94374472d6b49364a90c3fb40aec30bfa18b",
+      "after": "387bc762a67c8437ea77389b9c8782cd1c7cad063c70214bcf1816493464b26e"
+    },
+    {
+      "file": "ext/zlib/zlib.c",
+      "before": "d4a54f047b73c419624977c9248c12cfba0388a0aef196c321a289cd8e5b11cd",
+      "after": "b6fbc4808d93106e25a54969bd77b551322e5957e9e60e75777937aa653a908c"
+    },
+    {
+      "file": "ext/zlib/zlib_filter.c",
+      "before": "06a35433efe7f30ca771dff846d7b97010fd42b944f505b78031023fbe67abf3",
+      "after": "d65d9eb390905a91f03c09c0722b14e2dd3adca61353ca5b7697404d5c22078b"
+    },
+    {
+      "file": "main/SAPI.c",
+      "before": "a44f4c7dda4b0e7c11009c6e88d8420401b26035cda327aca86fabe7d4c0a896",
+      "after": "1e46e71eb7232ef7a094d939d0ed2a298a24e63d6a81577de97376692d6cb3dd"
+    },
+    {
+      "file": "main/SAPI.h",
+      "before": "32ead7f7e75591c0dbc15501cc2783ea13c6540352b0715d71be7e808001921c",
+      "after": "bdac9136194ad12f1bcded28d112b767a6abbff1ed23c546cdfc78a9a8c1b022"
+    },
+    {
+      "file": "main/config.w32.h",
+      "before": null,
+      "after": "eac3e75c4cee02e6b39bc2f43e23e52ad7617655d4e18f55f0bbb25543d24c51"
+    },
+    {
+      "file": "main/internal_functions.c",
+      "before": null,
+      "after": "2600ca8b6a2f08df4596735a9fb7a3965d923cbf0fc5e19b5c16e6cb2d3dc74d"
+    },
+    {
+      "file": "main/main.c",
+      "before": "38de049a6c5234b393826742b6f1232a170530dbbfdf6a88ba82eb8fb0294182",
+      "after": "19f7bf769942d8008d8661dbde16c97757b8bd8f43834ae87f43cd1cbeef84d9"
+    },
+    {
+      "file": "main/php_variables.c",
+      "before": "45bd9ca28f286a33dc8f69cdca6b28d2f3bd071b25b88dd490048bec57f5989f",
+      "after": "596b0780be944104b1f1a43d3f989c87cb148eb230f35dc30cb28ce39dcd88ec"
+    },
+    {
+      "file": "main/rfc1867.c",
+      "before": "965d3ec71792eed9d1bb4852b0d3c06d0e45a13572a891183ca9744b1558e992",
+      "after": "c06b8beb52479a40127c5b0e17aa5cfbed0ad7ed7819042a2e51f862355586c8"
+    },
+    {
+      "file": "main/streams/memory.c",
+      "before": "779aeec80e92483369b3d5e8544f3eb8e29a26162228965079593d50124d1934",
+      "after": "52f5c34bd1d9666423cad7bdda977615cadbc39729ea3c3d76a2d4e0aafdca72"
+    },
+    {
+      "file": "main/streams/streams.c",
+      "before": "1b333f114e4df95b37a0a053f147d676e8603ec50c6852abb23e1cfc2e5a8136",
+      "after": "3ccd0acff6635a371ee63e191330d2048ab3df9e5ad86cceaa400c9bff6765b4"
+    },
+    {
+      "file": "sapi/phpdbg/phpdbg.c",
+      "before": "ba3bd42406e1fbb569f864f0d1b700b2e5e459f052c9194e2a4f910741d4e55f",
+      "after": "97324606127769ac326b85bf20df475c91b2de36b1431c5dc738c453a8257192"
+    },
+    {
+      "file": "sapi/phpdbg/phpdbg_lexer.c",
+      "before": "d6c5fa5db8b05afbc10b8f557cd55f57ab08585faecac9a8d59a4c9d7b556c6b",
+      "after": "056eb7f58790f9943270280fea6e42b3a37a48e059b7d86d0ab9e75d82a0cb4a"
+    }
+  ]
+}

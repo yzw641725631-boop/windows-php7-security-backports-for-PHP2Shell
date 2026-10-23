@@ -1,0 +1,100 @@
+{
+  "kind": "publication packaging/path-adaptation checks; not a new full compiler or security audit",
+  "execution_host": "Windows 11, Windows PowerShell 5.1",
+  "source_application_methods": [
+    "hash-checked replacement",
+    "git apply"
+  ],
+  "historical_installer_checks": 12,
+  "publication_soft_oom_checks": 22,
+  "upstream_comparison_repeated": false,
+  "full_compiler_rebuild_repeated": false,
+  "windows_server_2019_application_validation_completed": false,
+  "checks": [
+    {
+      "check": "merged patch SHA-256 matches recorded build input",
+      "passed": true
+    },
+    {
+      "check": "all 114 published replacement files match recorded hashes",
+      "passed": true
+    },
+    {
+      "check": "pristine source archive matches recorded SHA-256",
+      "passed": true
+    },
+    {
+      "check": "checked-copy reproduces all changed source bytes from pristine inputs",
+      "passed": true
+    },
+    {
+      "check": "git-apply reproduces all changed source bytes from pristine inputs",
+      "passed": true
+    },
+    {
+      "check": "published package size/hash: php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip",
+      "passed": true
+    },
+    {
+      "check": "ZIP CRC: php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip",
+      "passed": true
+    },
+    {
+      "check": "all 83 original runtime manifest files match",
+      "passed": true
+    },
+    {
+      "check": "published package size/hash: phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "ZIP CRC: phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "installer kit contents match internal hashes",
+      "passed": true
+    },
+    {
+      "check": "installer kit includes Chinese and English instructions",
+      "passed": true
+    },
+    {
+      "check": "public regression tool: verify_candidate.py",
+      "passed": true
+    },
+    {
+      "check": "public regression tool: verify_fastcgi.py",
+      "passed": true
+    },
+    {
+      "check": "public regression tool: verify_soft_oom.py",
+      "passed": true
+    },
+    {
+      "check": "publication-time 22 bounded soft-OOM checks and hard-limit exit",
+      "passed": true
+    },
+    {
+      "check": "public Python entry points compile",
+      "passed": true
+    },
+    {
+      "check": "installer PowerShell syntax accepted by Windows PowerShell 5.1",
+      "passed": true
+    },
+    {
+      "check": "portable build wrapper rejects missing action",
+      "passed": true
+    },
+    {
+      "check": "all relative Markdown file links resolve",
+      "passed": true
+    },
+    {
+      "check": "allow-listed publication files and archive text scan contain no detected credentials, private keys or previously shared server addresses",
+      "passed": true
+    }
+  ],
+  "passed": true
+}
