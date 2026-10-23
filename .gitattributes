@@ -12,3 +12,4 @@
 # Replacement source bytes must retain the exact hashes used during the build.
 php7.3/7.3.4/source/patched-source/** -text
 php7.3/7.3.4/tests/upstream-tests/** -text
+php7.4/7.4.33/source/patched-source/** -text

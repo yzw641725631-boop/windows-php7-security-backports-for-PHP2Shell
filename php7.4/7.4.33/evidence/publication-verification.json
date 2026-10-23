@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "execution_host": "Windows 11 / Windows PowerShell 5.1",
+  "exact_upstream_patch": true,
+  "public_regression_tools_rerun": true,
+  "independent_security_certification": false,
+  "checks": [
+    {
+      "check": "17 replacement hashes match actual build",
+      "passed": true
+    },
+    {
+      "check": "public hash-checked source application reproduces exact upstream build input",
+      "passed": true
+    },
+    {
+      "check": "published patch is byte-identical to official reference",
+      "passed": true
+    },
+    {
+      "check": "package hash php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "ZIP CRC php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "internal hashes php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "package hash phpStudy-PHP-7.4.33-nts-VC15-x64-unofficial-backport-install-kit-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "ZIP CRC phpStudy-PHP-7.4.33-nts-VC15-x64-unofficial-backport-install-kit-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "internal hashes phpStudy-PHP-7.4.33-nts-VC15-x64-unofficial-backport-install-kit-20261023.zip",
+      "passed": true
+    },
+    {
+      "check": "public regression tool verify_candidate.py",
+      "passed": true
+    },
+    {
+      "check": "public regression tool verify_fastcgi.py",
+      "passed": true
+    },
+    {
+      "check": "public regression tool verify_upstream_mitigation.py",
+      "passed": true
+    },
+    {
+      "check": "public regression tool verify_large_upload.py",
+      "passed": true
+    },
+    {
+      "check": "public Python tools compile",
+      "passed": true
+    },
+    {
+      "check": "installer scripts parse on Windows PowerShell 5.1",
+      "passed": true
+    },
+    {
+      "check": "build wrapper rejects missing action",
+      "passed": true
+    },
+    {
+      "check": "relative Markdown links resolve",
+      "passed": true
+    }
+  ]
+}

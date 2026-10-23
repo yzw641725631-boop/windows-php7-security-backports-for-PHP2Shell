@@ -1,0 +1,86 @@
+"""Freeze the exact upstream 7.4 mitigation build into a matched runtime ZIP."""
+from pathlib import Path
+import difflib
+import hashlib
+import json
+import re
+import shutil
+import subprocess
+import tarfile
+import uuid
+import zipfile
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / 'build/php-7.4.33'
+STAGE = ROOT / 'stage'
+DIST = ROOT / 'dist'
+REPO_VERSION = ROOT.parent / 'windows-php7-security-backports-for-PHP2Shell/php7.4/7.4.33'
+DIST.mkdir(exist_ok=True)
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+manifest = json.loads((ROOT / 'source-manifest.json').read_text())
+build = json.loads((ROOT / 'logs/build-status.json').read_text('utf-8-sig'))
+smoke = json.loads((ROOT / 'logs/candidate-verification.json').read_text())
+oom = json.loads((ROOT / 'logs/official-mitigation-verification.json').read_text())
+large = json.loads((ROOT / 'logs/large-upload-verification.json').read_text())
+assert build['exit_code'] == 0 and build['optimization'] == '/O2 /Ob0'
+assert smoke['status'] == 'passed' and oom['passed'] and len(oom['cases']) == 22 and large['passed']
+for row in manifest['changed_files']:
+    assert sha(SRC / row['file']) == row['after'], row['file']
+    assert sha(ROOT / 'patched-source' / row['file']) == row['after'], row['file']
+# Replay the exact official patch against pristine changed inputs again.
+replay = ROOT / 'source-reproduction' / uuid.uuid4().hex
+replay.mkdir(parents=True)
+with tarfile.open(ROOT / 'downloads/php-7.4.33.tar.xz') as tar:
+    for row in manifest['changed_files']:
+        path = replay / row['file']
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(tar.extractfile('php-7.4.33/' + row['file']).read())
+for arguments in (['--check'], []):
+    result = subprocess.run(['git', '-c', 'core.autocrlf=false', 'apply', *arguments,
+                             str(ROOT / 'php-7.4.33-official-mitigation-712e60f.patch')], cwd=replay, capture_output=True)
+    assert result.returncode == 0, result.stderr.decode('utf-8', 'replace')
+assert all(sha(replay / row['file']) == row['after'] for row in manifest['changed_files'])
+(ROOT / 'logs/source-reproduction.json').write_text(json.dumps({'passed': True, 'changed_files': 17,
+    'exact_upstream_patch_replays_to_build_input': True, 'patch_sha256': manifest['patch_sha256']}, indent=2) + '\n')
+runtime_manifest = {'version': '7.4.33', 'target': 'Windows x64 / NTS / VC15',
+    'unofficial_windows_build': True, 'official_commit': manifest['official_commit'],
+    'exact_upstream_patch': True, 'changed_source_files': 17, 'source_archive_sha256': manifest['source_archive_sha256'],
+    'build': build, 'execution_host': 'Windows 11 Pro 10.0.26200',
+    'windows_server_2019_application_validation_completed': False,
+    'independent_security_audit_completed': False, 'exploit_regression_certification': False,
+    'oom_behavior': 'current worker exits with code 1; process-manager replacement required',
+    'session_upload_progress_callback': 'disabled by exact upstream patch; ordinary uploads supported',
+    'memory_hard_limit_percent_supported': False, 'max_multipart_body_parts_default': -1,
+    'functional_checks': 'passed', 'bounded_oom_exit_checks': 22, 'large_upload': large,
+    'limitations': ['Not an official PHP Windows security release',
+        'No complete upstream test harness or independent security audit',
+        'Third-party extension compatibility not comprehensively tested',
+        'Historical dependencies are not comprehensively security-updated',
+        'Inlining disabled to avoid an internal legacy compiler error; no performance benchmark',
+        'Nginx/phpStudy/Windows Server 2019/actual ThinkPHP business paths not fully validated']}
+(ROOT / 'port-manifest.json').write_text(json.dumps(runtime_manifest, indent=2) + '\n')
+(STAGE / 'UNOFFICIAL-BACKPORT-MANIFEST.json').write_text(json.dumps(runtime_manifest, indent=2) + '\n')
+readme = (REPO_VERSION / 'README.md').read_text('utf-8')
+web_base = 'https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/blob/main/php7.4/7.4.33/'
+readme = re.sub(r'\]\(([^)#?]+)\)', lambda m: m[0] if m[1].startswith(('https:', 'http:', '#')) else '](' + web_base + m[1] + ')', readme)
+(STAGE / 'UNOFFICIAL-BACKPORT-README.md').write_text(readme, encoding='utf-8')
+hashes = {p.relative_to(STAGE).as_posix(): sha(p) for p in sorted(STAGE.rglob('*'))
+          if p.is_file() and p.name != 'UNOFFICIAL-BACKPORT-SHA256.json'}
+(STAGE / 'UNOFFICIAL-BACKPORT-SHA256.json').write_text(json.dumps(hashes, indent=2) + '\n')
+archive = DIST / 'php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip'
+with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+    for path in sorted(STAGE.rglob('*')):
+        if path.is_file():
+            z.write(path, path.relative_to(STAGE).as_posix())
+with zipfile.ZipFile(archive) as z:
+    assert z.testzip() is None
+    for name, digest in hashes.items():
+        assert hashlib.sha256(z.read(name)).hexdigest() == digest, name
+record = {'file': archive.name, 'bytes': archive.stat().st_size, 'sha256': sha(archive)}
+(DIST / 'runtime-manifest.json').write_text(json.dumps(record, indent=2) + '\n')
+print(json.dumps({'runtime': record, 'runtime_files_verified': len(hashes), 'source_reproduction': True}, indent=2))

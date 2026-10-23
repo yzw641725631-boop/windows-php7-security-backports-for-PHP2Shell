@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "changed_files": 17,
+  "exact_upstream_patch_replays_to_build_input": true,
+  "patch_sha256": "5fe57ca6ee96d59b36c6e0ca842843c50884f177bef1e85234cf669b577f5e48"
+}

@@ -18,6 +18,7 @@ php-upload-error.log
 # Build/test workspaces; published ZIPs in dist/ are intentionally tracked
 **/work/
 **/stage/
+**/baseline/
 **/logs/
 **/verification/
 **/soft-oom-cases/

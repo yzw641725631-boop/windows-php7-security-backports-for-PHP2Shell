@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "transport": "loopback native FastCGI; no Nginx or business application",
+  "upload_bytes": 272629760,
+  "sha256": "e2af6dbab4bda6c6f770cd0d70781abb6e35d6fb2d8e985cc972a7727ad2342e",
+  "same_worker_alive": true,
+  "php_memory_limit": "32M",
+  "peak_php_allocated_bytes": 2097152,
+  "session_progress_callback_disabled": true,
+  "covers_business_upload_500": false
+}

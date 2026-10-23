@@ -1,0 +1,468 @@
+Rebuilding configure.js
+Now run 'configure --help'
+PHP Version: 7.4.33
+
+snapshot: forcing --disable-security-flags shared
+snapshot: forcing --without-uncritical-warn-choke shared
+snapshot: forcing sanitizer on
+snapshot: forcing codegen-arch on
+snapshot: forcing --disable-test-ini shared
+snapshot: forcing test-ini-ext-exclude on
+snapshot: forcing native-intrinsics on
+snapshot: forcing apache2handler on
+snapshot: forcing apache2-2handler on
+snapshot: forcing apache2-4handler on
+snapshot: forcing cli-win32 on
+snapshot: forcing embed on
+snapshot: forcing phpdbg on
+snapshot: forcing phpdbgs on
+snapshot: forcing --disable-phpdbg-webhelper shared
+snapshot: forcing bz2 on
+snapshot: forcing curl on
+snapshot: forcing dba on
+snapshot: forcing qdbm on
+snapshot: forcing db on
+snapshot: forcing lmdb on
+snapshot: forcing enchant on
+snapshot: forcing ffi on
+snapshot: forcing fileinfo on
+snapshot: forcing ftp on
+snapshot: forcing --without-libwebp shared
+snapshot: forcing gettext on
+snapshot: forcing gmp on
+snapshot: forcing mhash on
+snapshot: forcing imap on
+snapshot: forcing intl on
+snapshot: forcing ldap on
+snapshot: forcing mbstring on
+snapshot: forcing mbregex on
+snapshot: forcing oci8 on
+snapshot: forcing oci8-11g on
+snapshot: forcing odbc on
+snapshot: forcing openssl on
+snapshot: forcing --without-pcre-jit shared
+snapshot: forcing pgsql on
+snapshot: forcing pspell on
+snapshot: forcing shmop on
+snapshot: forcing snmp on
+snapshot: forcing sockets on
+snapshot: forcing sodium on
+snapshot: forcing sqlite3 on
+snapshot: forcing password-argon2 on
+snapshot: forcing sysvshm on
+snapshot: forcing tidy on
+snapshot: forcing zend-test on
+snapshot: forcing exif on
+snapshot: forcing mysqli on
+snapshot: forcing pdo on
+snapshot: forcing pdo-dblib on
+snapshot: forcing pdo-mssql on
+snapshot: forcing pdo-firebird on
+snapshot: forcing pdo-mysql on
+snapshot: forcing pdo-odbc on
+snapshot: forcing pdo-pgsql on
+snapshot: forcing pdo-sqlite on
+snapshot: forcing phar-native-ssl on
+snapshot: forcing soap on
+snapshot: forcing xmlrpc on
+snapshot: forcing xsl on
+Saving configure options to config.nice.bat
+Checking for cl.exe ...  <in default path>
+  Detected compiler Visual C++ 2017
+  Detected 64-bit compiler
+Checking for link.exe ...  <in default path>
+Checking for nmake.exe ...  <in default path>
+Checking for lib.exe ...  <in default path>
+Checking for bison.exe ...  <in default path>
+  Detected bison version 3.3.2
+Checking for sed.exe ...  <in default path>
+Checking for re2c.exe ...  <in default path>
+  Detected re2c version 1.1.1
+Checking for zip.exe ...  <in default path>
+Checking for lemon.exe ...  <in default path>
+Checking for 7za.exe ...  <in default path>
+Checking for mc.exe ...  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64
+Checking for mt.exe ...  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64
+Enabling multi process build
+
+Build dir: <BUILD_WORKSPACE>\build\php-7.4.33\x64\Release
+PHP Core:  php7.dll and php7.lib
+
+Checking for wspiapi.h ...  <in default path>
+Enabling IPv6 support
+WARNING: Apache 2.0 module requires an --enable-zts build of PHP on windows
+
+WARNING: Apache 2.2 module requires an --enable-zts build of PHP on windows
+
+WARNING: Apache 2.4 module requires an --enable-zts build of PHP on windows
+
+Enabling SAPI sapi\cgi
+Enabling SAPI sapi\cli
+Checking for library edit_a.lib;edit.lib ... <in deps path> \lib\edit_a.lib
+Checking for editline/readline.h ...  <in deps path> \include
+Enabling SAPI sapi\cli
+Enabling SAPI sapi\embed
+Enabling SAPI sapi\phpdbg
+Enabling extension sapi\phpdbg [shared]
+Enabling SAPI sapi\phpdbg
+Enabling extension ext\bcmath
+Checking for library libbz2_a.lib;libbz2.lib ... <in deps path> \lib\libbz2_a.lib
+Checking for bzlib.h ...  <in deps path> \include
+Enabling extension ext\bz2 [shared]
+Enabling extension ext\calendar
+Checking for library oleaut32.lib ... <in LIB path> OleAut32.Lib
+Enabling extension ext\com_dotnet [shared]
+Checking for mscoree.h ...  <not found>
+Checking for mscoree.h ...  <not found>
+Enabling extension ext\ctype
+Checking for library libcurl_a.lib;libcurl.lib ... <in deps path> \lib\libcurl_a.lib
+Checking for curl/easy.h ...  <in deps path> \include
+Checking for library libcrypto.lib ... <in deps path> \lib\libcrypto.lib
+Checking for library libssl.lib ... <in deps path> \lib\libssl.lib
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Checking for openssl/ssl.h ...  <in deps path> \include
+Checking for library winmm.lib ... <in LIB path> WinMM.Lib
+Checking for library wldap32.lib ... <in LIB path> Wldap32.Lib
+Checking for library normaliz.lib ... <in LIB path> normaliz.lib
+Checking for library libssh2.lib ... <in deps path> \lib\libssh2.lib
+Checking for library nghttp2.lib ... <in deps path> \lib\nghttp2.lib
+Enabling extension ext\curl [shared]
+Enabling extension ext\date
+Enabling extension ext\dba [shared]
+Checking for library libdb31s.lib;libdb61.lib ... <not found>
+WARNING: dba: db handlers not enabled; libraries and headers not found
+
+Checking for library qdbm_a.lib;qdbm.lib ... <in deps path> \lib\qdbm_a.lib
+Checking for depot.h ...  <in deps path> \include\qdbm
+Checking for library liblmdb_a.lib ... <in deps path> \lib\liblmdb_a.lib
+Checking for lmdb.h ...  <in deps path> \include
+Checking for library ntdll.lib ... <in LIB path> ntdll.lib
+Checking for enchant.h ...  <in deps path> \include
+Checking for glib.h ...  <in deps path> \include\glib-2.0
+Checking for library libenchant.lib ... <in deps path> \lib\libenchant.lib
+Enabling extension ext\enchant [shared]
+Checking for ffi.h ...  <in deps path> \include
+Checking for library libffi.lib ... <in deps path> \lib\libffi.lib
+Enabling extension ext\ffi [shared]
+Enabling extension ext\fileinfo [shared]
+Enabling extension ext\filter
+Enabling extension ext\ftp [shared]
+Checking for library libcrypto.lib ... <in deps path> \lib\libcrypto.lib
+Checking for library libssl.lib ... <in deps path> \lib\libssl.lib
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Checking for openssl/ssl.h ...  <in deps path> \include
+Enabling SSL support for ext\ftp
+Checking for library libjpeg_a.lib;libjpeg.lib ... <in deps path> \lib\libjpeg_a.lib
+Checking for library freetype_a.lib;freetype.lib ... <in deps path> \lib\freetype_a.lib
+Checking for ft2build.h ...  <in deps path> \include\freetype2
+Checking for library libpng_a.lib;libpng.lib ... <in deps path> \lib\libpng_a.lib
+Checking for gd.h ...  ext\gd\libgd
+Checking for png.h ...  <in deps path> \include\libpng16
+Checking for library libiconv_a.lib;libiconv.lib ... <in deps path> \lib\libiconv_a.lib
+Checking for iconv.h ...  <in deps path> \include
+Checking for library libXpm_a.lib ... <in deps path> \lib\libxpm_a.lib
+Checking for xpm.h ...  <in deps path> \include\X11
+Checking for library libwebp_a.lib ... <in deps path> \lib\libwebp_a.lib
+Checking for decode.h ...  <in deps path> \include\webp
+Checking for encode.h ...  <in deps path> \include\webp
+Checking for library User32.lib ... <in LIB path> User32.Lib
+Checking for library Gdi32.lib ... <in LIB path> Gdi32.Lib
+Enabling extension ext\gd [shared]
+Checking for library libintl_a.lib;libintl.lib ... <in deps path> \lib\libintl_a.lib
+Checking for libintl.h ...  <in deps path> \include
+Enabling extension ext\gettext [shared]
+Checking for library mpir_a.lib ... <in deps path> \lib\mpir_a.lib
+Checking for gmp.h ...  <in deps path> \include\mpir
+Enabling extension ext\gmp [shared]
+Enabling extension ext\hash
+Checking for KeccakHash.h ...  ext/hash/sha3/generic64lc
+Checking for library libiconv_a.lib ... <in deps path> \lib\libiconv_a.lib
+Checking for iconv.h ...  <in deps path> \include
+Enabling extension ext\iconv
+Checking for library cclient_a.lib;cclient.lib ... <in deps path> \lib\cclient_a.lib
+Checking for c-client.h ...  <not found>
+Checking for c-client.h ...  <not found>
+Checking for c-client/c-client.h ...  <in deps path> \include
+Checking for library winmm.lib ... <in LIB path> WinMM.Lib
+Checking for library ws2_32.lib ... <in LIB path> WS2_32.Lib
+Checking for library Secur32.lib ... <in LIB path> Secur32.Lib
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Enabling extension ext\imap [shared]
+Checking for library icuuc.lib ... <in deps path> \lib\icuuc.lib
+Checking for unicode/utf.h ...  <in deps path> \include
+Enabling extension ext\intl [shared]
+Checking for unicode/uspoof.h ...  <in deps path> \include
+Checking for library icule.lib ... <not found>
+Checking for library iculx.lib ... <not found>
+Enabling extension ext\json
+Checking for ldap.h ...  <in deps path> \include\openldap
+Checking for lber.h ...  <in deps path> \include\openldap
+Checking for library libcrypto.lib ... <in deps path> \lib\libcrypto.lib
+Checking for library libssl.lib ... <in deps path> \lib\libssl.lib
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Checking for openssl/ssl.h ...  <in deps path> \include
+Checking for library oldap32_a.lib ... <in deps path> \lib\oldap32_a.lib
+Checking for library olber32_a.lib ... <in deps path> \lib\olber32_a.lib
+Checking for library libsasl.lib ... <in deps path> \lib\libsasl.lib
+Enabling extension ext\ldap [shared]
+Checking for mbstring.h ...  <in default path>
+Enabling extension ext\mbstring [shared]
+Using bundled libmbfl...
+Checking for oniguruma.h ...  <in deps path> \include
+Checking for library onig_a.lib;libonig_a.lib ... <in deps path> \lib\onig_a.lib
+Checking for library ws2_32.lib ... <in LIB path> WS2_32.Lib
+Enabling extension ext\mysqlnd
+Checking for zlib.h ...  <in deps path> \include
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Checking for oci.h ...  <not found>
+Checking for oci.h ...  <not found>
+WARNING: oci8 not enabled: Oracle Database client libraries or Oracle 10g Instant Client not found
+
+Checking for oci.h ...  <not found>
+Checking for oci.h ...  <not found>
+WARNING: oci8-11g not enabled: Oracle Database client libraries or Oracle 11g Instant Client not found
+
+Checking for library odbc32.lib ... <in LIB path> odbc32.lib
+Checking for library odbccp32.lib ... <in LIB path> odbccp32.lib
+Checking for sql.h ...  <in default path>
+Checking for sqlext.h ...  <in default path>
+Enabling extension ext\odbc [shared]
+Enabling extension ext\opcache [shared]
+Checking for library libcrypto.lib ... <in deps path> \lib\libcrypto.lib
+Checking for library libssl.lib ... <in deps path> \lib\libssl.lib
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Checking for openssl/ssl.h ...  <in deps path> \include
+Enabling extension ext\openssl [shared]
+Enabling extension ext\pcre
+Checking for library libpq.lib ... <in deps path> \lib\libpq.lib
+Checking for libpq-fe.h ...  <in deps path> \include\libpq
+Enabling extension ext\pgsql [shared]
+Checking for pspell.h ...  <not found>
+Checking for pspell.h ...  <not found>
+WARNING: pspell not enabled; libraries and headers not found
+
+Checking for library edit_a.lib;edit.lib ... <in deps path> \lib\edit_a.lib
+Checking for editline/readline.h ...  <in deps path> \include
+Enabling extension ext\readline
+Enabling extension ext\reflection
+Enabling extension ext\session
+Enabling extension ext\shmop [shared]
+Checking for snmp.h ...  <in default path>
+Checking for library libcrypto.lib ... <in deps path> \lib\libcrypto.lib
+Checking for library libssl.lib ... <in deps path> \lib\libssl.lib
+Checking for library crypt32.lib ... <in LIB path> Crypt32.Lib
+Checking for openssl/ssl.h ...  <in deps path> \include
+Checking for library netsnmp.lib ... <in deps path> \lib\netsnmp.lib
+Enabling extension ext\snmp [shared]
+Checking for library ws2_32.lib ... <in LIB path> WS2_32.Lib
+Checking for library Iphlpapi.lib ... <in LIB path> iphlpapi.lib
+Checking for winsock.h ...  <in default path>
+Enabling extension ext\sockets [shared]
+Checking for library libsodium.lib ... <in deps path> \lib\libsodium.lib
+Checking for sodium.h ...  <in deps path> \include
+Enabling extension ext\sodium [shared]
+Enabling extension ext\spl
+Checking for library libsqlite3.lib;libsqlite3_a.lib ... <in deps path> \lib\libsqlite3.lib
+Checking for sqlite3.h ...  <in deps path> \include
+Checking for sqlite3ext.h ...  <in deps path> \include
+Enabling extension ext\sqlite3 [shared]
+Checking for library argon2_a.lib;argon2.lib ... <in deps path> \lib\argon2_a.lib
+Checking for argon2.h ...  <in deps path> \include
+Checking for argon2id_hash_raw in argon2.h ... OK
+Checking for timelib_config.h ...  ext/date/lib
+Enabling extension ext\standard
+Enabling extension ext\sysvshm [shared]
+Checking for library libtidy_a.lib;tidy_a.lib ... <in deps path> \lib\tidy_a.lib
+Checking for tidy.h ...  <in deps path> \include
+Checking for tidybuffio.h ...  <in deps path> \include
+Enabling extension ext\tidy [shared]
+Enabling extension ext\tokenizer
+Enabling extension ext\zend_test [shared]
+Checking for zip.h ...  <in deps path> \include
+Checking for zipconf.h ...  <in deps path> \include
+Checking for library libzip_a.lib ... <in deps path> \lib\libzip_a.lib
+Checking for library libbz2_a.lib ... <in deps path> \lib\libbz2_a.lib
+Checking for library zlib_a.lib ... <in deps path> \lib\zlib_a.lib
+Enabling extension ext\zip
+Checking for library zlib_a.lib;zlib.lib ... <in deps path> \lib\zlib_a.lib
+Checking for zlib.h ...  <in deps path> \include
+Enabling extension ext\zlib
+Checking for library libxml2_a_dll.lib;libxml2_a.lib ... <in deps path> \lib\libxml2_a_dll.lib
+Checking for library libiconv_a.lib;iconv_a.lib;libiconv.lib;iconv.lib ... <in deps path> \lib\libiconv_a.lib
+Checking for libxml/parser.h ...  <in deps path> \include\libxml2
+Checking for libxml/tree.h ...  <in deps path> \include\libxml2
+Enabling extension ext\libxml
+Checking for libxml/parser.h ...  <in deps path> \include\libxml2
+Enabling extension ext\dom
+Enabling extension ext\exif [shared]
+Enabling extension ext\mysqli [shared]
+	mysqlnd build
+Enabling extension ext\pdo
+Checking for library sybdb.lib ... <not found>
+WARNING: pdo_dblib not enabled, libraries or headers not found
+
+Checking for library sybdb.lib ... <not found>
+WARNING: pdo_mssql not enabled, libraries or headers not found
+
+Checking for library fbclient_ms.lib ... <in deps path> \lib\fbclient_ms.lib
+Checking for ibase.h ...  <in deps path> \include\interbase
+Enabling extension ext\pdo_firebird [shared]
+INFO: mysqlnd build
+Enabling extension ext\pdo_mysql [shared]
+Checking for library odbc32.lib ... <in LIB path> odbc32.lib
+Checking for library odbccp32.lib ... <in LIB path> odbccp32.lib
+Checking for sql.h ...  <in default path>
+Checking for sqlext.h ...  <in default path>
+Enabling extension ext\pdo_odbc [shared]
+Checking for library libpq.lib ... <in deps path> \lib\libpq.lib
+Checking for libpq-fe.h ...  <in deps path> \include\libpq
+Enabling extension ext\pdo_pgsql [shared]
+Checking for pg_config.h ...  <in deps path> \include\libpq
+Checking for library libsqlite3.lib;libsqlite3_a.lib ... <in deps path> \lib\libsqlite3.lib
+Checking for sqlite3.h ...  <in deps path> \include
+Checking for sqlite3ext.h ...  <in deps path> \include
+Enabling extension ext\pdo_sqlite [shared]
+Enabling extension ext\phar
+Checking for library libeay32st.lib ... <not found>
+WARNING: Could not enable native OpenSSL support in Phar
+
+Checking for libxml/tree.h ...  <in deps path> \include\libxml2
+Enabling extension ext\simplexml
+Checking for libxml/parser.h ...  <in deps path> \include\libxml2
+Checking for libxml/tree.h ...  <in deps path> \include\libxml2
+Enabling extension ext\soap [shared]
+Checking for libxml/parser.h ...  <in deps path> \include\libxml2
+Checking for libxml/tree.h ...  <in deps path> \include\libxml2
+Enabling extension ext\xml
+Checking for libxml/parser.h ...  <in deps path> \include\libxml2
+Checking for libxml/tree.h ...  <in deps path> \include\libxml2
+Enabling extension ext\xmlreader
+Checking for xmlrpc.h ...  ext\xmlrpc/libxmlrpc
+Checking for iconv.h ...  <in deps path> \include
+Checking for libxml/parser.h ...  <in deps path> \include\libxml2
+Enabling extension ext\xmlrpc [shared]
+Checking for libxml/xmlwriter.h ...  <in deps path> \include\libxml2
+Enabling extension ext\xmlwriter
+Checking for libxml/tree.h ...  <in deps path> \include\libxml2
+Checking for library libxslt_a.lib ... <in deps path> \lib\libxslt_a.lib
+Checking for library libexslt_a.lib ... <in deps path> \lib\libexslt_a.lib
+Checking for libxslt\xslt.h ...  <in deps path> \include
+Checking for libexslt\exslt.h ...  <in deps path> \include
+Enabling extension ext\xsl [shared]
+
+Creating build dirs...
+Generating files...
+Regenerating <BUILD_WORKSPACE>\build\php-7.4.33\x64\Release\tmp-php.ini ...
+Generating Makefile
+Generating main/internal_functions.c
+Generating main/config.w32.h
+Generating phpize
+Done.
+
+
+
+Enabled extensions:
+-----------------------------
+| Extension        | Mode   |
+-----------------------------
+| bcmath           | static |
+| bz2              | shared |
+| calendar         | static |
+| com_dotnet       | shared |
+| ctype            | static |
+| curl             | shared |
+| date             | static |
+| dba              | shared |
+| dom              | static |
+| enchant          | shared |
+| exif             | shared |
+| ffi              | shared |
+| fileinfo         | shared |
+| filter           | static |
+| ftp              | shared |
+| gd               | shared |
+| gettext          | shared |
+| gmp              | shared |
+| hash             | static |
+| iconv            | static |
+| imap             | shared |
+| intl             | shared |
+| json             | static |
+| ldap             | shared |
+| libxml           | static |
+| mbstring         | shared |
+| mysqli           | shared |
+| mysqlnd          | static |
+| odbc             | shared |
+| openssl          | shared |
+| pcre             | static |
+| pdo              | static |
+| pdo_firebird     | shared |
+| pdo_mysql        | shared |
+| pdo_odbc         | shared |
+| pdo_pgsql        | shared |
+| pdo_sqlite       | shared |
+| pgsql            | shared |
+| phar             | static |
+| phpdbg_webhelper | shared |
+| readline         | static |
+| reflection       | static |
+| session          | static |
+| shmop            | shared |
+| simplexml        | static |
+| snmp             | shared |
+| soap             | shared |
+| sockets          | shared |
+| sodium           | shared |
+| spl              | static |
+| sqlite3          | shared |
+| standard         | static |
+| sysvshm          | shared |
+| tidy             | shared |
+| tokenizer        | static |
+| xml              | static |
+| xmlreader        | static |
+| xmlrpc           | shared |
+| xmlwriter        | static |
+| xsl              | shared |
+| zend_test        | shared |
+| zip              | static |
+| zlib             | static |
+-----------------------------
+
+
+Enabled Zend extensions:
+----------------------
+| Extension | Mode   |
+----------------------
+| opcache   | shared |
+----------------------
+
+
+Enabled SAPI:
+-------------
+| Sapi Name |
+-------------
+| cgi       |
+| cli       |
+| cli_win32 |
+| embed     |
+| phpdbg    |
+| phpdbgs   |
+-------------
+
+
+---------------------------------------
+|                   |                 |
+---------------------------------------
+| Build type        | Release         |
+| Thread Safety     | No              |
+| Compiler          | Visual C++ 2017 |
+| Architecture      | x64             |
+| Optimization      | PGO disabled    |
+| Native intrinsics | SSE2            |
+| Static analyzer   | disabled        |
+---------------------------------------
+
+
+Type 'nmake snap' to build a PHP snapshot

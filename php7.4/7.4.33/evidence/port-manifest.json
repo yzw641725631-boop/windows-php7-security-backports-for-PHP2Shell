@@ -1,0 +1,45 @@
+{
+  "version": "7.4.33",
+  "target": "Windows x64 / NTS / VC15",
+  "unofficial_windows_build": true,
+  "official_commit": "712e60f9edfd03f0960fc4fc3c2c375f42b90aa2",
+  "exact_upstream_patch": true,
+  "changed_source_files": 17,
+  "source_archive_sha256": "924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927",
+  "build": {
+    "exit_code": 0,
+    "optimization": "/O2 /Ob0",
+    "compiler_workaround": "/d2SSAOptimizer-; remove /d2FuncCache1 from generated Makefile",
+    "official_patch": "712e60f9edfd03f0960fc4fc3c2c375f42b90aa2",
+    "log": "logs/build-06.log"
+  },
+  "execution_host": "Windows 11 Pro 10.0.26200",
+  "windows_server_2019_application_validation_completed": false,
+  "independent_security_audit_completed": false,
+  "exploit_regression_certification": false,
+  "oom_behavior": "current worker exits with code 1; process-manager replacement required",
+  "session_upload_progress_callback": "disabled by exact upstream patch; ordinary uploads supported",
+  "memory_hard_limit_percent_supported": false,
+  "max_multipart_body_parts_default": -1,
+  "functional_checks": "passed",
+  "bounded_oom_exit_checks": 22,
+  "large_upload": {
+    "passed": true,
+    "transport": "loopback native FastCGI; no Nginx or business application",
+    "upload_bytes": 272629760,
+    "sha256": "e2af6dbab4bda6c6f770cd0d70781abb6e35d6fb2d8e985cc972a7727ad2342e",
+    "same_worker_alive": true,
+    "php_memory_limit": "32M",
+    "peak_php_allocated_bytes": 2097152,
+    "session_progress_callback_disabled": true,
+    "covers_business_upload_500": false
+  },
+  "limitations": [
+    "Not an official PHP Windows security release",
+    "No complete upstream test harness or independent security audit",
+    "Third-party extension compatibility not comprehensively tested",
+    "Historical dependencies are not comprehensively security-updated",
+    "Inlining disabled to avoid an internal legacy compiler error; no performance benchmark",
+    "Nginx/phpStudy/Windows Server 2019/actual ThinkPHP business paths not fully validated"
+  ]
+}

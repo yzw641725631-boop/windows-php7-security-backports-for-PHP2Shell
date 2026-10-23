@@ -1,0 +1,71 @@
+{
+  "compiler": "MSVC 19.16.27054 x64 / VC15",
+  "windows_sdk": "10.0.26100.0",
+  "optimization": "/O2 /Ob0",
+  "compatibility": "/d2SSAOptimizer-; remove /d2FuncCache1 from generated Makefile",
+  "records": [
+    {
+      "file": "downloads\\Microsoft.VisualCpp.Tools.Common.Utils.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/a6f6b0d9-bd45-4cc7-9e0a-836ddd956c17/bdf1edf666041c98b13f824773469826/microsoft.visualcpp.tools.common.utils.vsix",
+      "sha256": "6cf281a7219d90de3ace2c637ade811de02f4f1bec3aea944854249fbc98d461",
+      "bytes": 84375,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.ATL.Headers.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/d9d7759e-831f-41fe-8d03-4e80ae1d426d/19ce0091eeec539cb98aa35a9006b89d/microsoft.visualcpp.atl.headers.vsix",
+      "sha256": "b971a8eb893f0d996835606d030547fad9de694c2f77333e86e5876ac139aaf5",
+      "bytes": 575440,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.ATL.X64.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/6a093098-c351-46aa-90fe-873debc50521/7daaaf72647cc065be50e125b61a1d88/microsoft.visualcpp.atl.x64.vsix",
+      "sha256": "866fd08c6f3e35605374a6d706713dea3557138a0ee2cb0b2bf80dbf71644f87",
+      "bytes": 723021,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.CRT.Headers.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/3711d8f0-a82d-4a7e-a28d-aacdd736535a/425eafe779e747c4dc78821729b8073a/microsoft.visualcpp.crt.headers.vsix",
+      "sha256": "5aa335488aca59ed221acea56f47f1457711d44081fee3d7a97acfda9904a116",
+      "bytes": 3046374,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.Tools.HostX64.TargetX64.Resources.enu.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/4ec86bdf-e72c-4d25-97c1-ec39b9811b0d/819e75f154d5c2fb1e688425e39591340447c50eabfc56a49fdcfa401bb89b99/Microsoft.VisualCpp.Tools.HostX64.TargetX64.Resources.enu.vsix",
+      "sha256": "819e75f154d5c2fb1e688425e39591340447c50eabfc56a49fdcfa401bb89b99",
+      "bytes": 210939,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.Tools.HostX64.TargetX64.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/4ec86bdf-e72c-4d25-97c1-ec39b9811b0d/0aa9bb0f5696e3376575d6fa68fdeabe18e57f86c6ab68b23ec1e8668d8d0fe1/Microsoft.VisualCpp.Tools.HostX64.TargetX64.vsix",
+      "sha256": "0aa9bb0f5696e3376575d6fa68fdeabe18e57f86c6ab68b23ec1e8668d8d0fe1",
+      "bytes": 15999629,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.CRT.x64.Desktop.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/540afcb9-22c7-4e2a-a139-405d1b7047fb/c71a55b328b47e044fc767dfbd4421aa/microsoft.visualcpp.crt.x64.desktop.vsix",
+      "sha256": "13de82b70972a1b72e9d7137b830b175a7e0056cd710c02c372b06be5a3f8b31",
+      "bytes": 41200016,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.CRT.x64.OneCore.Desktop.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/930d30b9-0c0a-4ab1-8417-d3ba23a05830/c9cb5ff87f03afeaf297edb2e69df172/microsoft.visualcpp.crt.x64.onecore.desktop.vsix",
+      "sha256": "bc27873e3233f2469f9f15b01db6d88150980ad56a9dd262be7df70fbf516f7a",
+      "bytes": 50347858,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads\\Microsoft.VisualCpp.CRT.x64.Store.vsix",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/6c1bc354-dadb-4c15-8ac8-44beae63e096/f511b234f2023b58fb21d6df51c45969/microsoft.visualcpp.crt.x64.store.vsix",
+      "sha256": "8e30f67f0118d3ed4c82b7a44657126574da3c7a53012b3a0ae400cc17cb69c1",
+      "bytes": 9305799,
+      "expected_hash_verified": true
+    }
+  ]
+}

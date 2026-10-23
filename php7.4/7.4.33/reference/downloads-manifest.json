@@ -1,0 +1,283 @@
+{
+  "source_version": "7.4.33",
+  "architecture": "x64",
+  "thread_safety": "NTS",
+  "compiler": "VC15",
+  "dependencies_series": "https://downloads.php.net/~windows/php-sdk/deps/series/packages-7.4-vc15-x64-stable.txt",
+  "records": [
+    {
+      "file": "downloads/packages-7.4-vc15-x64-stable.txt",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/series/packages-7.4-vc15-x64-stable.txt",
+      "sha256": "d43d361b51368a3d0dd3cea8109eb5f6ffe5550b6db4ca6dbc0fad60a47acd1a",
+      "bytes": 1018,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/c-client-2007f-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/c-client-2007f-1-vc15-x64.zip",
+      "sha256": "03584a0a6e74210435399f480cba433b5463a68a24dd7e53f9f80d17ea257c45",
+      "bytes": 649097,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/fbclient-3.0-nocrt-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/fbclient-3.0-nocrt-x64.zip",
+      "sha256": "a6985eca19902ad218d3866a90ef8add66afbd1fd6f818d207427bc4ed750b5f",
+      "bytes": 57701,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/freetype-2.9.1-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/freetype-2.9.1-1-vc15-x64.zip",
+      "sha256": "aabff841e603cf15d87963814f074163a5de0ec523312646f839bf9e022792b5",
+      "bytes": 3678412,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/apache-2.4.39-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/apache-2.4.39-vc15-x64.zip",
+      "sha256": "7f7487d359e32034f8ea6567a6f36f5195e70cf1d1e97502a2561744fcce0da8",
+      "bytes": 1672681,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/php-7.4.33.tar.xz",
+      "url": "https://www.php.net/distributions/php-7.4.33.tar.xz",
+      "sha256": "924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927",
+      "bytes": 10420144,
+      "expected_hash_verified": true
+    },
+    {
+      "file": "downloads/libargon2-20190702-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libargon2-20190702-vc15-x64.zip",
+      "sha256": "973632d183508a8e852dbe2c6710ced1e53bdb3dc8bcb9117fc481f800c862bf",
+      "bytes": 166213,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libbzip2-1.0.8-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libbzip2-1.0.8-vc15-x64.zip",
+      "sha256": "a767ed98e8c0caccce14cf5c4b063380011b0990c037e2d45715bc3892ea44fe",
+      "bytes": 110042,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/glib-2.53.3-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/glib-2.53.3-1-vc15-x64.zip",
+      "sha256": "cc4eb3e58fa844aba0cdfcc19fdbea2c2711f719cad06f100950f2f3fc969e8f",
+      "bytes": 7176432,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libcurl-7.70.0-6-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libcurl-7.70.0-6-vc15-x64.zip",
+      "sha256": "d8f6ef2eb3a22ca3ab694012d775c03362c6d7a358dfd112bcaab9ac3a8499b3",
+      "bytes": 2877071,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/php-7.4.33-nts-Win32-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/releases/archives/php-7.4.33-nts-Win32-vc15-x64.zip",
+      "sha256": "14ae3250d4447c8ccfc4c45a70d90adfbcd61e728d85f0be56a7ddf8f9c8aace",
+      "bytes": 26132214,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libffi-3.2.1-4-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libffi-3.2.1-4-vc15-x64.zip",
+      "sha256": "11461f14fbadd8095d5462fefb63c102e92cce63a19d5aabfa6982b9af7226b9",
+      "bytes": 101445,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libintl-0.18.3-3-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libintl-0.18.3-3-vc15-x64.zip",
+      "sha256": "d72b5316cd4883c71f0c5987dad7cf243d9e744c0f7ef3b2c009168808da691f",
+      "bytes": 1091986,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libjpeg-9c-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libjpeg-9c-vc15-x64.zip",
+      "sha256": "781fbee09f55c5d7da9515368d81d5288ad1d3999e2fcbd832183a520365fcb8",
+      "bytes": 203028,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/liblmdb-0.9.22-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/liblmdb-0.9.22-1-vc15-x64.zip",
+      "sha256": "0dcf294f1f395f9c43c3cb913a5409d2ef874ba2189b4130dc4f9f6615ed1275",
+      "bytes": 522116,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libenchant-1.6.1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libenchant-1.6.1-vc15-x64.zip",
+      "sha256": "a79888f0c16ea24c35ae77d101daabc8171c2f9d0d17cd73ba79fe52b9e2a68e",
+      "bytes": 1231234,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libiconv-1.16-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libiconv-1.16-1-vc15-x64.zip",
+      "sha256": "39a09b3cbbd4da87616ab1f58985f76291072e1393763061abe6de9a8f5b07cd",
+      "bytes": 3385875,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/ICU-66.1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/ICU-66.1-vc15-x64.zip",
+      "sha256": "0f7119856eaa44e682390fdb6b56bd814c1f3e03ab8b684ad9bcc1fe604583a8",
+      "bytes": 21993531,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libqdbm-1.8.78-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libqdbm-1.8.78-vc15-x64.zip",
+      "sha256": "ed2b92cbee59125aae72d8362e57b9910e2253cbf6b451f3f3b4d3802f53c380",
+      "bytes": 1272249,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libsasl-2.1.27-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libsasl-2.1.27-1-vc15-x64.zip",
+      "sha256": "145bba48a0c816caa457355e1d6cad94d8439c7bbfeee27065399739ff4bd162",
+      "bytes": 2088105,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libsodium-1.0.17-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libsodium-1.0.17-vc15-x64.zip",
+      "sha256": "4462619e029f265201c8d19df6a0d7655681231c84d351b8307a86a72e81982c",
+      "bytes": 1120421,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libonig-6.9.5-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libonig-6.9.5-1-vc15-x64.zip",
+      "sha256": "610562458a994af0dae1010ea8ae161ed44af99a6e5e3928c600d524373ae031",
+      "bytes": 565263,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libtidy-5.6.0-2-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libtidy-5.6.0-2-vc15-x64.zip",
+      "sha256": "79d6bc448493d688c203985a11ffa776946969c56d632b91b55be2c7944359a3",
+      "bytes": 2986883,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libwebp-1.1.0-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libwebp-1.1.0-vc15-x64.zip",
+      "sha256": "d76b4ce0fc0c9e61352c563aefd3672d46d1cbe073415ab212b0b8bc7f5d95d8",
+      "bytes": 2447287,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libpng-1.6.34-3-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libpng-1.6.34-3-vc15-x64.zip",
+      "sha256": "ef8dc6316b0638f8518ccb67e4d075df019db3906d7e14fa8d9d71f96175076f",
+      "bytes": 2114355,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libxpm-3.5.12-3-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libxpm-3.5.12-3-vc15-x64.zip",
+      "sha256": "b7e7a7d438e4f38fe254ff9de7584c157b29919b106cb201b0df6ca983f6dd28",
+      "bytes": 934635,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libxslt-1.1.32-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libxslt-1.1.32-vc15-x64.zip",
+      "sha256": "3a57af40997d09621d217a6fb5dabd2b3d96e59205466f93978880ee262fffb9",
+      "bytes": 612307,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libpq-11.4-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libpq-11.4-vc15-x64.zip",
+      "sha256": "614373e1cca66896ade3f8a64d04905818d1013fcbc67ca674413fe7aa68fdc6",
+      "bytes": 1772237,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/mpir-3.0.0-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/mpir-3.0.0-vc15-x64.zip",
+      "sha256": "272d7e09eab4719a72874a93b2df7cafaaaac78df9b19084a90f736e21506deb",
+      "bytes": 1044600,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/net-snmp-5.7.3-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/net-snmp-5.7.3-vc15-x64.zip",
+      "sha256": "b12d4661749fa8811c3a91a131e1062db86c522ee7ad17b0b43c93b48ef103dc",
+      "bytes": 1650116,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/nghttp2-1.40.0-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/nghttp2-1.40.0-vc15-x64.zip",
+      "sha256": "ad7048d8ea8cb066eda57849b32e9f0f0474a02abccba8a712a23262f2d6fa1d",
+      "bytes": 611897,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libzip-1.7.1-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libzip-1.7.1-1-vc15-x64.zip",
+      "sha256": "93b8c33e7462cec9fce6032be65558dbecc950959bc659f8ad0c7356143a7c8e",
+      "bytes": 343243,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libssh2-1.9.0-1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libssh2-1.9.0-1-vc15-x64.zip",
+      "sha256": "ee482e195135764dc2f3ca6b6c71ee155c8e2f9ca0003daf68974f1582613c08",
+      "bytes": 1223173,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/libxml2-2.9.10-2-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/libxml2-2.9.10-2-vc15-x64.zip",
+      "sha256": "03cf8922d0c9895bbf979b8cda329ab6f4a978f2e1fbc24b513742aaeb30798d",
+      "bytes": 10835285,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/wineditline-2.205-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/wineditline-2.205-vc15-x64.zip",
+      "sha256": "7ce5cc69005f41f975b31474717d6516a6a3be015d3c641543a94beaff259bcf",
+      "bytes": 212349,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/openldap-2.4.47-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/openldap-2.4.47-vc15-x64.zip",
+      "sha256": "686605dbb3963aeb5d1989b27626bd807e66465d7c0512fed312f34365b81b37",
+      "bytes": 1930276,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/zlib-1.2.12-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/zlib-1.2.12-vc15-x64.zip",
+      "sha256": "18c570e087b18d80f7ca5b6cc7acdbe21918517a660e7d3e27b9a611bd17b1ed",
+      "bytes": 188376,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/openssl-1.1.1s-74-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/openssl-1.1.1s-74-vc15-x64.zip",
+      "sha256": "0c6ce609b06c9ef96d36495e0482482fcc35b4c9424f693d9460060e7c76de82",
+      "bytes": 6678275,
+      "expected_hash_verified": false
+    },
+    {
+      "file": "downloads/sqlite3-3.31.1-vc15-x64.zip",
+      "url": "https://downloads.php.net/~windows/php-sdk/deps/vc15/x64/sqlite3-3.31.1-vc15-x64.zip",
+      "sha256": "a5fa8b9394591d9b73a829d73c5cf8fe80614856d90fcbb8f42fa3e79d25d20a",
+      "bytes": 5714614,
+      "expected_hash_verified": false
+    }
+  ],
+  "failures": []
+}

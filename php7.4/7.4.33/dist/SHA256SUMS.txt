@@ -1,0 +1,2 @@
+d4cda957de94520e476854fe3a72188de764f94defd795d3a8d39d5c5bfcbd83  php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip
+0e2f4a3f4bf47b7a91bb88b6fe7870afc6154fcd15f90c6c17aaba40bcc358f1  phpStudy-PHP-7.4.33-nts-VC15-x64-unofficial-backport-install-kit-20261023.zip

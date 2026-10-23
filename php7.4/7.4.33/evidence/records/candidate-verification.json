@@ -1,0 +1,125 @@
+{
+  "candidate": "<BUILD_WORKSPACE>\\stage\\php.exe",
+  "baseline": "<BASELINE_PHP_DIR>\\php.exe",
+  "host_os": "local Windows build host; Windows Server 2019 execution not yet verified",
+  "tests": {
+    "core_operations": {
+      "exit_code": 0,
+      "stdout": "core-smoke-ok",
+      "stderr": ""
+    },
+    "bundled_extensions": {
+      "exit_code": 0,
+      "stdout": "{\"extensions\":[\"Core\",\"bcmath\",\"calendar\",\"ctype\",\"date\",\"filter\",\"hash\",\"iconv\",\"json\",\"SPL\",\"pcre\",\"readline\",\"Reflection\",\"session\",\"standard\",\"mysqlnd\",\"tokenizer\",\"zip\",\"zlib\",\"libxml\",\"dom\",\"PDO\",\"openssl\",\"SimpleXML\",\"xml\",\"xmlreader\",\"xmlwriter\",\"curl\",\"Phar\",\"mbstring\",\"gd\",\"fileinfo\",\"mysqli\",\"pdo_mysql\",\"pdo_sqlite\",\"sqlite3\",\"intl\",\"soap\",\"sodium\",\"sockets\",\"Zend OPcache\"],\"zend_extensions\":[\"Zend OPcache\"],\"result\":\"extensions-ok\"}",
+      "stderr": ""
+    },
+    "existing_phpstudy_addon_loads": {
+      "redis": {
+        "status": "not present locally"
+      },
+      "sqlsrv": {
+        "status": "not present locally"
+      },
+      "pdo_sqlsrv": {
+        "status": "not present locally"
+      },
+      "xdebug": {
+        "status": "not present locally"
+      }
+    },
+    "original_multipart_limit": {
+      "post": [
+        "value",
+        "value",
+        "value",
+        "value",
+        "value",
+        "value"
+      ],
+      "post_count": 6,
+      "upload_size": null,
+      "upload_error": null,
+      "upload_sha256": null,
+      "session_progress_present": false,
+      "upload_progress_ini": "1",
+      "multipart_limit_ini": false
+    },
+    "original_oom_shutdown": {
+      "exit_code": 255,
+      "stdout": "SHUTDOWN-RAN",
+      "stderr": "PHP Fatal error:  Allowed memory size of 16777216 bytes exhausted (tried to allocate 67108896 bytes) in Command line code on line 1\n"
+    },
+    "patched_multipart_limit": {
+      "post": [
+        "value",
+        "value",
+        "value"
+      ],
+      "post_count": 3,
+      "upload_size": null,
+      "upload_error": null,
+      "upload_sha256": null,
+      "session_progress_present": false,
+      "upload_progress_ini": "1",
+      "multipart_limit_ini": "3"
+    },
+    "patched_oom_shutdown": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "\nFatal error: Allowed memory size of 16777216 bytes exhausted (tried to allocate 67108896 bytes) in Command line code on line 1\n"
+    },
+    "normal_http_upload_and_disabled_progress_callback": {
+      "original": {
+        "post": {
+          "PHP_SESSION_UPLOAD_PROGRESS": "guardcheck",
+          "name": "normal",
+          "meta": {
+            "k": "nested"
+          }
+        },
+        "post_count": 3,
+        "upload_size": 154000,
+        "upload_error": 0,
+        "upload_sha256": "37b7dba0dc75dc5e36f3bc219309d21e76ba897a2783a57cdb2469e2a1aed012",
+        "session_progress_present": true,
+        "upload_progress_ini": "1",
+        "multipart_limit_ini": false
+      },
+      "patched": {
+        "post": {
+          "PHP_SESSION_UPLOAD_PROGRESS": "guardcheck",
+          "name": "normal",
+          "meta": {
+            "k": "nested"
+          }
+        },
+        "post_count": 3,
+        "upload_size": 154000,
+        "upload_error": 0,
+        "upload_sha256": "37b7dba0dc75dc5e36f3bc219309d21e76ba897a2783a57cdb2469e2a1aed012",
+        "session_progress_present": false,
+        "upload_progress_ini": "1",
+        "multipart_limit_ini": "-1"
+      }
+    },
+    "native_fastcgi": {
+      "status": "passed",
+      "transport": "native Windows php-cgi FastCGI over loopback",
+      "requests": 3,
+      "single_worker_survived": true,
+      "normal_upload_hash_verified": true,
+      "session_upload_progress_callback_disabled": true,
+      "cgi_version": "PHP 7.4.33 (cgi-fcgi) (built: Oct 23 2026 16:12:23)\nCopyright (c) The PHP Group\nZend Engine v3.4.0, Copyright (c) Zend Technologies",
+      "not_an_rce_exploit_test": true
+    }
+  },
+  "rce_reproduction": "not performed; these are functional and targeted mitigation checks",
+  "metadata": {
+    "version": "7.4.33",
+    "version_id": 70433,
+    "zts": 0,
+    "int_size": 8,
+    "sapi": "cli"
+  },
+  "status": "passed"
+}

@@ -6,15 +6,16 @@
 
 本仓库提供针对 **PHP2Shell（CVE-2026-109618 / CVE-2026-109619）** 的非官方源码回补、Windows 构建产物，以及 phpStudy 安装和回滚脚本。
 
-当前仅提供 **PHP 7.3.4 / Windows x64 / NTS / VC15**。`php7.3/` 是版本系列目录，不代表全部 PHP 7.3 版本都已支持；其他 PHP 7.x 版本将在完成适配和验证后单独发布。
+当前提供 **PHP 7.3.4 和 PHP 7.4.33 / Windows x64 / NTS / VC15**。`php7.3/`、`php7.4/` 是版本系列目录，不代表该系列的全部小版本都已支持；其他 PHP 7.x 目标需要单独适配和验证。
 
-**状态：实验性源码移植候选版，未经过独立安全审计，不是 PHP 官方发行版。** 本项目按 PHP 8.2 官方修复适配旧引擎，改动范围大于官方 7.4 的最小缓解补丁。已发现的验证限制和待解决问题公开记录，不将编译成功、启动成功或 HTTP 状态码当作漏洞修复认证。
+**状态：非官方 Windows 候选构建，未经过独立安全审计，不是 PHP 官方发行版。** 7.3.4 按 PHP 8.2 官方修复移植旧引擎；7.4.33 直接应用官方 7.4 专用最小缓解补丁。两者 OOM 和 Session 上传进度行为不同，见各自版本说明。已发现的验证限制和待解决问题公开记录，不将编译成功、启动成功或 HTTP 状态码当作漏洞修复认证。
 
 ### 下载与使用
 
 | 版本 | 平台 | 文档 | 下载 |
 | --- | --- | --- | --- |
 | 7.3.4 | Windows x64 / NTS / VC15 | [版本说明](php7.3/7.3.4/README.md) | [phpStudy 安装包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip) · [完整运行包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip) |
+| 7.4.33 | Windows x64 / NTS / VC15 | [版本说明](php7.4/7.4.33/README.md) | [phpStudy 安装包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.4.33-php2shell-20261023-rc1/phpStudy-PHP-7.4.33-nts-VC15-x64-unofficial-backport-install-kit-20261023.zip) · [完整运行包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.4.33-php2shell-20261023-rc1/php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip) |
 
 phpStudy 用户：解压安装包到 PHP 安装目录之外，在 phpStudy 停止服务，以管理员身份运行 `Install.cmd`，输入实际的 PHP 7.3.4 目录。安装成功后再启动服务并验证业务。脚本保留原 `php.ini`、第三方扩展和原安装路径，另存完整旧目录备份。回滚使用 `Rollback.cmd`。详见[中英双语安装说明](php7.3/7.3.4/installer/README.md)。
 
@@ -33,9 +34,11 @@ php7.3/
     evidence/                 构建和测试记录、官方文件映射
     reference/                官方补丁、来源和依赖下载清单
     tests/                    本机回归工具和上游比较用例
+php7.4/
+  7.4.33/                     官方 7.4 专用补丁的非官方 Windows 构建
 ```
 
-### 已知验证范围
+### 已知验证范围（7.3.4）
 
 - 本机构建与测试宿主为 Windows 11；Windows Server 2019 是目标平台，尚无独立、完整的实机业务验证记录。
 - 核心与常用扩展、普通 HTTP/FastCGI 上传及 Session 上传进度已做功能检查；220 次有界软内存超限检查记录为通过，检查后同一工作进程继续响应。
@@ -45,21 +48,25 @@ php7.3/
 
 详见[版本说明](php7.3/7.3.4/README.md)、[验证记录](php7.3/7.3.4/evidence/README.md)和[安全报告指引](SECURITY.md)。
 
+7.4.33 的独立记录见 [7.4 版本说明](php7.4/7.4.33/README.md)：精确官方补丁修改 17 个文件，22 个 OOM 工作进程退出检查、260 MiB 流式上传和 12 项隔离安装/回滚检查通过。它会停用 Session 上传进度回调，OOM 直接退出当前进程。不同版本的测试结果不混用。
+
 ## English
 
 This repository contains **unofficial source backports for PHP2Shell (CVE-2026-109618 / CVE-2026-109619)**, Windows runtime builds, and phpStudy installation/rollback scripts.
 
-The only published target is **PHP 7.3.4 / Windows x64 / NTS / VC15**. The `php7.3/` directory groups the version family; it does not claim support for every PHP 7.3 release. Other PHP 7.x targets require separate adaptation and validation.
+Published targets are **PHP 7.3.4 and PHP 7.4.33 / Windows x64 / NTS / VC15**. The family directories do not claim support for every minor release. Other PHP 7.x targets require separate adaptation and validation.
 
-**Status: experimental source-port candidate; not independently security-audited and not an official PHP release.** This project adapts the PHP 8.2 upstream design to the older engine. Its scope is larger than the upstream PHP 7.4 minimal mitigation. Compilation, startup checks and HTTP status codes are not proof of exploit prevention.
+**Status: unofficial Windows build candidates; not independently security-audited or official PHP releases.** PHP 7.3.4 adapts the PHP 8.2 design; PHP 7.4.33 applies the exact upstream 7.4 minimal mitigation. OOM and Session progress behavior differ. Compilation, startup checks and HTTP status codes are not proof of exploit prevention.
 
 ### Downloads and installation
 
 Use the [PHP 7.3.4 documentation](php7.3/7.3.4/README.md), [phpStudy installer ZIP](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip), or [standalone runtime ZIP](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip). Verify the downloads against [`SHA256SUMS.txt`](php7.3/7.3.4/dist/SHA256SUMS.txt).
 
+For **PHP 7.4.33**, use its [documentation](php7.4/7.4.33/README.md), [installer kit](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.4.33-php2shell-20261023-rc1/phpStudy-PHP-7.4.33-nts-VC15-x64-unofficial-backport-install-kit-20261023.zip), [complete runtime](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.4.33-php2shell-20261023-rc1/php-7.4.33-nts-Win32-VC15-x64-unofficial-upstream-backport-20261023.zip) and [hashes](php7.4/7.4.33/dist/SHA256SUMS.txt).
+
 Extract the installer outside your PHP directory, stop services in phpStudy, run `Install.cmd` as Administrator, and enter the active PHP 7.3.4 directory. Restart services after success and validate your applications. The script preserves the existing `php.ini`, third-party extensions and installation path, while keeping a full original-directory backup. Use `Rollback.cmd` to restore it. See the [bilingual installation guide](php7.3/7.3.4/installer/README.md).
 
-### Validation and limitations
+### Validation and limitations (7.3.4)
 
 - The build and recorded tests ran on Windows 11. Windows Server 2019 remains the intended target without complete independent application validation.
 - Core/common-extension checks, ordinary HTTP/FastCGI uploads and retained Session upload progress were exercised. The recorded 220 bounded soft-OOM checks passed and the same worker responded afterward.
@@ -68,6 +75,8 @@ Extract the installer outside your PHP directory, stop services in phpStudy, run
 - Third-party extension load checks do not cover all their OOM paths. Historical bundled dependencies are not comprehensively updated. A large-upload HTTP 500 needs log-based diagnosis and is not evidence that the vulnerability was blocked.
 
 See [version details](php7.3/7.3.4/README.md), [validation evidence](php7.3/7.3.4/evidence/README.md), and [security reporting guidance](SECURITY.md).
+
+PHP 7.4.33 has [separate evidence](php7.4/7.4.33/evidence/README.md): the exact upstream patch modifies 17 files; 22 OOM worker-exit cases, a 260 MiB streamed upload and 12 isolated installer checks passed. Session progress is disabled and OOM exits the worker. Results and behavior are not shared across the two builds.
 
 ### Upstream / 上游参考
 

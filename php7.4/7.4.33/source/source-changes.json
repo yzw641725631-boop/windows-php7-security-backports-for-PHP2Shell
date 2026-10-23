@@ -1,0 +1,97 @@
+{
+  "version": "7.4.33",
+  "official_commit": "712e60f9edfd03f0960fc4fc3c2c375f42b90aa2",
+  "official_branch": "PHP-7.4-CVE-2026-109618-109619",
+  "strategy": "upstream PHP 7.4 minimal mitigation; OOM worker exit; session upload-progress callback disabled",
+  "exact_upstream_patch_applied_without_modification": true,
+  "unofficial_windows_build": true,
+  "source_archive_sha256": "924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927",
+  "patch_sha256": "5fe57ca6ee96d59b36c6e0ca842843c50884f177bef1e85234cf669b577f5e48",
+  "changed_files": [
+    {
+      "file": "Zend/zend_API.h",
+      "before": "6fdee5cb96463ff916610597e6b9a08baa4c48e3e15bca83dc5dd6a49844c9b7",
+      "after": "bfde2e3563e75e701c24a1af6a861c61cebd292cd7099df0fbb2731786854268"
+    },
+    {
+      "file": "Zend/zend_alloc.c",
+      "before": "bba032710f51f3d5ac1cc14c191fa083df673692e51e8063c6806962ae48444a",
+      "after": "6080363e4be0a2d9d593423d64d45aeafddc9f573fb100d086e695e9d1552372"
+    },
+    {
+      "file": "Zend/zend_alloc.h",
+      "before": "c67f3516c841aaa22c2e6f3c7fcfa90aabd702e87aaac51cf02cb6d49cd4cd9f",
+      "after": "317f45525b1b5562bb572c26bea4bf7fc0ba70ffadcecda74e4b47356eb0ae3c"
+    },
+    {
+      "file": "Zend/zend_execute_API.c",
+      "before": "a832ab763ada7ffba97db67df8111f09b5a6f033ca4d628b39875b792e28bcca",
+      "after": "2e32fb33328f28c5ee49a5a3a265f286780525cc2b7409acc6f9f320b2f99e8b"
+    },
+    {
+      "file": "Zend/zend_hash.c",
+      "before": "38bba88053ddecf087f6b41183af9942b071e4da7af463f5f2105072d2bc9e6f",
+      "after": "ce9f3ae5e7490edc8ea8bac7740413c146595adad56f7de7af58c83648c5652b"
+    },
+    {
+      "file": "Zend/zend_hash.h",
+      "before": "6c7a109524308d6429b2e64acb5ad540e9bf8366b49e581e3823adb8483e9db2",
+      "after": "418da5ae2af4445f068341422db3591742ff62f745998691c19fe599a977c507"
+    },
+    {
+      "file": "Zend/zend_llist.c",
+      "before": "1b303d109c9a2bc18aa9b7437d17eeb7ee168befe86f87e216c11e83addb25f9",
+      "after": "0a0f41939dcb197cef3a49cdfff43a79275b5579fcda941533a6b202c04d1ba2"
+    },
+    {
+      "file": "Zend/zend_multiply.h",
+      "before": "8700fcdc96a1e20381d52c923e3c78656ed61b78fa3ff3d18b1bfc4edb9f0a27",
+      "after": "50219a2559d3f8bf32d87a325b8b01f041483a9eb77be0887f6bb49e790c89cb"
+    },
+    {
+      "file": "Zend/zend_strtod.c",
+      "before": "d91b85dbec96334b7ae5dcfeb35a22b4bff70529457dbd4ffcaa84b8aec4a628",
+      "after": "8745b169a41892f69ae16452544e9cd9138bf73741f35b00070572b1d02c5f9a"
+    },
+    {
+      "file": "Zend/zend_types.h",
+      "before": "47f54363aca2721d9114abf8181e6fcfcb82852109a7ccf675d98b3a7e258fc0",
+      "after": "6499fc2b3db59f7b4d744a5e83d5ab08970ed939c09d1cb6bdead09ba13bee25"
+    },
+    {
+      "file": "Zend/zend_vm_def.h",
+      "before": "876c7e33d91145fbcc761f164022eb9e020008791770772df92f4aac96464dbe",
+      "after": "0da4245ef3e59119077d0219f8c1230adc52fe6af9f294488b36dfa5b3b7dbff"
+    },
+    {
+      "file": "Zend/zend_vm_execute.h",
+      "before": "2898fcbb6972e122f7677ce51a2d0d40c5e119485763ecc89439df0f7507bf61",
+      "after": "18b273036616f28a1540a110043ee8edf6f5ca935ff3a86cfac7a926b8171f94"
+    },
+    {
+      "file": "ext/session/session.c",
+      "before": "d1c7b85f1789d142ba1f96a0a5085a47f814fcd81d801a0a8b2f6bdd0a511394",
+      "after": "76985d9e7577e71dac605ab1eea3213d20647f81e3dc5dacb666c842490afdcd"
+    },
+    {
+      "file": "main/SAPI.c",
+      "before": "b4e08bda93bebb59bc7c0de20835afa4aa7e2f2a191b7d994b2bec85b3fe95d2",
+      "after": "aef437223683b2c52e1ca39339d7b09844075bd9e4fbb595dbecd2d627bf3587"
+    },
+    {
+      "file": "main/main.c",
+      "before": "96a4b2e4076d3af13c6d040a7cb82939237b7bef8dec4592afe33de66a520af7",
+      "after": "d5d6aeb6aca1225ba6bdeb62dfa92219bbfb570542629f3d4c931a0d01c620b1"
+    },
+    {
+      "file": "main/php_variables.c",
+      "before": "1949bd9c589962554c201877b875bfc778cfcfde4af39bb61e78b0a41f58dac4",
+      "after": "d43052a40f4757c1ae8323fd4f4e83628a7dc2e72c8e50038199f2cafc6a9725"
+    },
+    {
+      "file": "main/rfc1867.c",
+      "before": "eab91d789f5a8b37ed92bf21dea6846da6cef43829dfb5371166462fc67e6e28",
+      "after": "3f4df06e9136d8420375186ce4609da9c4116b867ffb6779a06b81d7eacf2813"
+    }
+  ]
+}

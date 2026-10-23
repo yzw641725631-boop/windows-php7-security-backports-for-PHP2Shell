@@ -1,0 +1,185 @@
+{
+  "kind": "bounded upstream PHP 7.4 mitigation behavior check",
+  "security_exploit_certification": false,
+  "oom_worker_exit_expected": 1,
+  "cases": [
+    {
+      "mode": "plain",
+      "case": "loop",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "try_finally",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "array_fill_unused",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "json_unused",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "nested_argument",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "callback",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "exception_inflight",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "shutdown_oom",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "destructor",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "plain",
+      "case": "concat",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "loop",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "try_finally",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "array_fill_unused",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "json_unused",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "nested_argument",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "callback",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "exception_inflight",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "shutdown_oom",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "destructor",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    },
+    {
+      "mode": "opcache",
+      "case": "concat",
+      "exit_code": 1,
+      "fatal_oom_recorded": true,
+      "ordinary_shutdown_not_run": true,
+      "passed": true
+    }
+  ],
+  "same_worker_survival_expected": false,
+  "passed": true
+}

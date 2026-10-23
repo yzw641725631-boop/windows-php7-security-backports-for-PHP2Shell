@@ -1,0 +1,272 @@
+{
+  "rebuilt": [
+    {
+      "file": "php-cgi.exe",
+      "sha256": "79783302fba853e6d054f9c77ed378683907384b5ab67de0a16a2ee1536040d5"
+    },
+    {
+      "file": "php-win.exe",
+      "sha256": "cd4d679ca320933526e2423576c54946eecb089a90600a7423a9affd37e004b8"
+    },
+    {
+      "file": "php.exe",
+      "sha256": "ea5fdc62cda0d05cf2367403df7b9a05a0a5209ef98eeffce295d01fb9a15cdf"
+    },
+    {
+      "file": "php7.dll",
+      "sha256": "31738469cbd81e5e7cdb7afc7e28eddae6c7d9fa148b59bda54bd1d7bf6b37db"
+    },
+    {
+      "file": "php7phpdbg.dll",
+      "sha256": "b2648e4ed1ba04df58385ab7f37fe1b7dde066dc7de5557d96a037651784a5cd"
+    },
+    {
+      "file": "phpdbg.exe",
+      "sha256": "1f66312e1670ffc5a5f7716713e1b8324c119d71e2e487d9ede55c18fd19f249"
+    },
+    {
+      "file": "ext/php_bz2.dll",
+      "sha256": "fe11f1ea11953ebacfcceb04fc7d33e7b780ffa2afc97b5d62cbb668194dd962"
+    },
+    {
+      "file": "ext/php_com_dotnet.dll",
+      "sha256": "1c2539a82dd22a074458d4314674846c6d84efcc330365e0e55a72e1fc4489b1"
+    },
+    {
+      "file": "ext/php_curl.dll",
+      "sha256": "a70f9626dc97fc359ae4829cd82e22031c6b2b46457a9eea17e920a7839498bc"
+    },
+    {
+      "file": "ext/php_dba.dll",
+      "sha256": "3d465fbf5633d4bbfb3056f73447b87153e8161a5906ca94ac66287498f537cb"
+    },
+    {
+      "file": "ext/php_enchant.dll",
+      "sha256": "a12b92e2ea351116e74dd87ff43262910a233cce429bbcaab3ee0bd361ee1e9c"
+    },
+    {
+      "file": "ext/php_exif.dll",
+      "sha256": "1550a1753b34c8e2cf8a774d3de1d773eff845f7d0ec6dd41d6a0b6d31982ae5"
+    },
+    {
+      "file": "ext/php_ffi.dll",
+      "sha256": "aa400f6bfc76d8c74674730e63d4edf7ee792aed7b261e0a85d6bb271df1befc"
+    },
+    {
+      "file": "ext/php_fileinfo.dll",
+      "sha256": "a91586b61281d1efd51761592f334e3bef473a2b3398193c916c29acb41cc684"
+    },
+    {
+      "file": "ext/php_ftp.dll",
+      "sha256": "81b36079c459333372d1277d171daf70265fd15cc895e1b4043a4e06ff637521"
+    },
+    {
+      "file": "ext/php_gd2.dll",
+      "sha256": "d1984c1a554b105e04e377e94a53ae30a63a762cbbc6ace0dd22742dd270436e"
+    },
+    {
+      "file": "ext/php_gettext.dll",
+      "sha256": "2193b07541386e5d052cdea1275d5d757c447928a556c57e151de19e0ae49e6f"
+    },
+    {
+      "file": "ext/php_gmp.dll",
+      "sha256": "bb93f060e44c13662e6d5e214d0a8ca976b326d72e54ad71cd387092d6eeb94a"
+    },
+    {
+      "file": "ext/php_imap.dll",
+      "sha256": "c07154f7641bf05a7bedc1b053eea64b094689b13504dfe40dbd26b62b831024"
+    },
+    {
+      "file": "ext/php_intl.dll",
+      "sha256": "de587af3bb0164013bdbc6c423f8abb30b0dc7ec89aa42b91a370de821c0af9d"
+    },
+    {
+      "file": "ext/php_ldap.dll",
+      "sha256": "56fb03114a98de737699d48509abdc8acfede3915f2a85e1c2c6604fac6e1b05"
+    },
+    {
+      "file": "ext/php_mbstring.dll",
+      "sha256": "f35f898fa786577689753bc8d7da52de1ef755cfbfe1271bddc2a88d74f437c9"
+    },
+    {
+      "file": "ext/php_mysqli.dll",
+      "sha256": "f73f2b9447e6c6e4dbbaeea6731d09ff775f234206cf27ce6553c7d62172cc99"
+    },
+    {
+      "file": "ext/php_odbc.dll",
+      "sha256": "7f1a34143ac940c9450a53ce177ade7a7d98b09ade0683fddb5acf163baef50c"
+    },
+    {
+      "file": "ext/php_opcache.dll",
+      "sha256": "7bc28f8b15498c9588b1dcf354ee44754d32e112112bbaf354d5c1eacbc69609"
+    },
+    {
+      "file": "ext/php_openssl.dll",
+      "sha256": "d2066516c2f17882ff4bc32fd3afe367bdf5870abc2c0282ab705a57c703f366"
+    },
+    {
+      "file": "ext/php_pdo_firebird.dll",
+      "sha256": "f86c1bb89f045635936871c26c3caa4d2a1ea6f985c2f3196f7ce9498c2dc856"
+    },
+    {
+      "file": "ext/php_pdo_mysql.dll",
+      "sha256": "a7acb5112d246b5e0208a59ce80bfe4e5b8e42498ff4ba4f390455046e86826b"
+    },
+    {
+      "file": "ext/php_pdo_odbc.dll",
+      "sha256": "84130cb22f5b1b13f189b96c4cfb6866a35ce9755be2153351bd5b5974d913da"
+    },
+    {
+      "file": "ext/php_pdo_pgsql.dll",
+      "sha256": "a89a19c95a8f1cbcaa483de51d004fc1a0fe845c3c60574cd26c482c218c6b38"
+    },
+    {
+      "file": "ext/php_pdo_sqlite.dll",
+      "sha256": "6da5b098590034ff810dee8a5d1a61f5f54c9445337f1868ab44d3800f610822"
+    },
+    {
+      "file": "ext/php_pgsql.dll",
+      "sha256": "f0cea585cacab62373683af69fac08b2b2f5559d8ae9ccc8ebe7ac635530fd96"
+    },
+    {
+      "file": "ext/php_phpdbg_webhelper.dll",
+      "sha256": "afea9655c70f12761d623a0cea907ba09c9b9973a41e2f82a15039129750a882"
+    },
+    {
+      "file": "ext/php_shmop.dll",
+      "sha256": "3bb8de7aaf53bec072e1c376a66e3e1e77bc7e6d5fa2a5a177203f11f54f7580"
+    },
+    {
+      "file": "ext/php_snmp.dll",
+      "sha256": "0a9f3486b48997353026d2957079fc1c8b160302ef2d2f5af88ad71f63650187"
+    },
+    {
+      "file": "ext/php_soap.dll",
+      "sha256": "ac82ef7a92396ceaf4e1fce2c29391d93e0b686b86b2a96c624eef45b4b8f4f8"
+    },
+    {
+      "file": "ext/php_sockets.dll",
+      "sha256": "5aa7212390bb2c9ffafceecfb9f90236051d6a6dbe1e7a98da25769429becdc5"
+    },
+    {
+      "file": "ext/php_sodium.dll",
+      "sha256": "cd8d14913d7505895f6fe3008c66b3eb887940177548bd5cf856c5cc23c8d392"
+    },
+    {
+      "file": "ext/php_sqlite3.dll",
+      "sha256": "bac2072d6a37fd6040b4baea1cd306212654742dced0233cf1e82106123006f0"
+    },
+    {
+      "file": "ext/php_sysvshm.dll",
+      "sha256": "eaf649ac989bbb8c6a332fb0a37561e7897c2943c1045a8cb1deca30c38bdd58"
+    },
+    {
+      "file": "ext/php_tidy.dll",
+      "sha256": "b200c71838b53c056559089b75fb5135cd9e6a238b026dfd30cdcd44f7505dab"
+    },
+    {
+      "file": "ext/php_xmlrpc.dll",
+      "sha256": "153af4a4dfae4c2f693bbb83e050ca2c833a241e792850bae4ecf62be086fda7"
+    },
+    {
+      "file": "ext/php_xsl.dll",
+      "sha256": "aeb5578a173618a00e85b63d6e66b906812f0d3ba5168890a25efad7509783fd"
+    },
+    {
+      "file": "ext/php_zend_test.dll",
+      "sha256": "1042450cb973b5c8d388cfb224436b291a2c13935523922c1700ff769a0059c9"
+    }
+  ],
+  "dependency_dlls": [
+    {
+      "file": "glib-2.dll",
+      "source": "bin/glib-2.dll",
+      "sha256": "2d5576772eece30ff89c8ab0ea4a5635d5feb4139dd39e8ed0f802dfc545f377"
+    },
+    {
+      "file": "libenchant.dll",
+      "source": "bin/libenchant.dll",
+      "sha256": "dc9e1fe565cb7e72c1dbdd938cd6dbb92c38b238233fe6d4464fddbee9cdd32a"
+    },
+    {
+      "file": "gmodule-2.dll",
+      "source": "bin/gmodule-2.dll",
+      "sha256": "2e13af0a06bb378960f64bbb0a528a1778267df3ab2649d65a2fa55790411efa"
+    },
+    {
+      "file": "libcrypto-1_1-x64.dll",
+      "source": "bin/libcrypto-1_1-x64.dll",
+      "sha256": "3cc94ced1fafe65438bacfe09118cb0258d5207c2b1288e5c5a459f70ee6e4e9"
+    },
+    {
+      "file": "libsqlite3.dll",
+      "source": "bin/libsqlite3.dll",
+      "sha256": "88411155880483647fd7209fe74324a9c320c3b556fb531e5ccadd34f05b3133"
+    },
+    {
+      "file": "libsodium.dll",
+      "source": "bin/libsodium.dll",
+      "sha256": "53b3dc63957192e90125f6188ef73cc2583a66b020cacf0560732fcc3861723e"
+    },
+    {
+      "file": "libpq.dll",
+      "source": "bin/libpq.dll",
+      "sha256": "1bbc7e5e1e67d30fa58a6dbd3d8e9d2c2e3353717947931d42dd59c652312bba"
+    },
+    {
+      "file": "libssl-1_1-x64.dll",
+      "source": "bin/libssl-1_1-x64.dll",
+      "sha256": "921a16b934a469a00f37cb4784c68aba03717d3dc177d08ab7ca63fd85a2405c"
+    },
+    {
+      "file": "libsasl.dll",
+      "source": "bin/libsasl.dll",
+      "sha256": "a1cb9951040424378eee55ed06edc166906a5beaacdc36bec3d865fa56105f7c"
+    },
+    {
+      "file": "icuuc66.dll",
+      "source": "bin/icuuc66.dll",
+      "sha256": "f60adb68fcf7196c26183eab4a2fc9f07ea6aded95d7dc40291e9090fca4f5d3"
+    },
+    {
+      "file": "icuin66.dll",
+      "source": "bin/icuin66.dll",
+      "sha256": "cb6576b9ee0da934c4aa11dff05493d73d8b763166c4cc7ede41abadc61c7215"
+    },
+    {
+      "file": "icuio66.dll",
+      "source": "bin/icuio66.dll",
+      "sha256": "248ff9d46ea23ec266abb395404651ea91067facd1c49b9a811194a14e493b95"
+    },
+    {
+      "file": "icudt66.dll",
+      "source": "bin/icudt66.dll",
+      "sha256": "2c796d089d4a0a6cee482a9722988cbce41ab835d3f4fbb6a1e09f2133749eea"
+    },
+    {
+      "file": "libssh2.dll",
+      "source": "bin/libssh2.dll",
+      "sha256": "d6faa2eeaab51398128b3ba64bf568f9273f8a664d3173672d6aa78d4f88b437"
+    },
+    {
+      "file": "nghttp2.dll",
+      "source": "bin/nghttp2.dll",
+      "sha256": "5acf6537fb65c160b89ec390cd598bf1bd509c6bb0013380dcd395391033c08b"
+    }
+  ],
+  "optional_external_client_dependencies": [
+    {
+      "importer": "ext/php_pdo_firebird.dll",
+      "dll": "fbclient.dll"
+    }
+  ],
+  "missing": [],
+  "examined_pe_files": 71,
+  "build": {
+    "exit_code": 0,
+    "optimization": "/O2 /Ob0",
+    "compiler_workaround": "/d2SSAOptimizer-; remove /d2FuncCache1 from generated Makefile",
+    "official_patch": "712e60f9edfd03f0960fc4fc3c2c375f42b90aa2",
+    "log": "logs/build-06.log"
+  }
+}

@@ -1,0 +1,75 @@
+"""Assemble matched PHP 7.4 binaries and dependency closure in an isolated stage."""
+from pathlib import Path
+import hashlib
+import importlib.util
+import json
+import os
+import shutil
+
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / 'build/php-7.4.33'
+BIN = SRC / 'x64/Release'
+STAGE = ROOT / 'stage'
+DEPS = ROOT / 'build/deps'
+status = json.loads((ROOT / 'logs/build-status.json').read_text('utf-8-sig'))
+assert status['exit_code'] == 0
+STAGE.mkdir(exist_ok=True)
+copied = []
+for file in BIN.iterdir():
+    if file.suffix.lower() not in ('.exe', '.dll'):
+        continue
+    relative = Path('ext') / file.name if file.name.startswith('php_') else Path(file.name)
+    dest = STAGE / relative
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(file, dest)
+    copied.append({'file': relative.as_posix(), 'sha256': hashlib.sha256(file.read_bytes()).hexdigest()})
+assert {'php.exe', 'php-cgi.exe', 'php7.dll'} <= {row['file'] for row in copied}
+for name in ('php.ini-development', 'php.ini-production'):
+    shutil.copy2(SRC / name, STAGE / name)
+for source, name in (('LICENSE', 'license.txt'), ('NEWS', 'news.txt')):
+    shutil.copy2(SRC / source, STAGE / name)
+shutil.copy2(ROOT / 'baseline/readme-redist-bins.txt', STAGE / 'readme-redist-bins.txt')
+for folder in ('extras', 'lib', 'sasl2'):
+    if (ROOT / 'baseline' / folder).exists():
+        shutil.copytree(ROOT / 'baseline' / folder, STAGE / folder, dirs_exist_ok=True)
+for name, relative in (('php7.lib', 'dev/php7.lib'), ('php7embed.lib', 'php7embed.lib')):
+    dest = STAGE / relative
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(BIN / name, dest)
+spec = importlib.util.spec_from_file_location('pe_import_helpers', ROOT.parent / 'php73-windows-build/complete_runtime_dependencies.py')
+helpers = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(helpers)
+available = {p.name.lower(): p for p in DEPS.rglob('*.dll')}
+present = {p.name.lower(): p for p in STAGE.rglob('*.dll')}
+system = {p.name.lower() for p in (Path(os.environ['SystemRoot']) / 'System32').glob('*.dll')}
+queue = [p for p in STAGE.rglob('*') if p.suffix.lower() in ('.exe', '.dll')]
+seen = set()
+added = []
+missing = []
+while queue:
+    file = queue.pop()
+    if file in seen:
+        continue
+    seen.add(file)
+    for name in helpers.imports(file):
+        key = name.lower()
+        if key in present:
+            continue
+        if key in available:
+            source = available[key]
+            dest = STAGE / source.name
+            shutil.copy2(source, dest)
+            present[key] = dest
+            queue.append(dest)
+            added.append({'file': dest.name, 'source': source.relative_to(DEPS).as_posix(),
+                          'sha256': hashlib.sha256(dest.read_bytes()).hexdigest()})
+        elif not key.startswith(('api-ms-win-', 'ext-ms-win-')) and key not in system:
+            missing.append({'importer': file.relative_to(STAGE).as_posix(), 'dll': name})
+optional = [row for row in missing if row['dll'].lower() == 'fbclient.dll' and row['importer'] == 'ext/php_pdo_firebird.dll']
+unexpected = [row for row in missing if row not in optional]
+report = {'rebuilt': copied, 'dependency_dlls': added, 'optional_external_client_dependencies': optional,
+          'missing': unexpected, 'examined_pe_files': len(seen), 'build': status}
+(ROOT / 'logs/stage-manifest.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+if unexpected:
+    raise SystemExit('Missing dependency DLLs: ' + str(unexpected))
+print(json.dumps({'rebuilt_binaries': len(copied), 'added_dependency_dlls': len(added), 'unresolved_required': len(unexpected)}))

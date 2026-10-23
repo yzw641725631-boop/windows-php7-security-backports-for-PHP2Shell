@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "optimization": "/O2 /Ob0",
+  "compiler_workaround": "/d2SSAOptimizer-; remove /d2FuncCache1 from generated Makefile",
+  "official_patch": "712e60f9edfd03f0960fc4fc3c2c375f42b90aa2",
+  "log": "logs/build-06.log"
+}
