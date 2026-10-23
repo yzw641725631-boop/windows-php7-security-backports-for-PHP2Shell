@@ -14,7 +14,7 @@
 
 | 版本 | 平台 | 文档 | 下载 |
 | --- | --- | --- | --- |
-| 7.3.4 | Windows x64 / NTS / VC15 | [版本说明](php7.3/7.3.4/README.md) | [phpStudy 安装包](php7.3/7.3.4/dist/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip?raw=true) · [完整运行包](php7.3/7.3.4/dist/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip?raw=true) |
+| 7.3.4 | Windows x64 / NTS / VC15 | [版本说明](php7.3/7.3.4/README.md) | [phpStudy 安装包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip) · [完整运行包](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip) |
 
 phpStudy 用户：解压安装包到 PHP 安装目录之外，在 phpStudy 停止服务，以管理员身份运行 `Install.cmd`，输入实际的 PHP 7.3.4 目录。安装成功后再启动服务并验证业务。脚本保留原 `php.ini`、第三方扩展和原安装路径，另存完整旧目录备份。回滚使用 `Rollback.cmd`。详见[中英双语安装说明](php7.3/7.3.4/installer/README.md)。
 
@@ -55,7 +55,7 @@ The only published target is **PHP 7.3.4 / Windows x64 / NTS / VC15**. The `php7
 
 ### Downloads and installation
 
-Use the [PHP 7.3.4 documentation](php7.3/7.3.4/README.md), [phpStudy installer ZIP](php7.3/7.3.4/dist/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip?raw=true), or [standalone runtime ZIP](php7.3/7.3.4/dist/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip?raw=true). Verify the downloads against [`SHA256SUMS.txt`](php7.3/7.3.4/dist/SHA256SUMS.txt).
+Use the [PHP 7.3.4 documentation](php7.3/7.3.4/README.md), [phpStudy installer ZIP](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/phpStudy-PHP-7.3.4-nts-VC15-x64-unofficial-port-install-kit-bilingual-20261023.zip), or [standalone runtime ZIP](https://github.com/yzw641725631-boop/windows-php7-security-backports-for-PHP2Shell/releases/download/php-7.3.4-php2shell-20261023-rc1/php-7.3.4-nts-Win32-VC15-x64-unofficial-source-port-20261022.zip). Verify the downloads against [`SHA256SUMS.txt`](php7.3/7.3.4/dist/SHA256SUMS.txt).
 
 Extract the installer outside your PHP directory, stop services in phpStudy, run `Install.cmd` as Administrator, and enter the active PHP 7.3.4 directory. Restart services after success and validate your applications. The script preserves the existing `php.ini`, third-party extensions and installation path, while keeping a full original-directory backup. Use `Rollback.cmd` to restore it. See the [bilingual installation guide](php7.3/7.3.4/installer/README.md).
 
